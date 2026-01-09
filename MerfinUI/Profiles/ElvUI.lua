@@ -81,9 +81,9 @@ db.movers = function(layout)
 
             -- Castbars
             E.db.movers.ElvUF_PlayerCastbarMover =  "BOTTOM,ElvUIParent,BOTTOM,0,220"
-            E.db.movers.ElvUF_TargetCastbarMover = "BOTTOM,ElvUIParent,BOTTOM,285,284"
             E.db.movers.ElvUF_PetCastbarMover = "BOTTOM,ElvUIParent,BOTTOM,0,222"
-            E.db.movers.ElvUF_TargetCastbarMover = "BOTTOM,ElvUIParent,BOTTOM,285,284"
+            E.db.movers.ElvUF_TargetCastbarMover = "BOTTOM,ElvUIParent,BOTTOM,267,254"
+			E.db.movers.ElvUF_FocusCastbarMover = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-256,254"
 
             -- Action Bars
             E.db.movers.ElvBar_Pet = "BOTTOM,ElvUIParent,BOTTOM,217,66"
@@ -112,8 +112,8 @@ db.movers = function(layout)
             -- Castbars
             E.db.movers.ElvUF_PlayerCastbarMover = "BOTTOM,ElvUIParent,BOTTOM,0,74"            
             E.db.movers.ElvUF_PetCastbarMover = "BOTTOM,ElvUIParent,BOTTOM,0,197"
-            E.db.movers.ElvUF_TargetCastbarMover = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-478,284" 
-            E.db.movers.ElvUF_FocusCastbarMover = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-288,284"                       
+            E.db.movers.ElvUF_TargetCastbarMover = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-478,254" 
+            E.db.movers.ElvUF_FocusCastbarMover = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-288,200"                       
 
             -- Action Bars
             E.db.movers.ElvBar_Pet = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,4,311"
@@ -658,7 +658,7 @@ db.unitframes = function(layout)
     E.db.unitframe.units.target.buffs.countFont = MUI:GetProfileFont()
     E.db.unitframe.units.target.buffs.spacing = -1
     E.db.unitframe.units.target.buffs.yOffset = -1
-    E.db.unitframe.units.target.castbar.enable = false
+    E.db.unitframe.units.target.castbar.enable = true
     E.db.unitframe.units.target.castbar.spark = false
     E.db.unitframe.units.target.castbar.strataAndLevel.useCustomLevel = true
     E.db.unitframe.units.target.colorOverride = "FORCE_ON"
@@ -799,7 +799,7 @@ db.unitframes = function(layout)
     E.db.unitframe.units.focus.debuffs.xOffset = -7
     E.db.unitframe.units.focus.debuffs.yOffset = -2
 
-    E.db.unitframe.units.focus.castbar.enable = false
+    E.db.unitframe.units.focus.castbar.enable = true
     E.db.unitframe.units.focus.castbar.spark = false
     E.db.unitframe.units.focus.castbar.strataAndLevel.frameStrata = "BACKGROUND"
     E.db.unitframe.units.focus.castbar.strataAndLevel.useCustomStrata = true
@@ -3844,4 +3844,5 @@ function MUI:ImportElvUI(layout)
     E:UpdateAll(true)
 
     addonTable:PluginInstallStepComplete('ElvUI ' .. profileName)
+
 end
