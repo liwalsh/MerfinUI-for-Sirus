@@ -1,0 +1,10 @@
+<Ui xmlns='http://www.blizzard.com/wow/ui/'>
+	<Include file='Libs\libsLoad.xml'/>
+	<Script file='Code.lua'/>
+	<Include file='Media\mediaLoad.xml'/>
+	<Include file='Locales\locales.xml'/>
+	<Include file='Core\coreLoad.xml'/>
+	<Include file='Options\optionsLoad.xml'/>
+	<Include file='Modules\modulesLoad.xml'/>
+	<Include file='Profiles\profilesLoad_Wrath.xml'/>
+</Ui>
