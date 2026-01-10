@@ -1168,7 +1168,7 @@ db.unitframes = function(layout)
 
     if layout == 'DPS/Tank' then
 
-        E.db.unitframe.units.party.customTexts.UnitName.text_format = "[name:abbrev:short]"
+        E.db.unitframe.units.party.customTexts.UnitName.text_format = "[name]"
         E.db.unitframe.units.raidpet.enable = false
         E.db.unitframe.units.player.castbar.displayTarget = false
         E.db.unitframe.units.party.debuffs.xOffset = 2
@@ -1188,7 +1188,7 @@ db.unitframes = function(layout)
         elseif layout == "Healer-V" then
             E.db.unitframe.units.party.debuffs.xOffset = 2
             E.db.unitframe.units.party.debuffs.numrows = 2
-            E.db.unitframe.units.party.customTexts.UnitName.text_format = "[name:abbrev:short]" 
+            E.db.unitframe.units.party.customTexts.UnitName.text_format = "[name]" 
         end  
 
         E.db.unitframe.units.raidpet.enable = true
@@ -1331,7 +1331,7 @@ db.unitframes = function(layout)
             E.db.unitframe.units.player.castbar.height = 33
             E.db.unitframe.units.player.castbar.width = 275
 
-            E.db.unitframe.units.party.customTexts.UnitName.text_format = "[name:abbrev:short]"
+            E.db.unitframe.units.party.customTexts.UnitName.text_format = "[name]"
             E.db.unitframe.units.party.height = 55
             E.db.unitframe.units.party.width = 230
             E.db.unitframe.units.party.power.height = 6
@@ -1444,7 +1444,7 @@ db.unitframes = function(layout)
                 E.db.unitframe.units.party.petsGroup.width = 100
                 E.db.unitframe.units.party.petsGroup.anchorPoint = "BOTTOM"
             elseif layout == "Healer-V" then
-                E.db.unitframe.units.party.customTexts.UnitName.text_format = "[name:abbrev:short]"
+                E.db.unitframe.units.party.customTexts.UnitName.text_format = "[name]"
                 E.db.unitframe.units.party.height = 55
                 E.db.unitframe.units.party.width = 235
                 E.db.unitframe.units.party.power.height = 6
@@ -3846,3 +3846,4 @@ function MUI:ImportElvUI(layout)
     addonTable:PluginInstallStepComplete('ElvUI ' .. profileName)
 
 end
+
