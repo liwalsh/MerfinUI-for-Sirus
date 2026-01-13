@@ -1,11 +1,11 @@
-local _, MerfinPlus = ...
-MerfinPlus = LibStub("AceAddon-3.0"):NewAddon("MerfinPlus", "AceEvent-3.0")
+local _, SharedMedia = ...
+SharedMedia = LibStub("AceAddon-3.0"):NewAddon("SharedMedia", "AceEvent-3.0")
 
-function MerfinPlus:OnEnable()
+function SharedMedia:OnEnable()
     self:RegisterEvent("PLAYER_ENTERING_WORLD", "HandleEnteringWorld")
 end
 
-function MerfinPlus:HandleEnteringWorld()
+function SharedMedia:HandleEnteringWorld()
     ChatFrame1:SetFrameStrata("MEDIUM")
 end
 

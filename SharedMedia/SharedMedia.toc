@@ -6,6 +6,8 @@
 ## OptionalDeps: LibStub, LibSharedMedia-3.0
 
 Libs\LibStub\LibStub.lua
+Libs\AceAddon-3.0\AceAddon-3.0.lua
+Libs\AceEvent-3.0\AceEvent-3.0.lua
 Libs\CallbackHandler-1.0\CallbackHandler-1.0.lua
 Libs\LibSharedMedia-3.0\lib.xml
 
