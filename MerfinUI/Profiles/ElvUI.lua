@@ -116,9 +116,9 @@ db.movers = function(layout)
             E.db.movers.ElvUF_FocusCastbarMover = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-288,205"                       
 
             -- Action Bars
-            E.db.movers.ElvBar_Pet = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,4,311"
+            E.db.movers.ElvBar_Pet = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,4,313"
             E.db.movers.ShiftAB = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,4,280"
-			E.db.movers.ElvBar_Totem = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,4,280"
+			E.db.movers.ElvBar_Totem = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,3,278"
         end
 
         if layout == "Healer-H" then
@@ -265,7 +265,8 @@ db.chat = function()
     E.db.chat.showHistory.EMOTE = false
     E.db.chat.showHistory.INSTANCE = false              
     E.db.chat.tabFont = MUI:GetProfileFont()
-    E.db.chat.timeStampFormat = "%H:%M:%S " 
+    E.db.chat.timeStampFormat = "%H:%M:%S "
+	E.db.chat.tabSelector = "NONE"
 
     if MUI:GetProfileResolution() == 'FULL_HD' then
 
@@ -3851,4 +3852,3 @@ function MUI:ImportElvUI(layout)
     addonTable:PluginInstallStepComplete('ElvUI ' .. profileName)
 
 end
-
