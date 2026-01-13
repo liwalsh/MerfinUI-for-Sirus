@@ -82,8 +82,8 @@ db.movers = function(layout)
             -- Castbars
             E.db.movers.ElvUF_PlayerCastbarMover =  "BOTTOM,ElvUIParent,BOTTOM,0,220"
             E.db.movers.ElvUF_PetCastbarMover = "BOTTOM,ElvUIParent,BOTTOM,0,222"
-            E.db.movers.ElvUF_TargetCastbarMover = "BOTTOM,ElvUIParent,BOTTOM,267,254"
-			E.db.movers.ElvUF_FocusCastbarMover = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-256,254"
+            E.db.movers.ElvUF_TargetCastbarMover = "BOTTOM,ElvUIParent,BOTTOM,267,259"
+			E.db.movers.ElvUF_FocusCastbarMover = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-256,259"
 
             -- Action Bars
             E.db.movers.ElvBar_Pet = "BOTTOM,ElvUIParent,BOTTOM,217,66"
@@ -104,7 +104,7 @@ db.movers = function(layout)
             E.db.movers.ElvUF_Raid10Mover = "TOPLEFT,ElvUIParent,BOTTOMLEFT,712,324"
             E.db.movers.ElvUF_Raid25Mover = "TOPLEFT,ElvUIParent,BOTTOMLEFT,712,324"
             E.db.movers.ElvUF_Raid40Mover = "TOPLEFT,ElvUIParent,BOTTOMLEFT,712,324"
-            E.db.movers.ElvUF_RaidpetMover = "TOPLEFT,ElvUIParent,BOTTOMLEFT,1207,237"
+            E.db.movers.ElvUF_RaidpetMover = "TOPLEFT,ElvUIParent,BOTTOMLEFT,1207,249"
             E.db.movers.ArenaHeaderMover = "TOPRIGHT,ElvUIParent,TOPRIGHT,-289,-331"
             E.db.movers.BossHeaderMover = "TOPRIGHT,ElvUIParent,TOPRIGHT,-289,-306"
             E.db.movers.ElvUF_TankMover = "BOTTOM,ElvUIParent,BOTTOM,-303,49"
@@ -112,8 +112,8 @@ db.movers = function(layout)
             -- Castbars
             E.db.movers.ElvUF_PlayerCastbarMover = "BOTTOM,ElvUIParent,BOTTOM,0,74"            
             E.db.movers.ElvUF_PetCastbarMover = "BOTTOM,ElvUIParent,BOTTOM,0,197"
-            E.db.movers.ElvUF_TargetCastbarMover = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-478,254" 
-            E.db.movers.ElvUF_FocusCastbarMover = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-288,200"                       
+            E.db.movers.ElvUF_TargetCastbarMover = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-478,259" 
+            E.db.movers.ElvUF_FocusCastbarMover = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-288,205"                       
 
             -- Action Bars
             E.db.movers.ElvBar_Pet = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,4,311"
@@ -1231,7 +1231,7 @@ db.unitframes = function(layout)
         E.db.unitframe.units.target.debuffs.countFontSize = 13
         E.db.unitframe.units.target.debuffs.perrow = 8
         E.db.unitframe.units.target.debuffs.sizeOverride = 23
-        E.db.unitframe.units.target.castbar.height = 27
+        E.db.unitframe.units.target.castbar.height = 22
         E.db.unitframe.units.target.castbar.width = 235
         E.db.unitframe.units.target.customTexts.UnitPower.size = 13
         E.db.unitframe.units.target.customTexts.UnitHealth.size = 13
@@ -1247,7 +1247,7 @@ db.unitframes = function(layout)
 
         E.db.unitframe.units.focus.height = 44
         E.db.unitframe.units.focus.width = 180
-        E.db.unitframe.units.focus.castbar.height = 27
+        E.db.unitframe.units.focus.castbar.height = 22
         E.db.unitframe.units.focus.castbar.width = 180
         E.db.unitframe.units.focus.buffs.countFontSize = 13
         E.db.unitframe.units.focus.debuffs.countFontSize = 13
@@ -1456,7 +1456,8 @@ db.unitframes = function(layout)
 
                 E.db.unitframe.units.party.buffs.countFontSize = 12
                 E.db.unitframe.units.party.buffs.sizeOverride = 20
-                E.db.unitframe.units.party.buffs.yOffset = 25
+                E.db.unitframe.units.party.buffs.yOffset = 20
+				E.db.unitframe.units.party.buffs.attachTo = "HEALTH"
 
                 E.db.unitframe.units.party.rdebuffs.size = 30
                 E.db.unitframe.units.party.rdebuffs.fontSize = 12
@@ -1480,7 +1481,8 @@ db.unitframes = function(layout)
 
             E.db.unitframe.units.raid10.buffs.countFontSize = 12
             E.db.unitframe.units.raid10.buffs.sizeOverride = 18
-            E.db.unitframe.units.raid10.buffs.yOffset = 22
+            E.db.unitframe.units.raid10.buffs.yOffset = 18
+			E.db.unitframe.units.raid10.buffs.attachTo = "HEALTH"
 
             E.db.unitframe.units.raid10.debuffs.countFontSize = 12
             E.db.unitframe.units.raid10.debuffs.sizeOverride = 18
@@ -1491,7 +1493,7 @@ db.unitframes = function(layout)
             E.db.unitframe.units.raid10.rdebuffs.yOffset = 15
 
             E.db.unitframe.units.raid25.width = 100
-            E.db.unitframe.units.raid25.height = 47
+            E.db.unitframe.units.raid25.height = 50
             E.db.unitframe.units.raid25.customTexts.DeadGhostStatus.size = 13
             E.db.unitframe.units.raid25.customTexts.DeadGhostStatus.xOffset = 0
             E.db.unitframe.units.raid25.customTexts.DeadGhostStatus.yOffset = 15
@@ -1501,7 +1503,8 @@ db.unitframes = function(layout)
 
             E.db.unitframe.units.raid25.buffs.countFontSize = 12
             E.db.unitframe.units.raid25.buffs.sizeOverride = 18
-            E.db.unitframe.units.raid25.buffs.yOffset = 22
+            E.db.unitframe.units.raid25.buffs.yOffset = 18
+			E.db.unitframe.units.raid25.buffs.attachTo = "HEALTH"
 
             E.db.unitframe.units.raid25.debuffs.countFontSize = 12
             E.db.unitframe.units.raid25.debuffs.sizeOverride = 18
@@ -1522,7 +1525,8 @@ db.unitframes = function(layout)
 
             E.db.unitframe.units.raid40.buffs.countFontSize = 12
             E.db.unitframe.units.raid40.buffs.sizeOverride = 13
-            E.db.unitframe.units.raid40.buffs.yOffset = 16
+            E.db.unitframe.units.raid40.buffs.yOffset = 13
+			E.db.unitframe.units.raid40.buffs.attachTo = "HEALTH"
 
             E.db.unitframe.units.raid40.debuffs.countFontSize = 12
             E.db.unitframe.units.raid40.debuffs.sizeOverride = 13
