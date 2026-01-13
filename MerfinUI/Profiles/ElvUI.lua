@@ -1434,7 +1434,8 @@ db.unitframes = function(layout)
 
                 E.db.unitframe.units.party.buffs.countFontSize = 12
                 E.db.unitframe.units.party.buffs.sizeOverride = 18
-                E.db.unitframe.units.party.buffs.yOffset = 23
+                E.db.unitframe.units.party.buffs.yOffset = 19
+				E.db.unitframe.units.party.buffs.attachTo = "HEALTH"
 
                 E.db.unitframe.units.party.rdebuffs.size = 25
                 E.db.unitframe.units.party.rdebuffs.fontSize = 12
