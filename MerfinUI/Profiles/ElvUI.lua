@@ -265,7 +265,7 @@ db.chat = function()
     E.db.chat.showHistory.EMOTE = false
     E.db.chat.showHistory.INSTANCE = false              
     E.db.chat.tabFont = MUI:GetProfileFont()
-    E.db.chat.timeStampFormat = "%H:%M:%S "
+    E.db.chat.timeStampFormat = "%H:%M:%S"
 	E.db.chat.tabSelector = "NONE"
 
     if MUI:GetProfileResolution() == 'FULL_HD' then
