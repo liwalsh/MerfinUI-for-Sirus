@@ -452,7 +452,7 @@ db.actionbars = function()
         end
 
         E.db.actionbar.cooldown.fonts.fontSize = 13
-        E.db.actionbar.FontSize = 13
+        E.db.actionbar.fontSize = 13
         E.db.actionbar.barPet.buttonsize = 32
         E.db.actionbar.stanceBar.buttonsize = 32
         E.db.actionbar.barTotem.buttonsize = 32
