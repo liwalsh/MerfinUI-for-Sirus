@@ -113,7 +113,7 @@ addon.defaults = {
           ["reputation"] = {
             enabled = false, desc = "Reputation",
             colors = {
-              ["reputationGain"]     = { enabled = false, desc = "Reputation Gained",  default = { 0.10, 0.10, 1.00 } },
+              ["reputationGain"]     = { enabled = false, desc = "Reputation Gained",  default = { 0.10, 1.00, 0.10 } },
               ["reputationLoss"]     = { enabled = false, desc = "Reputation Lost",    default = { 1.00, 0.10, 0.10 } },
             },
           },
