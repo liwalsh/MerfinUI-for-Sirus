@@ -24,7 +24,7 @@ db.movers = function(layout)
         E.db.movers.DTPanelCustomPanel_RightMover = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-4,4"
         E.db.movers.DurabilityFrameMover = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-7,430"
         E.db.movers.ElvUIBagMover = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-4,29"
-        E.db.movers.ElvUIBankMover = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,4,280"
+        E.db.movers.ElvUIBankMover = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,4,29"
         E.db.movers.ExperienceBarMover = "TOP,UIParent,TOP,0,-4"
         E.db.movers.GMMover = "TOPLEFT,UIParent,TOPLEFT,284,-4"
         E.db.movers.ReputationBarMover = "TOPRIGHT,ElvUIParent,TOPRIGHT,-4,-207"
@@ -88,7 +88,7 @@ db.movers = function(layout)
             -- Action Bars
             E.db.movers.ElvBar_Pet = "BOTTOM,ElvUIParent,BOTTOM,217,66"
             E.db.movers.ShiftAB = "TOPLEFT,ElvUIParent,BOTTOMLEFT,588,98"
-			E.db.movers.ElvBar_Totem = "TOPLEFT,ElvUIParent,BOTTOMLEFT,587,98"
+			E.db.movers.ElvBar_Totem = "BOTTOM,ElvUIParent,BOTTOM,-310,66"
 
         elseif layout == 'Healer-H' or layout == 'Healer-V' then
 
@@ -116,9 +116,9 @@ db.movers = function(layout)
             E.db.movers.ElvUF_FocusCastbarMover = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-288,205"                       
 
             -- Action Bars
-            E.db.movers.ElvBar_Pet = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,4,313"
-            E.db.movers.ShiftAB = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,4,280"
-			E.db.movers.ElvBar_Totem = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,3,278"
+            E.db.movers.ElvBar_Pet = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,4,317"
+            E.db.movers.ShiftAB = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,4,282"
+			E.db.movers.ElvBar_Totem = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,4,282"
         end
 
         if layout == "Healer-H" then
