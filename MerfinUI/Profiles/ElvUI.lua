@@ -989,9 +989,6 @@ db.unitframes = function(layout)
     E.db.unitframe.units.party.healPrediction.enable = true
     E.db.unitframe.units.party.health.text_format = ""
     E.db.unitframe.units.party.name.text_format = ""
-    E.db.unitframe.units.party.petsGroup.anchorPoint = "LEFT"
-    E.db.unitframe.units.party.petsGroup.enable = true
-    E.db.unitframe.units.party.petsGroup.name.text_format = "[health:current]"
     
     E.db.unitframe.units.party.power.enable = true
     E.db.unitframe.units.party.power.text_format = ""
@@ -1359,8 +1356,7 @@ db.unitframes = function(layout)
             E.db.unitframe.units.party.rdebuffs.fontSize = 12
             E.db.unitframe.units.party.rdebuffs.yOffset = 10
 
-            E.db.unitframe.units.party.petsGroup.height = 35
-            E.db.unitframe.units.party.petsGroup.width = 90            
+            E.db.unitframe.units.party.petsGroup.enable = false            
 
             E.db.unitframe.units.raid10.width = 80
             E.db.unitframe.units.raid10.height = 50
@@ -1453,6 +1449,8 @@ db.unitframes = function(layout)
                 E.db.unitframe.units.party.petsGroup.height = 25
                 E.db.unitframe.units.party.petsGroup.width = 100
                 E.db.unitframe.units.party.petsGroup.anchorPoint = "BOTTOM"
+				E.db.unitframe.units.party.petsGroup.enable = true
+				E.db.unitframe.units.party.petsGroup.name.text_format = "[health:current]"
             elseif layout == "Healer-V" then
                 E.db.unitframe.units.party.customTexts.UnitName.text_format = "[name]"
                 E.db.unitframe.units.party.height = 55
@@ -1475,6 +1473,9 @@ db.unitframes = function(layout)
 
                 E.db.unitframe.units.party.petsGroup.height = 35
                 E.db.unitframe.units.party.petsGroup.width = 90
+				E.db.unitframe.units.party.petsGroup.anchorPoint = "LEFT"
+				E.db.unitframe.units.party.petsGroup.enable = true
+				E.db.unitframe.units.party.petsGroup.name.text_format = "[health:current]"
             end
 
             E.db.unitframe.units.player.castbar.height = 35
