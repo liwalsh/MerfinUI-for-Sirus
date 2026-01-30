@@ -64,10 +64,10 @@ db.movers = function(layout)
 			
             -- Individual Elements:
             E.db.movers.ElvUF_PlayerMover = "BOTTOM,ElvUIParent,BOTTOM,-267,280"
-            E.db.movers.ElvUF_PetMover = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,436,280"
+            E.db.movers.ElvUF_PetMover = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,446,280"
             E.db.movers.ElvUF_TargetMover = "BOTTOM,ElvUIParent,BOTTOM,267,280"
-            E.db.movers.ElvUF_FocusMover = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-256,280"
-            E.db.movers.ElvUF_TargetTargetMover = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-447,280"
+            E.db.movers.ElvUF_TargetTargetMover = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-445,280"
+            E.db.movers.ElvUF_FocusMover = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-255,280"
 
             -- Group Elements
             E.db.movers.ElvUF_PartyMover = "TOPLEFT,ElvUIParent,TOPLEFT,418,-361"         
@@ -83,7 +83,7 @@ db.movers = function(layout)
             E.db.movers.ElvUF_PlayerCastbarMover =  "BOTTOM,ElvUIParent,BOTTOM,0,220"
             E.db.movers.ElvUF_PetCastbarMover = "BOTTOM,ElvUIParent,BOTTOM,0,222"
             E.db.movers.ElvUF_TargetCastbarMover = "BOTTOM,ElvUIParent,BOTTOM,267,259"
-			E.db.movers.ElvUF_FocusCastbarMover = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-256,259"
+			E.db.movers.ElvUF_FocusCastbarMover = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-255,259"
 
             -- Action Bars
             E.db.movers.ElvBar_Pet = "BOTTOM,ElvUIParent,BOTTOM,217,66"
