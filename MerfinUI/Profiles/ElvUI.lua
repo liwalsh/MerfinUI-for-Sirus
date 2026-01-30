@@ -3822,6 +3822,8 @@ function MUI:GlobalDB()
     E.global.dtbars.DTB2_DBT2_RightBottomBar.slots = 2
     E.global.dtbars.DTB2_DBT2_RightBottomBar.hide = false
 
+    E.global.general.fadeMapWhenMoving = false
+
     local DB = E:GetModule('DTBars2')
     DB:CreateFrames()
     DB:MoverCreation()
