@@ -30,7 +30,7 @@ function MUI:ImportDBM(layout)
 		["DontShowNameplateIcons"] = false,
 		["SpecialWarningFlash5"] = true,
 		["SWarnNameInNote"] = true,
-		["DontShowPTCountdownText"] = true,
+		["DontShowPTCountdownText"] = false,
 		["EventSoundMusic"] = "None",
 		["FilterInterruptNoteName"] = false,
 		["EventSoundMusicCombined"] = false,
@@ -230,7 +230,7 @@ function MUI:ImportDBM(layout)
 		["DoNotLogLFG"] = true,
 		["GroupOptionsExcludeIcon"] = false,
 		["WarningIconLeft"] = true,
-		["RangeFrameLocked"] = true,
+		["RangeFrameLocked"] = false,
 		["SpecialWarningFlashDura2"] = 0.4,
 		["FilterTTargetFocus"] = true,
 		["SpamSpecRolegtfo"] = false,
@@ -339,7 +339,7 @@ function MUI:ImportDBM(layout)
 			["TextColorR"] = 1,
 			["EndColorAER"] = 1,
 			["StartColorIB"] = 1,
-			["IconRight"] = true,
+			["IconRight"] = false,
 			["Font"] = MUI:GetMediaPath('font', MUI:GetProfileFont()),
 			["EndColorB"] = 0,
 			["EndColorAEB"] = 0.247,
@@ -380,7 +380,7 @@ function MUI:ImportDBM(layout)
 			["KeepBars"] = true,
 			["HugeAlpha"] = 1,
 			["ColorByType"] = true,
-			["IconLeft"] = false,
+			["IconLeft"] = true,
 			["EndColorUIG"] = 0.92156862745098,
 			["EndColorUIB"] = 0.0117647058823529,
 			["StartColorAB"] = 1,
@@ -408,62 +408,29 @@ function MUI:ImportDBM(layout)
 
 	if MUI:GetProfileResolution() == 'FULL_HD' then
 
-		DBT_AllPersistentOptions[profileName].DBM.HugeTimerX = 270
-		DBT_AllPersistentOptions[profileName].DBM.HugeTimerY = -90
+		DBT_AllPersistentOptions[profileName].DBM.HugeTimerX = layout == 'Healer' and 387 or 290
+		DBT_AllPersistentOptions[profileName].DBM.HugeTimerY = layout == 'Healer' and -125 or -115
 		DBT_AllPersistentOptions[profileName].DBM.HugeTimerPoint = "CENTER"
-		DBT_AllPersistentOptions[profileName].DBM.HugeScale = 1.1
 
-		DBT_AllPersistentOptions[profileName].DBM.TimerX = -132.000064831103
-		DBT_AllPersistentOptions[profileName].DBM.TimerY = -109.999970867036
+		DBT_AllPersistentOptions[profileName].DBM.TimerX = layout == 'Healer' and -362 or -459
+		DBT_AllPersistentOptions[profileName].DBM.TimerY = layout == 'Healer' and -125 or -115
 		DBT_AllPersistentOptions[profileName].DBM.TimerPoint = "RIGHT"
 
-		DBT_AllPersistentOptions[profileName].DBM.Width = 190
-		DBT_AllPersistentOptions[profileName].DBM.Height = 23
+		DBT_AllPersistentOptions[profileName].DBM.Width = 170
+		DBT_AllPersistentOptions[profileName].DBM.Height = 20
 
-		DBT_AllPersistentOptions[profileName].DBM.HugeWidth = 208
-		DBT_AllPersistentOptions[profileName].DBM.HugeHeight = 23
+		DBT_AllPersistentOptions[profileName].DBM.HugeWidth = 190
+		DBT_AllPersistentOptions[profileName].DBM.HugeHeight = 20	
 
-		DBT_AllPersistentOptions[profileName].DBM.FontSize = MUI:SetFontSize(13)
+		DBT_AllPersistentOptions[profileName].DBM.FontSize = MUI:SetFontSize(12)
 
 		DBM_AllSavedOptions[profileName].RangeFrameX = 289.5726013183594
 		DBM_AllSavedOptions[profileName].RangeFrameY = 35.2346076965332
+		DBM_AllSavedOptions[profileName].RangeFrameRadarPoint = "CENTER"
 
 		DBM_AllSavedOptions[profileName].InfoFrameX = 241
 		DBM_AllSavedOptions[profileName].InfoFrameY = 239
 		DBM_AllSavedOptions[profileName].InfoFramePoint = "LEFT"
-
-		if layout == 'DPS/Tank' then
-
-			DBT_AllPersistentOptions[profileName].DBM.HugeTimerPoint = "RIGHT"
-			DBT_AllPersistentOptions[profileName].DBM.TimerPoint = "RIGHT"
-
-			DBT_AllPersistentOptions[profileName].DBM.TimerX = -222.9998240396329
-			DBT_AllPersistentOptions[profileName].DBM.TimerY = -4.000029816836405
-
-			DBT_AllPersistentOptions[profileName].DBM.HugeTimerX = -464.4999260392006
-			DBT_AllPersistentOptions[profileName].DBM.HugeTimerY = -143.9997603711129
-
-			DBM_AllSavedOptions[profileName].RangeFrameRadarX = 438.9998760139349
-			DBM_AllSavedOptions[profileName].RangeFrameRadarY = -84.00000465033229
-			DBM_AllSavedOptions[profileName].RangeFrameRadarPoint = "LEFT"
-
-
-		elseif layout == 'Healer' then
-
-			DBT_AllPersistentOptions[profileName].DBM.HugeTimerPoint = "RIGHT"
-			DBT_AllPersistentOptions[profileName].DBM.TimerPoint = "RIGHT"
-
-			DBT_AllPersistentOptions[profileName].DBM.TimerX = -125.0001439551391
-			DBT_AllPersistentOptions[profileName].DBM.TimerY = 7.999928330173045
-
-			DBT_AllPersistentOptions[profileName].DBM.HugeTimerX = -409.4997611575662
-			DBT_AllPersistentOptions[profileName].DBM.HugeTimerY = -146.9997827337402
-
-			DBM_AllSavedOptions[profileName].RangeFrameRadarX = -310.9999022746348
-			DBM_AllSavedOptions[profileName].RangeFrameRadarY = -85.88703727398615
-			DBM_AllSavedOptions[profileName].RangeFrameRadarPoint = "CENTER"
-
-		end
 
 	end
 
