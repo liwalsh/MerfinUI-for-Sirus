@@ -23,19 +23,19 @@ db.movers = function(layout)
         E.db.movers.DTPanelCustomPanel_LeftMover = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,4,4"
         E.db.movers.DTPanelCustomPanel_RightMover = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-4,4"
         E.db.movers.DurabilityFrameMover = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-7,430"
-        E.db.movers.ElvUIBagMover = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-4,29"
-        E.db.movers.ElvUIBankMover = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,4,29"
+        E.db.movers.ElvUIBagMover = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-4,30"
+        E.db.movers.ElvUIBankMover = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,4,30"
         E.db.movers.ExperienceBarMover = "TOP,UIParent,TOP,0,-4"
         E.db.movers.GMMover = "TOPLEFT,UIParent,TOPLEFT,284,-4"
         E.db.movers.ReputationBarMover = "TOPRIGHT,ElvUIParent,TOPRIGHT,-4,-207"
         E.db.movers.HonorBarMover = "TOPRIGHT,ElvUIParent,TOPRIGHT,-4,-220"
-        E.db.movers.LeftChatMover = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,4,29"
+        E.db.movers.LeftChatMover = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,4,30"
         E.db.movers.LootFrameMover = "TOP,UIParent,TOP,0,-218"
         E.db.movers.MinimapButtonAnchor = "TOPRIGHT,ElvUIParent,TOPRIGHT,0,-203"
         E.db.movers.MinimapMover = "TOPRIGHT,UIParent,TOPRIGHT,-4,-4"
         E.db.movers.ObjectiveFrameMover = "TOPRIGHT,ElvUIParent,TOPRIGHT,-4,-234"
         E.db.movers.WatchFrameMover = "TOPRIGHT,ElvUIParent,TOPRIGHT,-4,-211"
-        E.db.movers.RightChatMover = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-4,29"
+        E.db.movers.RightChatMover = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-4,30"
         E.db.movers.SquareMinimapButtonBarMover = "TOPRIGHT,ElvUIParent,TOPRIGHT,-4,-208"
         E.db.movers.TopCenterContainerMover = "TOP,ElvUIParent,TOP,0,-62"
         E.db.movers.RaidMarkerBarAnchor = "TOP,UIParent,TOP,0,-4"
@@ -51,12 +51,12 @@ db.movers = function(layout)
         -- Action Bars
         if not MUI:GetBlacklist('actionBars') then
             E.db.movers.ElvAB_1 = "BOTTOM,ElvUIParent,BOTTOM,-186,4"
-            E.db.movers.ElvAB_2 = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,4,316"
-            E.db.movers.ElvAB_3 = "BOTTOM,ElvUIParent,BOTTOM,186,4"
-            E.db.movers.ElvAB_4 = "BOTTOM,ElvUIParent,BOTTOM,-186,35"
-            E.db.movers.ElvAB_5 = "BOTTOM,ElvUIParent,BOTTOM,186,35"
+            E.db.movers.ElvAB_2 = "BOTTOM,ElvUIParent,BOTTOM,186,4"
+            E.db.movers.ElvAB_3 = "BOTTOM,ElvUIParent,BOTTOM,-186,35"
+            E.db.movers.ElvAB_4 = "BOTTOM,ElvUIParent,BOTTOM,186,35"
+            E.db.movers.ElvAB_5 = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,4,316"
             E.db.movers.ElvAB_6 = "BOTTOMLEFT,UIParent,BOTTOMLEFT,424,551"
-            E.db.movers.MicrobarMover = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-240,4"
+            E.db.movers.MicrobarMover = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-239,4"
             E.db.movers.ElvBar_Pet = "BOTTOM,ElvUIParent,BOTTOM,217,66"
         end
 
@@ -71,9 +71,9 @@ db.movers = function(layout)
 
             -- Group Elements
             E.db.movers.ElvUF_PartyMover = "TOPLEFT,ElvUIParent,TOPLEFT,418,-361"         
-            E.db.movers.ElvUF_Raid10Mover = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,4,281"
-            E.db.movers.ElvUF_Raid25Mover = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,4,281"
-            E.db.movers.ElvUF_Raid40Mover = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,4,281"
+            E.db.movers.ElvUF_Raid10Mover = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,4,283"
+            E.db.movers.ElvUF_Raid25Mover = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,4,283"
+            E.db.movers.ElvUF_Raid40Mover = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,4,283"
             E.db.movers.ElvUF_RaidpetMover = "TOPLEFT,ElvUIParent,TOPLEFT,4,-403"
             E.db.movers.ArenaHeaderMover = "TOPRIGHT,UIParent,TOPRIGHT,-387,-344"
             E.db.movers.BossHeaderMover = "TOPRIGHT,ElvUIParent,TOPRIGHT,-387,-370"
@@ -88,7 +88,7 @@ db.movers = function(layout)
             -- Action Bars
             E.db.movers.ElvBar_Pet = "BOTTOM,ElvUIParent,BOTTOM,217,66"
             E.db.movers.ShiftAB = "TOPLEFT,ElvUIParent,BOTTOMLEFT,588,98"
-			E.db.movers.ElvBar_Totem = "BOTTOM,ElvUIParent,BOTTOM,-310,66"
+			E.db.movers.ElvBar_Totem = "BOTTOM,ElvUIParent,BOTTOM,-279,66"
 
         elseif layout == 'Healer-H' or layout == 'Healer-V' then
 
@@ -116,9 +116,9 @@ db.movers = function(layout)
             E.db.movers.ElvUF_FocusCastbarMover = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-288,205"                       
 
             -- Action Bars
-            E.db.movers.ElvBar_Pet = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,4,317"
-            E.db.movers.ShiftAB = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,4,282"
-			E.db.movers.ElvBar_Totem = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,4,282"
+            E.db.movers.ElvBar_Pet = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,4,318"
+            E.db.movers.ShiftAB = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,4,283"
+			E.db.movers.ElvBar_Totem = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,4,283"
         end
 
         if layout == "Healer-H" then
@@ -248,7 +248,8 @@ db.bags = function()
 end
 
 db.chat = function()
-    
+
+    E.db.chat.fade = false
     E.db.chat.editBoxPosition = "ABOVE_CHAT"
     E.db.chat.font = MUI:GetProfileFont()
     E.db.chat.panelBackdrop = "LEFT"
@@ -367,10 +368,10 @@ db.actionbars = function()
     if MUI:GetBlacklist('actionBars') then return end
 
     E.db.actionbar.bar1.enabled = true
-    E.db.actionbar.bar2.enabled = false
+    E.db.actionbar.bar2.enabled = true
     E.db.actionbar.bar3.enabled = true
     E.db.actionbar.bar4.enabled = true
-    E.db.actionbar.bar5.enabled = true
+    E.db.actionbar.bar5.enabled = false
     E.db.actionbar.bar6.enabled = false
     E.db.actionbar.stanceBar.enabled = true
     E.db.actionbar.microbar.enabled = true
@@ -414,7 +415,7 @@ db.actionbars = function()
     E.db.actionbar.barTotem.alpha = 1
 
     E.db.actionbar.stanceBar.point = "TOPLEFT"
-    E.db.actionbar.stanceBar.style = "classic"
+    E.db.actionbar.stanceBar.style = "darkenInactive"
     E.db.actionbar.stanceBar.alpha = 1
     E.db.actionbar.stanceBar.buttons = 9
     E.db.actionbar.stanceBar.buttonsPerRow = 9
@@ -3693,7 +3694,7 @@ function MUI:LoadPlugins()
             E.db.dtbars.DTB2_DBT2_RightBottomBar.width = 232
             E.db.dtbars.DTB2_DBT2_RightBottomBar.height = 23
             E.db.dtbars.DTB2_DBT2_LeftBottomBar.width = 396
-            E.db.dtbars.DTB2_DBT2_LeftBottomBar.height = 22
+            E.db.dtbars.DTB2_DBT2_LeftBottomBar.height = 23
             
         end
 
