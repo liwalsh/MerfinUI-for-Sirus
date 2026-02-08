@@ -138,6 +138,68 @@ MUI.InstallerData = {
 		end,
 
 		[10] = function()
+			PluginInstallFrame.SubTitle:SetText("Weakauras - Для классов в латах")
+			PluginInstallFrame.Desc1:SetText(L["Выберите свой класс для загрузки профиля WeakAuras."])
+			
+			PluginInstallFrame.Option1:Show()
+			PluginInstallFrame.Option1:SetScript("OnClick", function() MUI:ImportWeakAuras("DEATH_KNIGHT") end)
+			PluginInstallFrame.Option1:SetText("DEATH KNIGHT")
+			
+			PluginInstallFrame.Option2:Show()
+			PluginInstallFrame.Option2:SetScript("OnClick", function() MUI:ImportWeakAuras("WARRIOR") end)
+			PluginInstallFrame.Option2:SetText("WARRIOR")
+
+			PluginInstallFrame.Option3:Show()
+			PluginInstallFrame.Option3:SetScript("OnClick", function() MUI:ImportWeakAuras("PALADIN") end)
+			PluginInstallFrame.Option3:SetText("PALADIN")
+		end,
+
+		[11] = function()
+			PluginInstallFrame.SubTitle:SetText("Weakauras - Для классов в кольчуге")
+			PluginInstallFrame.Desc1:SetText(L["Выберите свой класс для загрузки профиля WeakAuras."])
+			
+			PluginInstallFrame.Option1:Show()
+			PluginInstallFrame.Option1:SetScript("OnClick", function() MUI:ImportWeakAuras("HUNTER") end)
+			PluginInstallFrame.Option1:SetText("HUNTER")
+			
+			PluginInstallFrame.Option2:Show()
+			PluginInstallFrame.Option2:SetScript("OnClick", function() MUI:ImportWeakAuras("SHAMAN") end)
+			PluginInstallFrame.Option2:SetText("SHAMAN")
+			
+			
+		end,
+
+		[12] = function()
+			PluginInstallFrame.SubTitle:SetText("Weakauras - Для классов в коже")
+			PluginInstallFrame.Desc1:SetText(L["Выберите свой класс для загрузки профиля WeakAuras."])
+
+			PluginInstallFrame.Option1:Show()
+			PluginInstallFrame.Option1:SetScript("OnClick", function() MUI:ImportWeakAuras("ROGUE") end)
+			PluginInstallFrame.Option1:SetText("ROGUE")
+
+			PluginInstallFrame.Option2:Show()
+			PluginInstallFrame.Option2:SetScript("OnClick", function() MUI:ImportWeakAuras("DRUID") end)
+			PluginInstallFrame.Option2:SetText("DRUID")
+		end,
+
+		[13] = function()
+			PluginInstallFrame.SubTitle:SetText("Weakauras - Для классов в ткани")
+			PluginInstallFrame.Desc1:SetText(L["Выберите свой класс для загрузки профиля WeakAuras."])
+
+			PluginInstallFrame.Option1:Show()
+			PluginInstallFrame.Option1:SetScript("OnClick", function() MUI:ImportWeakAuras("WARLOCK") end)
+			PluginInstallFrame.Option1:SetText("WARLOCK")
+
+			PluginInstallFrame.Option2:Show()
+			PluginInstallFrame.Option2:SetScript("OnClick", function() MUI:ImportWeakAuras("MAGE") end)
+			PluginInstallFrame.Option2:SetText("MAGE")
+
+			PluginInstallFrame.Option3:Show()
+			PluginInstallFrame.Option3:SetScript("OnClick", function() MUI:ImportWeakAuras("PRIEST") end)
+			PluginInstallFrame.Option3:SetText("PRIEST")
+		end,
+
+		[14] = function()
 			PluginInstallFrame.SubTitle:SetText(L["Installation Complete"])
 			PluginInstallFrame.Desc1:SetText(L["You have completed the installation process."])
 			PluginInstallFrame.Desc2:SetText(L["You must click the button below in order to finalize the process and automatically reload your UI."])
@@ -158,13 +220,17 @@ MUI.InstallerData = {
 		[7] = L['Boss Mods'],
 		[8] = L['Damage Meter'],
 		[9] = L["Color Theme"],
-		[10] = L["Installation Complete"],
+		[10] = L["Weakauras - Для классов в латах"],
+		[11] = L["Weakauras - Для классов в кольчуге"],
+		[12] = L["Weakauras - Для классов в коже"],
+		[13] = L["Weakauras - Для классов в ткани"],
+		[14] = L["Installation Complete"],
 	},
 
 	StepTitlesColor = { 1, 1, 1 },
 	StepTitlesColorSelected = { 0, 179/255, 1 },
-	StepTitleWidth = 200,
-	StepTitleButtonWidth = 180,
+	StepTitleWidth = 260,
+	StepTitleButtonWidth = 250,
 	StepTitleTextJustification = "RIGHT",
 	
 }
