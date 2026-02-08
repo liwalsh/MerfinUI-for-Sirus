@@ -93,6 +93,6 @@ auras['SHAMAN'] = LoadWeakaurasShaman()
 
 auras['WARLOCK'] = LoadWeakaurasWarlock()
 
-
 auras['WARRIOR'] = LoadWeakaurasWarrior()
+
 
