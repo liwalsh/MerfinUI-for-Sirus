@@ -16,7 +16,6 @@ function MUI:Config()
 	
 	-- Install Section
 	MUI.Options.args.installer = ACH:Execute(L["UI Install"], L["Re-Run the installation process."], 1, function() PluginInstaller:Queue(MUI.InstallerData) end)
-	MUI.Options.args.quickInstaller = ACH:Execute(L["UI Quick Install"], L["Re-Run the installation process."], 2, function() PluginInstaller:Queue(MUI.InstallerDataQuick) end)
 	MUI.Options.args.spacer1 = ACH:Spacer(3, 'full')
 	-- Profile Settings
 	MUI.Options.args.profiles = ACH:Group(L["Profile Settings"], nil, 3, 'tab', function(info) return E.private.MUI.general.profileSettings[info[#info]] end, function(info, value) E.private.MUI.general.profileSettings[info[#info]] = value end)
@@ -38,8 +37,7 @@ function MUI:Config()
 	MUI.Options.args.profiles.args.blacklist.inline = true
 	MUI.Options.args.profiles.args.blacklist.args.movers = ACH:Toggle(L["Movers"], nil, 1)
 	MUI.Options.args.profiles.args.blacklist.args.actionBars = ACH:Toggle(L["Action Bars"], nil, 2)
-	MUI.Options.args.profiles.args.setDefaults = ACH:Execute(L["Reset to Defaults"], L["Set Default MerfinUI settings"], 8, function() MUI:SetDefaults() end)
-	MUI.Options.args.profiles.args.setActualVersion = ACH:Execute(L["Set Actual Version"], L["Actualize Profile Version"], 9, function() MUI:SetActualVersion() end)
+	MUI.Options.args.profiles.args.setDefaults = ACH:Execute(L["Reset to Defaults"], L["Reset to Defaults UI"], 8, function() MUI:SetDefaults() end)
 	
 	-- Layout Settings
 	MUI.Options.args.layout = ACH:Group(L["Color Theme"], nil, 4)
