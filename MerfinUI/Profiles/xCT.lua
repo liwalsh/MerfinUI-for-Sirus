@@ -38,7 +38,7 @@ function MUI:Import_xCT(layout)
     xCTSavedDB["profiles"] = xCTSavedDB["profiles"] or {}
     xCTSavedDB["profileKeys"] = xCTSavedDB["profileKeys"] or {}
 
-    local profileName = 'MerfinUI (' .. layout .. ') (' .. addonTable.ScreenHeight .. ') v' .. addonTable.Version
+    local profileName = 'MerfinUI (' .. layout .. ')'
 
     xCTSavedDB["profiles"][profileName] = {
         ["megaDamage"] = {
@@ -330,7 +330,6 @@ function MUI:Import_xCT(layout)
         },
     }
 
-    if MUI:GetProfileResolution() == 'FULL_HD' then
 
         xCTSavedDB.profiles[profileName].frames.general.Y = 300
         xCTSavedDB.profiles[profileName].frames.general.X = 0
@@ -349,8 +348,6 @@ function MUI:Import_xCT(layout)
             xCTSavedDB.profiles[profileName].frames.outgoing.X = 587
             xCTSavedDB.profiles[profileName].frames.outgoing.enableOutHeal = true
         end
-
-    end
 
     xCTSavedDB["profileKeys"][addonTable.AceProfileName] = profileName
 

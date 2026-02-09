@@ -7,7 +7,7 @@ function MUI:ImportDBM(layout)
 		DEFAULT_CHAT_FRAME:AddMessage("|cffbefc03MerfinUI:|r You need to enable DBM to apply profile settings!")
 	end
 	
-	local profileName = 'MerfinUI (' .. layout .. ') (' .. addonTable.ScreenHeight .. ') v' .. addonTable.Version
+	local profileName = 'MerfinUI (' .. layout .. ')'
 
 	DBM_AllSavedOptions = DBM_AllSavedOptions or {}
 	DBT_AllPersistentOptions = DBT_AllPersistentOptions or {}
@@ -405,34 +405,29 @@ function MUI:ImportDBM(layout)
 		},
 	}
 
+	DBT_AllPersistentOptions[profileName].DBM.HugeTimerX = layout == 'Healer' and 387 or 290
+	DBT_AllPersistentOptions[profileName].DBM.HugeTimerY = layout == 'Healer' and -125 or -115
+	DBT_AllPersistentOptions[profileName].DBM.HugeTimerPoint = "CENTER"
 
-	if MUI:GetProfileResolution() == 'FULL_HD' then
+	DBT_AllPersistentOptions[profileName].DBM.TimerX = layout == 'Healer' and -362 or -459
+	DBT_AllPersistentOptions[profileName].DBM.TimerY = layout == 'Healer' and -125 or -115
+	DBT_AllPersistentOptions[profileName].DBM.TimerPoint = "RIGHT"
 
-		DBT_AllPersistentOptions[profileName].DBM.HugeTimerX = layout == 'Healer' and 387 or 290
-		DBT_AllPersistentOptions[profileName].DBM.HugeTimerY = layout == 'Healer' and -125 or -115
-		DBT_AllPersistentOptions[profileName].DBM.HugeTimerPoint = "CENTER"
+	DBT_AllPersistentOptions[profileName].DBM.Width = 170
+	DBT_AllPersistentOptions[profileName].DBM.Height = 20
 
-		DBT_AllPersistentOptions[profileName].DBM.TimerX = layout == 'Healer' and -362 or -459
-		DBT_AllPersistentOptions[profileName].DBM.TimerY = layout == 'Healer' and -125 or -115
-		DBT_AllPersistentOptions[profileName].DBM.TimerPoint = "RIGHT"
+	DBT_AllPersistentOptions[profileName].DBM.HugeWidth = 190
+	DBT_AllPersistentOptions[profileName].DBM.HugeHeight = 20	
 
-		DBT_AllPersistentOptions[profileName].DBM.Width = 170
-		DBT_AllPersistentOptions[profileName].DBM.Height = 20
+	DBT_AllPersistentOptions[profileName].DBM.FontSize = MUI:SetFontSize(12)
 
-		DBT_AllPersistentOptions[profileName].DBM.HugeWidth = 190
-		DBT_AllPersistentOptions[profileName].DBM.HugeHeight = 20	
+	DBM_AllSavedOptions[profileName].RangeFrameX = 289.5726013183594
+	DBM_AllSavedOptions[profileName].RangeFrameY = 35.2346076965332
+	DBM_AllSavedOptions[profileName].RangeFrameRadarPoint = "CENTER"
 
-		DBT_AllPersistentOptions[profileName].DBM.FontSize = MUI:SetFontSize(12)
-
-		DBM_AllSavedOptions[profileName].RangeFrameX = 289.5726013183594
-		DBM_AllSavedOptions[profileName].RangeFrameY = 35.2346076965332
-		DBM_AllSavedOptions[profileName].RangeFrameRadarPoint = "CENTER"
-
-		DBM_AllSavedOptions[profileName].InfoFrameX = 241
-		DBM_AllSavedOptions[profileName].InfoFrameY = 239
-		DBM_AllSavedOptions[profileName].InfoFramePoint = "LEFT"
-
-	end
+	DBM_AllSavedOptions[profileName].InfoFrameX = 241
+	DBM_AllSavedOptions[profileName].InfoFrameY = 239
+	DBM_AllSavedOptions[profileName].InfoFramePoint = "LEFT"
 
 	DBM_UsedProfile = profileName
 

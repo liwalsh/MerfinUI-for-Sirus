@@ -18,7 +18,6 @@ function MUI:ImportDetails(theme)
 	_detalhes_global = _detalhes_global or {}
 	_detalhes_global["__profiles"] = _detalhes_global["__profiles"] or {}
 
-	if MUI:GetProfileResolution() == 'FULL_HD' then
 		_detalhes_global["__profiles"][addonTable.MerfinProfileName] = {
             ["overall_clear_newtorghast"] = true,
             ["use_realtimedps"] = false,
@@ -1075,7 +1074,7 @@ function MUI:ImportDetails(theme)
                 ["damage"] = "red"
             }
         }
-	end
+
 
 	if theme == 'NORMAL' then
 	else
