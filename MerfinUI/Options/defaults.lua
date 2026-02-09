@@ -1,10 +1,6 @@
 local E, L, V, P, G = unpack(ElvUI)
 local addonName, addonTable = ...
 
-MUI.resolutions = {
-    FULL_HD = 'Full HD (1920-1080px)',
-}
-
 G.MUI = {
 	install_version = nil,
 }
@@ -14,7 +10,6 @@ V.MUI = {
     general = {
         profileSettings = {
             media = {
-                resolution = addonTable.Resolution,
                 font = addonTable.Font,
                 texture = addonTable.Texture,
             },
