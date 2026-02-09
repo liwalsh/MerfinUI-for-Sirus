@@ -59,7 +59,5 @@ L["Profiles (ElvUI)"] = true
 L['Profile contains settings for Party Cooldowns in dungeons.'] = true
 L["Choose between DBM or BigWigs. Make sure the addOn is enabled! I personally prefer BigWigs over DBM but it's up to you!"] = true
 L["Profile Settings"] = true
-L["Set Actual Version"] = true
-L["Actualize Profile Version"] = true
 L["Player Castbar"] = true
 L["Show Player Cast Bar provided by ElvUI"] = true
