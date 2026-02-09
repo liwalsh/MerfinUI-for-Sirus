@@ -4,15 +4,9 @@ local PI = E:GetModule('PluginInstaller')
 
 local addonName, addonTable = ...
 
-local reso = ({GetScreenResolutions()})[GetCurrentResolution()]
-local w, h = strsplit('x', reso)
-local screenWidth, screenHeight = tonumber(w), tonumber(h)
-
 addonTable.L = GetLocale()
 addonTable.Name = '|cff40c7ebMerfinUI|r'
 addonTable.Version = tonumber(GetAddOnMetadata(addonName, 'Version'))
-addonTable.Resolution = screenWidth >= 1920 and 'FULL_HD'
-addonTable.ScreenHeight = screenHeight
 addonTable.Font = 'SFUIDisplayCondensed-Semibold'
 addonTable.Texture = 'Flatt'
 addonTable.AceProfileName = string.format("%s - %s", UnitName("player"), GetRealmName("player"))
