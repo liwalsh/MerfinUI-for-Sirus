@@ -8,8 +8,8 @@ local StopMusic = StopMusic
 
 function addonTable:PluginInstallStepComplete(plugin)
 	PluginInstallStepComplete:Hide()
-    PluginInstallStepComplete.message = string.format("%s Installed!", plugin)
-    PluginInstallStepComplete:Show()
+	PluginInstallStepComplete.message = string.format("%s Installed!", plugin)
+	PluginInstallStepComplete:Show()
 end
 
 function addonTable:InstallComplete()
@@ -25,16 +25,16 @@ end
 
 MUI.InstallerData = {
 
-	Title = format("|cff4beb2c%s %s|r", addonTable.Name, "Installation"),
+	Title = format("|cff4beb2c%s", addonTable.Name),
 	Name = addonTable.Name,
 	tutorialImage = "Interface\\AddOns\\MerfinUI\\Media\\Textures\\logo.tga",
 
 	Pages = {
 		[1] = function()
 			PluginInstallFrame.SubTitle:SetFormattedText(L["Welcome to the installation for %s."], addonTable.Name.." "..Version)
-			PluginInstallFrame.Desc1:SetText(L["This is installer that contains profiles for various addons of MerfinUI."])
-			PluginInstallFrame.Desc2:SetText(L["Before you start the installation process i highly recommend you to make a backup of your current WTF folder to save your current settings just in case."])
-			PluginInstallFrame.Desc3:SetText(L["Don't forget to click on Finished on last step. That would reload your UI and all the settings will be applied"])
+			PluginInstallFrame.Desc1:SetText(L["This installer contains profiles for various addons in MerfinUI."])
+			PluginInstallFrame.Desc2:SetText(L["Before starting the installation process, I highly recommend backing up your current WTF folder to preserve your existing settings, just in case."])
+			PluginInstallFrame.Desc3:SetText(L["Don't forget to click Finished in the final step. This will reload your UI and apply all the settings."])
 			PluginInstallFrame.Option1:Show()
 			PluginInstallFrame.Option1:SetScript("OnClick", addonTable.InstallComplete)
 			PluginInstallFrame.Option1:SetText(L["Skip Process"])
@@ -43,9 +43,8 @@ MUI.InstallerData = {
 		
 		[2] = function()
 			PluginInstallFrame.SubTitle:SetText(L["Account Settings"])
-			PluginInstallFrame.Desc1:SetText(L["World of Warcraft game client stores all of its configurations in console variables (CVars). These variables affect many aspects of the game, such as the graphics, the sound system and the interface."])
-			PluginInstallFrame.Desc2:SetText(L["This step also contains settings for such addons as Questie and Leatrix."])
-			PluginInstallFrame.Desc3:SetText(L['Importance: |cff4beb2cOptional|r'])
+			PluginInstallFrame.Desc1:SetText(L["The World of Warcraft game client stores all its configurations in console variables (CVars). These variables control various aspects of the game, including graphics, sound, and the user interface."])
+			PluginInstallFrame.Desc3:SetText(L["Importance: |cff4beb2cOptional|r"])
 			PluginInstallFrame.Option1:Show()
 			PluginInstallFrame.Option1:SetScript("OnClick", function() MUI:Set_CVars() end)
 			PluginInstallFrame.Option1:SetText(L["Load CVars"])
@@ -53,7 +52,7 @@ MUI.InstallerData = {
 
 		[3] = function()
 			PluginInstallFrame.SubTitle:SetText(L["Chat Settings"])
-			PluginInstallFrame.Desc1:SetText(L["This will setup chat windows to look like this:\n\nGNL - Clog - LT - /W - LFG."])
+			PluginInstallFrame.Desc1:SetText(L["This will set up the chat windows to look like this:\n\nGNL - Clog - LT - /W - LFG."])
 			PluginInstallFrame.Desc2:SetText(L['Importance: |cff4beb2cOptional|r'])
 			PluginInstallFrame.Option1:Show()
 			PluginInstallFrame.Option1:SetScript("OnClick", function() MUI:SetupChat() end)
@@ -62,7 +61,7 @@ MUI.InstallerData = {
 
 		[4] = function()
 			PluginInstallFrame.SubTitle:SetText(L["Profiles (ElvUI)"])
-			PluginInstallFrame.Desc1:SetText(L["Click the button below to apply the layout of your choice, depending on your role: DPS/Tank or Healer. Use Healer-H if you prefer horizontal party frames (similar to your raid frames). Choose Healer-V if you'd like your party frames to grow vertically. I personally prefer the vertical layout, but it's up to you!"])
+			PluginInstallFrame.Desc1:SetText(L["Сlick a button below to apply the layout of your choosing depending on your role: DPS, Tank or Healer. You can set different profiles to each of your spec in Profile Tab of ElvUI."])
 			PluginInstallFrame.Desc2:SetText(L['Importance: |cff4beb2cHigh|r'])
 			PluginInstallFrame.Option1:Show()
 			PluginInstallFrame.Option1:SetScript("OnClick", function() MUI:ImportElvUI("DPS/Tank") end)
@@ -77,7 +76,7 @@ MUI.InstallerData = {
 
 		[5] = function()
 			PluginInstallFrame.SubTitle:SetText(L["Action Bars Visibility"])
-			PluginInstallFrame.Desc1:SetText(L["Click on the button to set color theme."])
+			PluginInstallFrame.Desc1:SetText(L["Click on the button to set action bars visibility."])
 			PluginInstallFrame.Desc3:SetText(L['Importance: |cff4beb2cOptional|r'])
 			PluginInstallFrame.Option1:Show()
 			PluginInstallFrame.Option1:SetScript("OnClick", function() MUI:ActionBarsVisibility(true) end)
@@ -90,7 +89,7 @@ MUI.InstallerData = {
 
 		[6] = function()
 			PluginInstallFrame.SubTitle:SetText(L["Combat Text"])
-			PluginInstallFrame.Desc1:SetText(L["Here you can choose how to display Combat Text (damage, healing numbers, etc.). If you prefer the normal numbers above the mobs, click on Blizzard. If you prefer damage numbers to be stacked in one place, use xCT — either xCT DPS/Tank or xCT Healer, depending on your spec."])
+			PluginInstallFrame.Desc1:SetText(L["Click on the button to adjust settings. If you wish to see standart Blizzard Combat Text, you can skip this step and disable xCT+ addon."])
 			PluginInstallFrame.Desc2:SetText(L['Importance: |cff4beb2cHigh|r'])
 			PluginInstallFrame.Option1:Show()
 			PluginInstallFrame.Option1:SetScript("OnClick", function() MUI:Import_xCT("Blizzard") end)
@@ -105,7 +104,7 @@ MUI.InstallerData = {
 		end,
 
 		[7] = function()
-			PluginInstallFrame.SubTitle:SetText("Boss Mods")
+			PluginInstallFrame.SubTitle:SetText("Deadly Boss Mods")
 			PluginInstallFrame.Desc1:SetText(L["Click on the button to adjust settings."])
 			PluginInstallFrame.Desc2:SetText(L['Importance: |cff4beb2cHigh|r'])
 			PluginInstallFrame.Option1:Show()
@@ -117,8 +116,8 @@ MUI.InstallerData = {
 		end,
 
 		[8] = function()
-			PluginInstallFrame.SubTitle:SetText("Damage Meter (Details)")
-			PluginInstallFrame.Desc1:SetText(L["Click the button to adjust the settings."])
+			PluginInstallFrame.SubTitle:SetText("Details")
+			PluginInstallFrame.Desc1:SetText(L["Click on the button to adjust settings."])
 			PluginInstallFrame.Desc3:SetText(L['Importance: |cff4beb2cHigh|r'])
 			PluginInstallFrame.Option1:Show()
 			PluginInstallFrame.Option1:SetScript("OnClick", function() MUI:ImportDetails('Normal') end)
@@ -127,7 +126,7 @@ MUI.InstallerData = {
 
 		[9] = function()
 			PluginInstallFrame.SubTitle:SetText(L["Color Theme"])
-			PluginInstallFrame.Desc1:SetText(L["Click on the button to set color theme."])
+			PluginInstallFrame.Desc1:SetText(L["Click on the button below to set color theme of ElvUI unit frames.\n- Normal Theme would enable class colorized frames;\n- Dark Theme would darken them and put Unit Names texts class colorized"])
 			PluginInstallFrame.Desc3:SetText(L['Importance: |cff4beb2cOptional|r'])
 			PluginInstallFrame.Option1:Show()
 			PluginInstallFrame.Option1:SetScript("OnClick", function() MUI:ChangeTheme('Normal') end)
@@ -143,15 +142,15 @@ MUI.InstallerData = {
 			
 			PluginInstallFrame.Option1:Show()
 			PluginInstallFrame.Option1:SetScript("OnClick", function() MUI:ImportWeakAuras("DEATH_KNIGHT") end)
-			PluginInstallFrame.Option1:SetText("DEATH KNIGHT")
+			PluginInstallFrame.Option1:SetText("Death Knight")
 			
 			PluginInstallFrame.Option2:Show()
 			PluginInstallFrame.Option2:SetScript("OnClick", function() MUI:ImportWeakAuras("WARRIOR") end)
-			PluginInstallFrame.Option2:SetText("WARRIOR")
+			PluginInstallFrame.Option2:SetText("Warrior")
 
 			PluginInstallFrame.Option3:Show()
 			PluginInstallFrame.Option3:SetScript("OnClick", function() MUI:ImportWeakAuras("PALADIN") end)
-			PluginInstallFrame.Option3:SetText("PALADIN")
+			PluginInstallFrame.Option3:SetText("Paladin")
 		end,
 
 		[11] = function()
@@ -160,11 +159,11 @@ MUI.InstallerData = {
 			
 			PluginInstallFrame.Option1:Show()
 			PluginInstallFrame.Option1:SetScript("OnClick", function() MUI:ImportWeakAuras("HUNTER") end)
-			PluginInstallFrame.Option1:SetText("HUNTER")
+			PluginInstallFrame.Option1:SetText("Hunter")
 			
 			PluginInstallFrame.Option2:Show()
 			PluginInstallFrame.Option2:SetScript("OnClick", function() MUI:ImportWeakAuras("SHAMAN") end)
-			PluginInstallFrame.Option2:SetText("SHAMAN")
+			PluginInstallFrame.Option2:SetText("Shaman")
 			
 			
 		end,
@@ -175,11 +174,11 @@ MUI.InstallerData = {
 
 			PluginInstallFrame.Option1:Show()
 			PluginInstallFrame.Option1:SetScript("OnClick", function() MUI:ImportWeakAuras("ROGUE") end)
-			PluginInstallFrame.Option1:SetText("ROGUE")
+			PluginInstallFrame.Option1:SetText("Rogue")
 
 			PluginInstallFrame.Option2:Show()
 			PluginInstallFrame.Option2:SetScript("OnClick", function() MUI:ImportWeakAuras("DRUID") end)
-			PluginInstallFrame.Option2:SetText("DRUID")
+			PluginInstallFrame.Option2:SetText("Druid")
 		end,
 
 		[13] = function()
@@ -188,15 +187,15 @@ MUI.InstallerData = {
 
 			PluginInstallFrame.Option1:Show()
 			PluginInstallFrame.Option1:SetScript("OnClick", function() MUI:ImportWeakAuras("WARLOCK") end)
-			PluginInstallFrame.Option1:SetText("WARLOCK")
+			PluginInstallFrame.Option1:SetText("Warlock")
 
 			PluginInstallFrame.Option2:Show()
 			PluginInstallFrame.Option2:SetScript("OnClick", function() MUI:ImportWeakAuras("MAGE") end)
-			PluginInstallFrame.Option2:SetText("MAGE")
+			PluginInstallFrame.Option2:SetText("Mage")
 
 			PluginInstallFrame.Option3:Show()
 			PluginInstallFrame.Option3:SetScript("OnClick", function() MUI:ImportWeakAuras("PRIEST") end)
-			PluginInstallFrame.Option3:SetText("PRIEST")
+			PluginInstallFrame.Option3:SetText("Priest")
 		end,
 
 		[14] = function()
@@ -217,8 +216,8 @@ MUI.InstallerData = {
 		[4] = L["Profiles (ElvUI)"],
 		[5] = L["Action Bars Visibility"],
 		[6] = L["Combat Text"],
-		[7] = L['Boss Mods'],
-		[8] = L['Damage Meter'],
+		[7] = L['Deadly Boss Mods'],
+		[8] = L['Details'],
 		[9] = L["Color Theme"],
 		[10] = L["Weakauras - Для классов в латах"],
 		[11] = L["Weakauras - Для классов в кольчуге"],
@@ -257,40 +256,3 @@ MUI.QuickInstall = function(layout)
 	addonTable:InstallComplete()
 
 end
-
-MUI.InstallerDataQuick = {
-
-	Title = format("|cff4beb2c%s %s|r", addonTable.Name, "Installation"),
-	Name = addonTable.Name,
-	tutorialImage = "Interface\\AddOns\\MerfinUI\\Media\\Textures\\logo.tga",
-
-	Pages = {
-		[1] = function()
-			PluginInstallFrame.SubTitle:SetFormattedText(L["Welcome to the installation for %s."], addonTable.Name.." "..Version)
-			PluginInstallFrame.Desc1:SetText(L["Welcome to MerfinUI Quick Install!"])
-			PluginInstallFrame.Desc2:SetText(L["This installer will quickly set up all add-ons and profiles (except for WeakAuras, as neither the full installer currently handles WeakAuras). With just one click, everything will be configured, followed by a reload at the end. If you're unsure, consider using the standard installer instead."])
-			PluginInstallFrame.Desc3:SetText(L["DPS/Tank refers to the layout designed for DPS and Tank roles. Healer-H is for the Healer layout with horizontally growing party frames, while Healer-V provides a layout with vertically growing party frames"])
-			PluginInstallFrame.Option1:Show()
-			PluginInstallFrame.Option1:SetScript("OnClick", function() MUI.QuickInstall('DPS/Tank') end)
-			PluginInstallFrame.Option1:SetText(L["DPS/Tank"])
-			PluginInstallFrame.Option2:Show()
-			PluginInstallFrame.Option2:SetScript("OnClick", function() MUI.QuickInstall('Healer-H') end)
-			PluginInstallFrame.Option2:SetText(L["Healer-H"])
-			PluginInstallFrame.Option3:Show()
-			PluginInstallFrame.Option3:SetScript("OnClick", function() MUI.QuickInstall('Healer-V') end)
-			PluginInstallFrame.Option3:SetText(L["Healer-V"])
-		end,
-
-	},
-
-	StepTitles = {
-		[1] = L["Quick Install"],
-	},
-
-	StepTitlesColor = { 1, 1, 1 },
-	StepTitlesColorSelected = { 0, 179/255, 1 },
-	StepTitleWidth = 200,
-	StepTitleButtonWidth = 180,
-	StepTitleTextJustification = "RIGHT",
-	
-}

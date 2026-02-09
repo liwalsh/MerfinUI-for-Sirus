@@ -3,14 +3,11 @@ local PI = E:GetModule('PluginInstaller')
 local addonName, addonTable = ...
 
 function MUI:Toggles(msg)
-    if msg == 'install' then
-        PI:Queue(MUI.InstallerData)
-    elseif msg == 'qinstall' then
-        PI:Queue(MUI.InstallerDataQuick)
-    elseif msg == 'config' then
-        --E:ToggleOptions()
-        E.Libs.AceConfigDialog:SelectGroup('ElvUI', 'MUI')
-    end
+	if msg == 'install' then
+		PI:Queue(MUI.InstallerData)
+	elseif msg == 'config' then
+		E.Libs.AceConfigDialog:SelectGroup('ElvUI', 'MUI')
+	end
 end
 
 function MUI:RegisterCommands()

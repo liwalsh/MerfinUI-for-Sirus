@@ -7,7 +7,7 @@ local E, L = unpack(ElvUI)
 local PI = E:GetModule('PluginInstaller')
 
 function addonTable:Print(msg)
-    print(addonTable.Name .. ': ' .. msg)
+	print(addonTable.Name .. ': ' .. msg)
 end
 
 -- Reload popup
@@ -39,8 +39,7 @@ end
 
 function MUI:PLAYER_ENTERING_WORLD(_, isInitial, isReload)
 
-
-    DeleteModified()
+	DeleteModified()
 
 end
 
