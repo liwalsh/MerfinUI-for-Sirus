@@ -31,12 +31,7 @@ function MUI:Config()
 	MUI.Options.args.profiles.args.actionbars.args.showMouseover = ACH:Toggle(L["Show Mouseover"], nil, 2)
 	MUI.Options.args.profiles.args.unitframes = ACH:Group(L["Unit Frames"], nil, 6, nil, function(info) return E.private.MUI.general.profileSettings.unitframes[info[#info]] end, function(info, value) E.private.MUI.general.profileSettings.unitframes[info[#info]] = value; MUI:SetTransparency() end)
 	MUI.Options.args.profiles.args.unitframes.inline = true
-	MUI.Options.args.profiles.args.unitframes.args.playerCastBar = ACH:Toggle(L["Player Castbar"], L["Show Player Cast Bar provided by ElvUI"], 1)
 	MUI.Options.args.profiles.args.unitframes.args.transparentHealth = ACH:Toggle(L["Transparent Unit Health"], L["Make Unit Health texture transparent"], 2)
-	MUI.Options.args.profiles.args.blacklist = ACH:Group(L["Ignore Modules"], nil, 7, nil, function(info) return E.private.MUI.general.profileSettings.blacklist[info[#info]] end, function(info, value) E.private.MUI.general.profileSettings.blacklist[info[#info]] = value end)
-	MUI.Options.args.profiles.args.blacklist.inline = true
-	MUI.Options.args.profiles.args.blacklist.args.movers = ACH:Toggle(L["Movers"], nil, 1)
-	MUI.Options.args.profiles.args.blacklist.args.actionBars = ACH:Toggle(L["Action Bars"], nil, 2)
 	MUI.Options.args.profiles.args.setDefaults = ACH:Execute(L["Reset to Defaults"], L["Reset to Defaults UI"], 8, function() MUI:SetDefaults() end)
 	
 	-- Layout Settings
@@ -45,10 +40,6 @@ function MUI:Config()
 	MUI.Options.args.layout.args.header = ACH:Header(L["Color Theme"], 1)
 	MUI.Options.args.layout.args.desc = ACH:Description(L["Click on the button below to set color theme of ElvUI unit frames.\n- Normal Theme would enable class colorized frames;\n- Dark Theme would darken them and put Unit Names texts class colorized"], 2)
 	MUI.Options.args.layout.args.spacer1 = ACH:Spacer(3, 'full')
-	MUI.Options.args.layout.args.darkColor = ACH:Color(L["Main"], nil, 4, true, nil, function() local c = E.private.MUI.general.layout.dark.color return c.r, c.g, c.b, c.a end, function(_, r, g, b, a) local c = E.private.MUI.general.layout.dark.color c.r, c.g, c.b, c.a = r, g, b, a end)
-	MUI.Options.args.layout.args.darkColorBackdrop = ACH:Color(L["Backdrop"], nil, 5, true, nil, function() local c = E.private.MUI.general.layout.dark.backdrop return c.r, c.g, c.b, c.a end, function(_, r, g, b, a) local c = E.private.MUI.general.layout.dark.backdrop c.r, c.g, c.b, c.a = r, g, b, a end)
-	MUI.Options.args.layout.args.darkColorDeadge = ACH:Color(L["Dead"], nil, 6, true, nil, function() local c = E.private.MUI.general.layout.dark.dead return c.r, c.g, c.b, c.a end, function(_, r, g, b, a) local c = E.private.MUI.general.layout.dark.dead c.r, c.g, c.b, c.a = r, g, b, a end)
-	MUI.Options.args.layout.args.spacer2 = ACH:Spacer(7, 'full')
 	MUI.Options.args.layout.args.setNormalTheme = ACH:Execute(L["Normal Theme"], nil, 8, function() MUI:ChangeTheme('Normal'); E:StaticPopup_Show('MUI_RELOAD') end)
 	MUI.Options.args.layout.args.setDarkTheme = ACH:Execute(L["Dark Theme"], nil, 9, function() MUI:ChangeTheme('Dark'); E:StaticPopup_Show('MUI_RELOAD') end)
 	MUI.Options.args.layout.args.spacer3 = ACH:Spacer(10, 'full')
