@@ -15,12 +15,6 @@ function MUI:GetActionBarsSettings()
     return mouseover, showGrid
 end
 
--- @returns preferable resolution (default otherwise)
-function MUI:GetProfileResolution()
-    local profileResolution = E.private.MUI.general.profileSettings.media.resolution
-    return profileResolution or addonTable.Resolution
-end
-
 -- @returns main db font (default otherwise)
 function MUI:GetProfileFont()
     local profileFont = E.private.MUI.general.profileSettings.media.font
@@ -132,6 +126,7 @@ function MUI:ChangeTheme(theme)
         E.db.unitframe.colors.health_backdrop_dead.g = dead.g
         E.db.unitframe.colors.health_backdrop_dead.r = dead.r
 
+        E.db.unitframe.units['player'].customTexts.UnitName.text_format = "[namecolor][name:abbrev:medium]"
         E.db.unitframe.units['party'].customTexts.UnitName.text_format = "[namecolor][name]"
         E.db.unitframe.units['raid10'].customTexts.UnitName.text_format = "[namecolor][name:veryshort]"
         E.db.unitframe.units['raid25'].customTexts.UnitName.text_format = "[namecolor][name:veryshort]"
@@ -163,6 +158,7 @@ function MUI:ChangeTheme(theme)
         E.db.unitframe.colors.health_backdrop_dead.g = 0.46274509803922
         E.db.unitframe.colors.health_backdrop_dead.r = 0.51764705882353
 
+        E.db.unitframe.units['player'].customTexts.UnitName.text_format = "[name:abbrev:medium]"
         E.db.unitframe.units['party'].customTexts.UnitName.text_format = "[name]"
         E.db.unitframe.units['raid10'].customTexts.UnitName.text_format = "[name:veryshort]"
         E.db.unitframe.units['raid25'].customTexts.UnitName.text_format = "[name:veryshort]"
@@ -188,7 +184,6 @@ function MUI:SetDefaultLayout()
 end
 
 function MUI:SetDefaults()
-    E.private.MUI.general.profileSettings.media.resolution = addonTable.Resolution
     E.private.MUI.general.profileSettings.media.font = addonTable.Font
     E.private.MUI.general.profileSettings.media.texture = addonTable.Texture
     E.private.MUI.general.profileSettings.actionbars.showMouseover = true
