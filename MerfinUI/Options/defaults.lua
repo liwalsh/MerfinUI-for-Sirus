@@ -1,11 +1,8 @@
 local E, L, V, P, G = unpack(ElvUI)
 local addonName, addonTable = ...
-
 G.MUI = {
 	install_version = nil,
 }
-
--- E.private.MUI
 V.MUI = {
     general = {
         profileSettings = {
@@ -38,7 +35,5 @@ V.MUI = {
         deleteFill = true,
     },
 }
-
--- E.global
 G.MUI = {
 }
