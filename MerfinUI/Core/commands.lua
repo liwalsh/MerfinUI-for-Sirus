@@ -6,10 +6,11 @@ function MUI:Toggles(msg)
 	if msg == 'install' then
 		PI:Queue(MUI.InstallerData)
 	elseif msg == 'config' then
+		E:ToggleOptions()
 		E.Libs.AceConfigDialog:SelectGroup('ElvUI', 'MUI')
 	end
 end
 
 function MUI:RegisterCommands()
-	self:RegisterChatCommand("merfinui", "Toggles")
+	self:RegisterChatCommand('merfinui', 'Toggles')
 end
