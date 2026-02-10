@@ -1,7 +1,6 @@
 local addonName, addonTable = ...
 local E, L, V, P, G = unpack(ElvUI)
 local SetCVar = SetCVar
-
 function MUI:Set_CVars()
     local CVars = {
         ["autoLootDefault"] = 1,
@@ -32,10 +31,8 @@ function MUI:Set_CVars()
         ["alwaysShowActionBars"] = 1,
         ["ShowVKeyCastbar"] = 1
     }
-
     for CVar, variable in pairs(CVars) do
         SetCVar(CVar, variable)
     end
-
     addonTable:PluginInstallStepComplete("Account Settings")
 end
