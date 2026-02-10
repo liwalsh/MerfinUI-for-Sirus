@@ -1,6 +1,5 @@
 local L = ElvUI[1].Libs.ACL:NewLocale('ElvUI', 'ruRU')
 if not L then return end
-
 L["Welcome to the installation for %s."] = "Добро пожаловать на установку"
 L["Skip Process"] = "Пропустить"
 L["Importance: |cff4beb2cOptional|r"] = "Значимость: |cff4beb2cОпциональная|r"
