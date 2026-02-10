@@ -21,23 +21,11 @@ local ChatFrame_RemoveChannel = ChatFrame_RemoveChannel
 local ChatFrame_AddChannel = ChatFrame_AddChannel
 
 local localizedChannels = {
-    ['enUS'] = {
-        ['General']         = true,
-        ['Trade']           = true,
-        ['LocalDefense']    = true,
-        ['LookingForGroup'] = true,
-    },
     ['ruRU'] = {
         ['Общий']            = true,
         ['Торговля']         = true,
         ['ОборонаЛокальный'] = true,
         ['ПоискСпутников']   = true,
-    },
-    ['deDE'] = {
-        ['Allgemein']          = true,
-        ['Handel']             = true,
-        ['LokaleVerteidigung'] = true,
-        ['SucheNachGruppe']    = true,
     },
 }
 
@@ -120,7 +108,7 @@ function MUI:SetupChat()
     -- Tab setup: RAID
     local chats = {  'GLOBAL', 'GENERAL' }
     ChatFrame_RemoveAllMessageGroups(_G.ChatFrame6)
-    for _, k in ipairs(chats) do
+        for _, k in ipairs(chats) do
         ChatFrame_AddMessageGroup(_G.ChatFrame6, k)
     end
 
