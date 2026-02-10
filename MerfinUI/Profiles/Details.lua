@@ -1,23 +1,17 @@
 local addonName, addonTable = ...
 local E, L, V, P, G = unpack(ElvUI)
---local _detalhes = _G._detalhes
-
 function MUI:ImportDetails(theme)
 	if not E:IsAddOnEnabled("Details") then 
 		DEFAULT_CHAT_FRAME:AddMessage("|cffbefc03MerfinUI:|r You need to enable Details!")
 		return 
 	end
-
 	_detalhes.encounter_spell_pool = {}
 	_detalhes.npcid_pool = {}
 	_detalhes.spell_pool = {}
 	_detalhes.spell_school_cache = {}
-
 	_detalhes:EraseProfile(addonTable.MerfinProfileName)
-
 	_detalhes_global = _detalhes_global or {}
 	_detalhes_global["__profiles"] = _detalhes_global["__profiles"] or {}
-
 		_detalhes_global["__profiles"][addonTable.MerfinProfileName] = {
             ["overall_clear_newtorghast"] = true,
             ["use_realtimedps"] = false,
@@ -1074,8 +1068,6 @@ function MUI:ImportDetails(theme)
                 ["damage"] = "red"
             }
         }
-
-
 	if theme == 'NORMAL' then
 	else
 		local color, backdrop = MUI:GetDarkThemeColors()
@@ -1091,16 +1083,10 @@ function MUI:ImportDetails(theme)
             }
 		end
 	end
-
-	--_detalhes:EraseProfile(addonTable.MerfinProfileName)
-	--_detalhes:ImportProfile(importCode, addonTable.MerfinProfileName)
-
 	if _detalhes:GetCurrentProfileName() ~= addonTable.MerfinProfileName then
 		_detalhes:ApplyProfile(addonTable.MerfinProfileName)
 	end
-
 	_detalhes.always_use_profile = true
 	_detalhes.always_use_profile_name = addonTable.MerfinProfileName
-
 	addonTable:PluginInstallStepComplete("Details")
 end

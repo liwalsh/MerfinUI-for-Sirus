@@ -1,17 +1,12 @@
 local addonName, addonTable = ...
 local profileName = addonTable.MerfinProfileName
-
 function MUI:ImportDBM(layout)
-
 	if not IsAddOnLoaded("DBM-Core") then
 		DEFAULT_CHAT_FRAME:AddMessage("|cffbefc03MerfinUI:|r You need to enable DBM to apply profile settings!")
 	end
-	
 	local profileName = 'MerfinUI (' .. layout .. ')'
-
 	DBM_AllSavedOptions = DBM_AllSavedOptions or {}
 	DBT_AllPersistentOptions = DBT_AllPersistentOptions or {}
-
 	DBM_AllSavedOptions[profileName] = {
 		["DontShowFarWarnings"] = true,
 		["FilterInterrupt2"] = "TandFandBossCooldown",
@@ -310,7 +305,6 @@ function MUI:ImportDBM(layout)
 		["HelpMessageVersion"] = 3,
 		["RangeFrameRadarPoint"] = 'CENTER',
 	}
-
 	DBT_AllPersistentOptions[profileName] = {
 		["DBM"] = {
 			["StartColorPR"] = 1,
@@ -404,32 +398,23 @@ function MUI:ImportDBM(layout)
 			["ClickThrough"] = false,
 		},
 	}
-
 	DBT_AllPersistentOptions[profileName].DBM.HugeTimerX = layout == 'Healer' and 387 or 290
 	DBT_AllPersistentOptions[profileName].DBM.HugeTimerY = layout == 'Healer' and -125 or -115
 	DBT_AllPersistentOptions[profileName].DBM.HugeTimerPoint = "CENTER"
-
 	DBT_AllPersistentOptions[profileName].DBM.TimerX = layout == 'Healer' and -362 or -459
 	DBT_AllPersistentOptions[profileName].DBM.TimerY = layout == 'Healer' and -125 or -115
 	DBT_AllPersistentOptions[profileName].DBM.TimerPoint = "RIGHT"
-
 	DBT_AllPersistentOptions[profileName].DBM.Width = 170
 	DBT_AllPersistentOptions[profileName].DBM.Height = 20
-
 	DBT_AllPersistentOptions[profileName].DBM.HugeWidth = 190
 	DBT_AllPersistentOptions[profileName].DBM.HugeHeight = 20	
-
 	DBT_AllPersistentOptions[profileName].DBM.FontSize = MUI:SetFontSize(12)
-
 	DBM_AllSavedOptions[profileName].RangeFrameX = 289.5726013183594
 	DBM_AllSavedOptions[profileName].RangeFrameY = 35.2346076965332
 	DBM_AllSavedOptions[profileName].RangeFrameRadarPoint = "CENTER"
-
 	DBM_AllSavedOptions[profileName].InfoFrameX = 241
 	DBM_AllSavedOptions[profileName].InfoFrameY = 239
 	DBM_AllSavedOptions[profileName].InfoFramePoint = "LEFT"
-
 	DBM_UsedProfile = profileName
-
 	addonTable:PluginInstallStepComplete("DBM " .. profileName)
 end
