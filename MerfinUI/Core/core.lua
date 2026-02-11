@@ -15,7 +15,17 @@ E.PopupDialogs.MUI_RELOAD = {
 	whileDead = 1,
 	hideOnEscape = false,
 }
-function MUI:PLAYER_ENTERING_WORLD(_, isInitial, isReload) end
+local function DeleteModified()
+  if not E.private.MUI.automatation.deleteFill then
+    return
+  end
+  hooksecurefunc(StaticPopupDialogs.DELETE_GOOD_ITEM, 'OnShow', function(frame)
+    frame.editBox:SetText(DELETE_ITEM_CONFIRM_STRING)
+  end)
+end
+function MUI:PLAYER_ENTERING_WORLD(_, isInitial, isReload)
+  DeleteModified()
+end
 function MUI:RegisterEvents()
-	MUI:RegisterEvent('PLAYER_ENTERING_WORLD')
+  MUI:RegisterEvent('PLAYER_ENTERING_WORLD')
 end
