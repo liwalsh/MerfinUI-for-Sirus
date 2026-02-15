@@ -139,6 +139,7 @@ db.general = function()
 	E.db.general.minimap.timeFontSize = 12
 	E.db.general.totems.fontSize = 13
 	E.db.general.totems.size = 28
+	E.db.general.objectiveFrameHeight = 470
 end
 
 db.auras = function()
@@ -814,11 +815,6 @@ db.unitframes = function(layout)
 	E.db.unitframe.units.tank.targetsGroup.enable = false
 	E.db.unitframe.units.tank.threatStyle = "NONE"
 	E.db.unitframe.units.tank.verticalSpacing = 1
-	E.db.unitframe.units.party.buffs.enable = true
-	E.db.unitframe.units.party.buffs.anchorPoint = "BOTTOMLEFT"
-	E.db.unitframe.units.party.buffs.countFont = MUI:GetProfileFont()
-	E.db.unitframe.units.party.buffs.perrow = 3
-	E.db.unitframe.units.party.buffs.spacing = -1
 	E.db.unitframe.units.party.colorOverride = "FORCE_ON"
 	E.db.unitframe.units.party.customTexts.DeadGhostStatus.attachTextTo = "Health"
 	E.db.unitframe.units.party.customTexts.DeadGhostStatus.enable = true
@@ -849,8 +845,6 @@ db.unitframes = function(layout)
 	E.db.unitframe.units.party.customTexts.UnitName.justifyH = "CENTER"
 	E.db.unitframe.units.party.customTexts.UnitName.xOffset = 0
 	E.db.unitframe.units.party.customTexts.UnitName.yOffset = 0
-	E.db.unitframe.units.party.debuffs.countFont = MUI:GetProfileFont()
-	E.db.unitframe.units.party.debuffs.perrow = 3
 	E.db.unitframe.units.party.groupBy = "ROLE"
 	E.db.unitframe.units.party.healPrediction.enable = true
 	E.db.unitframe.units.party.health.text_format = ""
@@ -872,7 +866,25 @@ db.unitframes = function(layout)
 	E.db.unitframe.units.party.verticalSpacing = -1
 	E.db.unitframe.units.party.horizontalSpacing = -1
 	E.db.unitframe.units.party.absorbPrediction.absorbTexture = "Flatt"
-	
+	E.db.unitframe.units.party.buffs.sizeOverride = 18
+	E.db.unitframe.units.party.buffs.countFont = MUI:GetProfileFont()
+	E.db.unitframe.units.party.buffs.perrow = 3
+	E.db.unitframe.units.party.buffs.anchorPoint = "BOTTOMLEFT"
+	E.db.unitframe.units.party.buffs.xOffset = 0
+	E.db.unitframe.units.party.buffs.yOffset = 18
+	E.db.unitframe.units.party.buffs.numrows = 1
+	E.db.unitframe.units.party.buffs.countFontSize = 12
+	E.db.unitframe.units.party.buffs.attachTo = "HEALTH"
+	E.db.unitframe.units.party.debuffs.sizeOverride = 18
+	E.db.unitframe.units.party.debuffs.countFont = MUI:GetProfileFont()
+	E.db.unitframe.units.party.debuffs.perrow = 3
+	E.db.unitframe.units.party.debuffs.anchorPoint = "TOPLEFT"
+	E.db.unitframe.units.party.debuffs.xOffset = 0
+	E.db.unitframe.units.party.debuffs.yOffset = -18
+	E.db.unitframe.units.party.debuffs.numrows = 1
+	E.db.unitframe.units.party.debuffs.countFontSize = 12
+	E.db.unitframe.units.party.debuffs.attachTo = "HEALTH"
+
 	if layout == 'DPS/Tank' or layout == 'Healer-V' then
 		E.db.unitframe.units.party.petsGroup.xOffset = -15
 	elseif layout == 'Healer-H' then
@@ -1019,25 +1031,18 @@ db.unitframes = function(layout)
 	E.db.unitframe.units.raidpet.absorbPrediction.absorbTexture = "Flatt"
 
 	if layout == 'DPS/Tank' then
-		E.db.unitframe.units.party.customTexts.UnitName.text_format = "[name]"
+		E.db.unitframe.units.party.customTexts.UnitName.text_format = "[name:abbrev:veryshort]"
 		E.db.unitframe.units.raidpet.enable = false
 		E.db.unitframe.units.player.castbar.displayTarget = false
-		E.db.unitframe.units.party.debuffs.xOffset = 2
-		E.db.unitframe.units.party.debuffs.numrows = 2
 		E.db.unitframe.units.raid10.growthDirection = "RIGHT_UP"
 		E.db.unitframe.units.raid25.growthDirection = "RIGHT_UP"
 		E.db.unitframe.units.raid40.growthDirection = "RIGHT_UP"
 	elseif layout == 'Healer-H' or layout == 'Healer-V' then
 	if layout == "Healer-H" then
-		E.db.unitframe.units.party.debuffs.anchorPoint = "TOPLEFT"
-		E.db.unitframe.units.party.debuffs.xOffset = 0
-		E.db.unitframe.units.party.debuffs.numrows = 1
 		E.db.unitframe.units.party.growthDirection = "RIGHT_DOWN"
 		E.db.unitframe.units.party.customTexts.UnitName.text_format = "[name:abbrev:veryshort]"
 	elseif layout == "Healer-V" then
-		E.db.unitframe.units.party.debuffs.xOffset = 2
-		E.db.unitframe.units.party.debuffs.numrows = 2
-		E.db.unitframe.units.party.customTexts.UnitName.text_format = "[name]" 
+		E.db.unitframe.units.party.customTexts.UnitName.text_format = "[name:abbrev:veryshort]" 
 	end
 		E.db.unitframe.units.raidpet.enable = true
 		E.db.unitframe.units.player.castbar.displayTarget = true
@@ -1160,13 +1165,6 @@ db.unitframes = function(layout)
 		E.db.unitframe.units.party.width = 230
 		E.db.unitframe.units.party.power.height = 6
 		E.db.unitframe.units.party.readycheckIcon.size = 20
-		E.db.unitframe.units.party.debuffs.sizeOverride = 25
-		E.db.unitframe.units.party.debuffs.countFontSize = 12
-		E.db.unitframe.units.party.debuffs.yOffset = 13
-		E.db.unitframe.units.party.buffs.countFontSize = 12
-		E.db.unitframe.units.party.buffs.sizeOverride = 20
-		E.db.unitframe.units.party.buffs.yOffset = 21
-		E.db.unitframe.units.party.buffs.attachTo = "HEALTH"
 		E.db.unitframe.units.party.rdebuffs.size = 30
 		E.db.unitframe.units.party.rdebuffs.fontSize = 12
 		E.db.unitframe.units.party.rdebuffs.yOffset = 10
@@ -1232,13 +1230,6 @@ db.unitframes = function(layout)
 			E.db.unitframe.units.party.width = 100
 			E.db.unitframe.units.party.power.height = 6
 			E.db.unitframe.units.party.readycheckIcon.size = 20
-			E.db.unitframe.units.party.debuffs.sizeOverride = 18
-			E.db.unitframe.units.party.debuffs.countFontSize = 12
-			E.db.unitframe.units.party.debuffs.yOffset = -18
-			E.db.unitframe.units.party.buffs.countFontSize = 12
-			E.db.unitframe.units.party.buffs.sizeOverride = 18
-			E.db.unitframe.units.party.buffs.yOffset = 19
-			E.db.unitframe.units.party.buffs.attachTo = "HEALTH"
 			E.db.unitframe.units.party.rdebuffs.size = 25
 			E.db.unitframe.units.party.rdebuffs.fontSize = 12
 			E.db.unitframe.units.party.rdebuffs.yOffset = 14
@@ -1253,13 +1244,6 @@ db.unitframes = function(layout)
 			E.db.unitframe.units.party.width = 235
 			E.db.unitframe.units.party.power.height = 6
 			E.db.unitframe.units.party.readycheckIcon.size = 20
-			E.db.unitframe.units.party.debuffs.sizeOverride = 25
-			E.db.unitframe.units.party.debuffs.countFontSize = 13
-			E.db.unitframe.units.party.debuffs.yOffset = 13
-			E.db.unitframe.units.party.buffs.countFontSize = 12
-			E.db.unitframe.units.party.buffs.sizeOverride = 20
-			E.db.unitframe.units.party.buffs.yOffset = 20
-			E.db.unitframe.units.party.buffs.attachTo = "HEALTH"
 			E.db.unitframe.units.party.rdebuffs.size = 30
 			E.db.unitframe.units.party.rdebuffs.fontSize = 12
 			E.db.unitframe.units.party.rdebuffs.yOffset = 10
