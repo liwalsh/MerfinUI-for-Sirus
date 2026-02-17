@@ -236,6 +236,7 @@ db.databars = function()
 	E.db.databars.experience.showQuestXP = false
 	E.db.databars.experience.textFormat = "REM"
 	E.db.databars.experience.orientation = "HORIZONTAL"
+	E.db.databars.experience.questXP.enable = true
 	E.db.databars.petExperience.font = MUI:GetProfileFont()
 	E.db.databars.petExperience.textFormat = "REM"
 	E.db.databars.petExperience.hideAtMaxLevel = true
