@@ -16,7 +16,7 @@ V.MUI = {
             },
             unitframes = {
                 transparentHealth = false,
-                playerCastBar = false,
+                unitportrait = true,
             },
             blacklist = {
                 movers = false,

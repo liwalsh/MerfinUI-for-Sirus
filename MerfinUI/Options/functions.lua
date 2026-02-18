@@ -11,6 +11,11 @@ function MUI:GetActionBarsSettings()
     local showGrid = E.private.MUI.general.profileSettings.actionbars.showGrid
     return mouseover, showGrid
 end
+function MUI:GetSetTransparency()
+    local transp = E.private.MUI.general.profileSettings.unitframes.transparentHealth
+    local unitportrait = E.private.MUI.general.profileSettings.unitframes.unitportrait
+    return transp, unitportrait
+end
 function MUI:GetProfileFont()
     local profileFont = E.private.MUI.general.profileSettings.media.font
     return profileFont or addonTable.Font
@@ -25,12 +30,14 @@ function MUI:GetDarkThemeColors()
     local dead = E.private.MUI.general.layout.dark.dead
     return color, backdropColor, dead
 end
-function MUI:GetPlayerCastBar()
-    return E.private.MUI.general.profileSettings.unitframes.playerCastBar
-end
 function MUI:SetTransparency()
-    local transp = E.private.MUI.general.profileSettings.unitframes.transparentHealth
+    local transp, unitportrait = MUI:GetSetTransparency()
     E.db.unitframe.colors.transparentHealth = transp
+	E.db.unitframe.units.player.portrait.enable = unitportrait
+	E.db.unitframe.units.target.portrait.enable = unitportrait
+	E.db.unitframe.units.targettarget.portrait.enable = unitportrait
+	E.db.unitframe.units.pet.portrait.enable = unitportrait
+	E.db.unitframe.units.focus.portrait.enable = unitportrait
     UF:Update_AllFrames()
 end
 function MUI:GetBlacklist(info)
