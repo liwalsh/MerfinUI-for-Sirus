@@ -51,3 +51,5 @@ L["Automatically fill out the confirmation text to delete items."] = "Автом
 L["Fill Delete"] = "Заполнить \"Удалить\""
 L["Automatation"] = "Автоматизация"
 L["Improvements"] = "Улучшения"
+L["Portrait Unit Frames"] = "Портреты"
+L["Enable/Disable Portrait Unit Frames"] = "Включение/Отключение портретов"
