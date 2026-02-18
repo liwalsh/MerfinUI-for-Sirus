@@ -3,6 +3,7 @@ local stformat = string.format
 local E, L, V, P, G = unpack(ElvUI) 
 local PluginInstaller = E:GetModule('PluginInstaller')
 local ACD = E.Libs.AceConfigDialog
+local individualUnits = { 'player', 'pet', 'pettarget', 'target', 'targettarget', 'targettargettarget', 'focus', 'focustarget' }
 E.Options.name = stformat('%s + %s v%d', E.Options.name, addonTable.Name, addonTable.Version)
 function MUI:Config()
 	ACH = E.Libs.ACH
@@ -21,7 +22,8 @@ function MUI:Config()
 	MUI.Options.args.profiles.args.actionbars.args.showMouseover = ACH:Toggle(L["Show Mouseover"], nil, 2)
 	MUI.Options.args.profiles.args.unitframes = ACH:Group(L["Unit Frames"], nil, 6, nil, function(info) return E.private.MUI.general.profileSettings.unitframes[info[#info]] end, function(info, value) E.private.MUI.general.profileSettings.unitframes[info[#info]] = value; MUI:SetTransparency() end)
 	MUI.Options.args.profiles.args.unitframes.inline = true
-	MUI.Options.args.profiles.args.unitframes.args.transparentHealth = ACH:Toggle(L["Transparent Unit Health"], L["Make Unit Health texture transparent"], 2)
+	MUI.Options.args.profiles.args.unitframes.args.transparentHealth = ACH:Toggle(L["Transparent Unit Health"], L["Make Unit Health texture transparent"], 1)
+	MUI.Options.args.profiles.args.unitframes.args.unitportrait = ACH:Toggle(L["Portrait Unit Frames"], L["Enable/Disable Portrait Unit Frames"], 2)
 	MUI.Options.args.profiles.args.setDefaults = ACH:Execute(L["Reset to Defaults"], L["Reset to Defaults UI"], 8, function() MUI:SetDefaults() end)
 	MUI.Options.args.layout = ACH:Group(L["Color Theme"], nil, 4)
 	MUI.Options.args.layout.args.header = ACH:Header(L["Color Theme"], 1)
