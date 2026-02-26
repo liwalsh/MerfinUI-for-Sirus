@@ -14,10 +14,6 @@ V.MUI = {
                 showGrid = false,
                 showMouseover = true,
             },
-            unitframes = {
-                transparentHealth = false,
-                unitportrait = true,
-            },
             blacklist = {
                 movers = false,
                 actionBars = false,
@@ -34,6 +30,10 @@ V.MUI = {
     automatation = {
         deleteFill = true,
     },
+	unitframes = {
+		transparentHealth = false,
+		unitportrait = true,
+	},
 }
 G.MUI = {
 }

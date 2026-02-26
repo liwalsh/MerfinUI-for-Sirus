@@ -12,8 +12,8 @@ function MUI:GetActionBarsSettings()
     return mouseover, showGrid
 end
 function MUI:GetSetTransparency()
-    local transp = E.private.MUI.general.profileSettings.unitframes.transparentHealth
-    local unitportrait = E.private.MUI.general.profileSettings.unitframes.unitportrait
+    local transp = E.private.MUI.unitframes.transparentHealth
+    local unitportrait = E.private.MUI.unitframes.unitportrait
     return transp, unitportrait
 end
 function MUI:GetProfileFont()
@@ -85,8 +85,6 @@ function MUI:ChangeTheme(theme)
         for unitFrame in pairs(E.db.unitframe.units) do
             E.db.unitframe.units[unitFrame].colorOverride = "FORCE_OFF"
         end
-        E.db.unitframe.colors.useDeadBackdrop = true
-        E.db.unitframe.colors.transparentHealth = true
         local color, backdropColor, dead = MUI:GetDarkThemeColors()
         E.db.unitframe.colors.health.b = color.b
         E.db.unitframe.colors.health.g = color.g
@@ -112,8 +110,6 @@ function MUI:ChangeTheme(theme)
         for unitFrame in pairs(E.db.unitframe.units) do
             E.db.unitframe.units[unitFrame].colorOverride = "FORCE_ON"
         end
-        E.db.unitframe.colors.useDeadBackdrop = false
-        E.db.unitframe.colors.transparentHealth = false
         E.db.unitframe.colors.health.b = 0.17254901960784
         E.db.unitframe.colors.health.g = 0.17254901960784
         E.db.unitframe.colors.health.r = 0.1921568627451
