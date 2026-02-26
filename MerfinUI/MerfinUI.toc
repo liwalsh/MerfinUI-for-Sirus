@@ -1,7 +1,7 @@
 ## Interface: 30300
 ## Author: Merfin
 ## Version: 7.1
-## Title: |cff4beb2cMerfinUI|r for Sirus
+## Title: |cff1784d1E|r|cffe5e3e3lvUI|r |cff1784d1M|r|cffe5e3e3erfinUI|r for sirus
 ## RequiredDeps: ElvUI
 ## DefaultState: enabled
 Load_Wrath.xml
