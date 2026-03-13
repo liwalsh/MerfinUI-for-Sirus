@@ -117,8 +117,9 @@ function MUI:Config()
 	MUI.Options.args.links.args.twitch = ACH:Input('Github Тут лежат последние обновления:', nil, 3, nil, 'full', function() return 'https://github.com/liwalsh/MerfinUI-for-Sirus' end)
 
 	MUI.Options.args.credits = ACH:Group(L["Credits"], nil, 5)
-	MUI.Options.args.credits.args.description = ACH:Description("Я бы хотел выделить следующих людей, которые так или иначе помогли мне в разработке/переделки сие чуда.\n\nfxpw - Своим сообществом в Discord\nYorogumo - пожертвовал 25к голды\nSEGAZBS - Пожертвовал 25к голды\тEmurst - Пожертвовал 15к голды", 1)
+	MUI.Options.args.credits.args.description = ACH:Description("Я бы хотел выделить следующих людей, которые так или иначе помогли мне в разработке/переделки сие чуда.\n\nfxpw - Своим сообществом в Discord\nYorogumo - пожертвовал 25к голды\nSEGAZBS - Пожертвовал 25к голды\nEmurst - Пожертвовал 15к голды", 1)
 
 	E.Options.args.MUI = MUI.Options
 
 end
+
