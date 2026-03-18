@@ -77,7 +77,6 @@ function MUI:Config()
 
 	MUI.Options.args.blizzard.args.unitframes = ACH:Group(L["Unit Frames"], nil, 2, nil, function(info) return E.private.MUI.unitframes[info[#info]] end, function(info, value) E.private.MUI.unitframes[info[#info]] = value; MUI:SetTransparency() end)
 	MUI.Options.args.blizzard.args.unitframes.args.transparentHealth = ACH:Toggle(L["Transparent Unit Health"], L["Make Unit Health texture transparent"], 1)
-	MUI.Options.args.blizzard.args.unitframes.args.unitportrait = ACH:Toggle(L["Portrait Unit Frames"], L["Enable/Disable Portrait Unit Frames"], 2)
 
 	MUI.Options.args.weakauras = ACH:Group('WeakAuras', nil, 3)
     MUI.Options.args.weakauras.args.description = ACH:Description(L["Some WeakAuras in the installer may be outdated."], 1)
