@@ -11,11 +11,6 @@ function MUI:GetActionBarsSettings()
     local showGrid = E.private.MUI.general.profileSettings.actionbars.showGrid
     return mouseover, showGrid
 end
-function MUI:GetSetTransparency()
-    local transp = E.private.MUI.unitframes.transparentHealth
-    local unitportrait = E.private.MUI.unitframes.unitportrait
-    return transp, unitportrait
-end
 function MUI:GetProfileFont()
     local profileFont = E.private.MUI.general.profileSettings.media.font
     return profileFont or addonTable.Font
@@ -31,14 +26,9 @@ function MUI:GetDarkThemeColors()
     return color, backdropColor, dead
 end
 function MUI:SetTransparency()
-    local transp, unitportrait = MUI:GetSetTransparency()
-    E.db.unitframe.colors.transparentHealth = transp
-	E.db.unitframe.units.player.portrait.enable = unitportrait
-	E.db.unitframe.units.target.portrait.enable = unitportrait
-	E.db.unitframe.units.targettarget.portrait.enable = unitportrait
-	E.db.unitframe.units.pet.portrait.enable = unitportrait
-	E.db.unitframe.units.focus.portrait.enable = unitportrait
-    UF:Update_AllFrames()
+  local transp = E.private.MUI.unitframes.transparentHealth
+  E.db.unitframe.colors.transparentHealth = transp
+  UF:Update_AllFrames()
 end
 function MUI:GetBlacklist(info)
     return E.private.MUI.general.profileSettings.blacklist[info]
@@ -85,6 +75,9 @@ function MUI:ChangeTheme(theme)
         for unitFrame in pairs(E.db.unitframe.units) do
             E.db.unitframe.units[unitFrame].colorOverride = "FORCE_OFF"
         end
+		
+		E.db.unitframe.colors.transparentHealth = true
+		
         local color, backdropColor, dead = MUI:GetDarkThemeColors()
         E.db.unitframe.colors.health.b = color.b
         E.db.unitframe.colors.health.g = color.g
@@ -95,7 +88,6 @@ function MUI:ChangeTheme(theme)
         E.db.unitframe.colors.health_backdrop_dead.b = dead.b
         E.db.unitframe.colors.health_backdrop_dead.g = dead.g
         E.db.unitframe.colors.health_backdrop_dead.r = dead.r
-        E.db.unitframe.units['player'].customTexts.UnitName.text_format = "[namecolor][name:abbrev:medium]"
         E.db.unitframe.units['party'].customTexts.UnitName.text_format = "[namecolor][name]"
         E.db.unitframe.units['raid10'].customTexts.UnitName.text_format = "[namecolor][name:veryshort]"
         E.db.unitframe.units['raid25'].customTexts.UnitName.text_format = "[namecolor][name:veryshort]"
@@ -110,6 +102,9 @@ function MUI:ChangeTheme(theme)
         for unitFrame in pairs(E.db.unitframe.units) do
             E.db.unitframe.units[unitFrame].colorOverride = "FORCE_ON"
         end
+		
+		E.db.unitframe.colors.transparentHealth = false
+		
         E.db.unitframe.colors.health.b = 0.17254901960784
         E.db.unitframe.colors.health.g = 0.17254901960784
         E.db.unitframe.colors.health.r = 0.1921568627451
@@ -119,7 +114,6 @@ function MUI:ChangeTheme(theme)
         E.db.unitframe.colors.health_backdrop_dead.b = 0.46274509803922
         E.db.unitframe.colors.health_backdrop_dead.g = 0.46274509803922
         E.db.unitframe.colors.health_backdrop_dead.r = 0.51764705882353
-        E.db.unitframe.units['player'].customTexts.UnitName.text_format = "[name:abbrev:medium]"
         E.db.unitframe.units['party'].customTexts.UnitName.text_format = "[name]"
         E.db.unitframe.units['raid10'].customTexts.UnitName.text_format = "[name:veryshort]"
         E.db.unitframe.units['raid25'].customTexts.UnitName.text_format = "[name:veryshort]"

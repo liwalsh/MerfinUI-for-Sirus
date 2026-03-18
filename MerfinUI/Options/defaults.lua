@@ -32,7 +32,6 @@ V.MUI = {
     },
 	unitframes = {
 		transparentHealth = false,
-		unitportrait = true,
 	},
 }
 G.MUI = {
