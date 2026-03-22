@@ -495,7 +495,7 @@ db.unitframes = function(layout)
 	E.db.unitframe.units.player.classbar.enable = false
 	E.db.unitframe.units.player.colorOverride = "FORCE_ON"
 	E.db.unitframe.units.player.customTexts.UnitPower.attachTextTo = "Health"
-	E.db.unitframe.units.player.customTexts.UnitPower.enable = true
+	E.db.unitframe.units.player.customTexts.UnitPower.enable = false
 	E.db.unitframe.units.player.customTexts.UnitPower.font = MUI:GetProfileFont()
 	E.db.unitframe.units.player.customTexts.UnitPower.fontOutline = "OUTLINE"
 	E.db.unitframe.units.player.customTexts.UnitPower.justifyH = "LEFT"
@@ -3428,6 +3428,8 @@ function MUI:PrivateDB()
 		E.private.enhanced.deathRecap = true
 		E.private.enhanced.character = E.private.enhanced.character or {}
 		E.private.enhanced.character.modelFrames = true
+		E.private.enhanced.character.GemsEnable = true
+		E.private.enhanced.character.GearTexturesEnable = true
 		E.private.enhanced.character.player = E.private.enhanced.character.player or {}
 		E.private.enhanced.character.player.orderName2 = ""
 		E.private.enhanced.character.player.collapsedName1 = E.private.enhanced.character.player.collapsedName1 or {}
