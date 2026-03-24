@@ -4047,7 +4047,7 @@ end
 
 function MUI:ImportElvUI(layout)
 
-	local profileName = 'MerfinUI (' .. layout .. ')'
+	local profileName = 'MerfinUI (' .. layout .. ') (' .. addonTable.ScreenHeight .. ') v' .. addonTable.Version
 	E.data:SetProfile(profileName)
 	
 	MUI:GlobalDB()
