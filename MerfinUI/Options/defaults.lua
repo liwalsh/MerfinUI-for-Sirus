@@ -1,15 +1,25 @@
 local E, L, V, P, G = unpack(ElvUI)
 local addonName, addonTable = ...
+
+MUI.resolutions = {
+  FULL_HD = 'Full HD (1920-1080px)',
+  QUAD_HD = 'Quad HD (2560-1440px)',
+}
+
 G.MUI = {
 	install_version = nil,
 }
+
 V.MUI = {
     general = {
         profileSettings = {
+			install = {
+			},
             media = {
-                font = addonTable.Font,
-                texture = addonTable.Texture,
-            },
+				resolution = addonTable.Resolution,
+				font = addonTable.Font,
+				texture = addonTable.Texture,
+			},
             actionbars = {
                 showGrid = false,
                 showMouseover = true,

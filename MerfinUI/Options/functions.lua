@@ -11,6 +11,10 @@ function MUI:GetActionBarsSettings()
     local showGrid = E.private.MUI.general.profileSettings.actionbars.showGrid
     return mouseover, showGrid
 end
+function MUI:GetProfileResolution()
+  local profileResolution = E.private.MUI.general.profileSettings.media.resolution
+  return profileResolution or addonTable.Resolution
+end
 function MUI:GetProfileFont()
     local profileFont = E.private.MUI.general.profileSettings.media.font
     return profileFont or addonTable.Font
