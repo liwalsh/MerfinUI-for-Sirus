@@ -5,7 +5,7 @@ local PluginInstaller = E:GetModule('PluginInstaller')
 local ACD = E.Libs.AceConfigDialog
 local individualUnits = { 'player', 'pet', 'pettarget', 'target', 'targettarget', 'targettargettarget', 'focus', 'focustarget' }
 
-E.Options.name = stformat('%s + %s', E.Options.name, addonTable.Name)
+E.Options.name = stformat('%s + %s v%s', E.Options.name, addonTable.Name, addonTable.Version)
 
 function MUI:Config()
     ACH = E.Libs.ACH
