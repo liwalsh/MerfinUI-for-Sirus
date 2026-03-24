@@ -47,4 +47,4 @@ L["Automatically fill out the confirmation text to delete items."] = "Автом
 L["Fill Delete"] = "Заполнить \"Удалить\""
 L["Automatation"] = "Автоматизация"
 L["Media Settings"] = "Медиа настройки"
-L['Display resolution'] = "Разрешение дисплея"
+L["Display resolution"] = "Разрешение дисплея"
