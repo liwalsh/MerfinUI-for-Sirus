@@ -58,7 +58,7 @@ function MUI:Config()
                     resolution = {
                         order = 1,
                         type = "select",
-                        name = L['Display resolution'],
+                        name = L["Display resolution"],
                         values = MUI.resolutions
                     },
 					font = {
