@@ -147,20 +147,6 @@ function MUI:SetDefaults()
     E.private.MUI.general.profileSettings.blacklist.actionBars = false
     MUI:ActionBarsSettings()
 end
-local WarmaneRealms = {
-    ['Lordaeron']            = true,
-    ['Icecrown']             = true,
-    ['Onyxia']               = true,
-    ['Blackrock [PvP only]'] = true,
-}
-function MUI:IsWarmane()
-    local realmName = addonTable.RealmName
-    if WarmaneRealms[realmName] then
-        return true
-    else
-        return false
-    end
-end
 function MUI:SetActualVersion()
     local Version = GetAddOnMetadata(addonName, "Version")
 	E.global.MUI.install_version = Version
