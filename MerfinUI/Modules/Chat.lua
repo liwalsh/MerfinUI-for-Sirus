@@ -15,17 +15,6 @@ local ChatFrame_RemoveAllMessageGroups = ChatFrame_RemoveAllMessageGroups
 local JoinChannelByName = JoinChannelByName
 local ChatFrame_RemoveChannel = ChatFrame_RemoveChannel
 local ChatFrame_AddChannel = ChatFrame_AddChannel
-local localizedChannels = {
-    ['ruRU'] = {
-        ['Общий']            = true,
-        ['Торговля']         = true,
-        ['ОборонаЛокальный'] = true,
-        ['ПоискСпутников']   = true,
-    },
-}
-if MUI:IsWarmane() and localizedChannels[addonTable.L] then
-    localizedChannels[addonTable.L]['Global'] = true
-end
 function MUI:SetupChat()
     FCF_ResetChatWindows()
     FCF_OpenNewWindow()
