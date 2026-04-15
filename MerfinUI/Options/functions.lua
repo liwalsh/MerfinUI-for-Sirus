@@ -34,9 +34,6 @@ function MUI:SetTransparency()
   E.db.unitframe.colors.transparentHealth = transp
   UF:Update_AllFrames()
 end
-function MUI:GetBlacklist(info)
-    return E.private.MUI.general.profileSettings.blacklist[info]
-end
 function MUI:GetMediaPath(mediaType, key)
     local hashTable = LSM:HashTable(mediaType)
     if not hashTable then return '' end
@@ -143,8 +140,6 @@ function MUI:SetDefaults()
     E.private.MUI.general.profileSettings.media.texture = addonTable.Texture
     E.private.MUI.general.profileSettings.actionbars.showMouseover = true
     E.private.MUI.general.profileSettings.actionbars.showGrid = false
-    E.private.MUI.general.profileSettings.blacklist.movers = false
-    E.private.MUI.general.profileSettings.blacklist.actionBars = false
     MUI:ActionBarsSettings()
 end
 function MUI:SetActualVersion()
