@@ -24,10 +24,6 @@ V.MUI = {
                 showGrid = false,
                 showMouseover = true,
             },
-            blacklist = {
-                movers = false,
-                actionBars = false,
-            },
         },
         layout = {
             dark = {
