@@ -6,5 +6,5 @@
 	<Include file='Core\coreLoad.xml'/>
 	<Include file='Options\optionsLoad.xml'/>
 	<Include file='Modules\modulesLoad.xml'/>
-	<Include file='Profiles\profilesLoad_Wrath.xml'/>
+	<Include file='Profiles\profilesLoad.xml'/>
 </Ui>
