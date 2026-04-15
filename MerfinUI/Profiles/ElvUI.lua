@@ -5,11 +5,7 @@ local profileName = string.format('%s - %s', UnitName('player'), GetRealmName('p
 local db = {}
 
 db.movers = function(layout)
-  if MUI:GetBlacklist('movers') then
-    return
-  end
-
-  E.db.movers = E.db.movers or {}
+	E.db.movers = E.db.movers or {}
 
 	if MUI:GetProfileResolution() == 'QUAD_HD' then
 
@@ -465,9 +461,6 @@ db.tooltip = function()
 end
 
 db.actionbars = function()
-
-	if MUI:GetBlacklist('actionBars') then return end
-
 	E.db.actionbar.bar1.enabled = true
 	E.db.actionbar.bar2.enabled = true
 	E.db.actionbar.bar3.enabled = true
