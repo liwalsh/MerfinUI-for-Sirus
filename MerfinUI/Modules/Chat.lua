@@ -75,12 +75,5 @@ function MUI:SetupChat()
     ChatFrame_RemoveMessageGroup(_G.ChatFrame1, 'GLOBAL')
     ChatFrame_RemoveMessageGroup(_G.ChatFrame1, 'LOOT')
     ChatFrame_RemoveMessageGroup(_G.ChatFrame1, 'MONEY')
-    if localizedChannels[addonTable.L] then
-        for channelName in pairs(localizedChannels[addonTable.L]) do
-            JoinChannelByName(channelName)
-            ChatFrame_RemoveChannel(_G.ChatFrame1, channelName)
-            ChatFrame_AddChannel(_G.ChatFrame6, channelName)
-        end
-    end
     addonTable:PluginInstallStepComplete("Chat Settings")
 end
