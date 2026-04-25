@@ -46,8 +46,8 @@ db.movers = function(layout)
 		E.db.movers.ElvAB_6 = 'BOTTOM,ElvUIParent,BOTTOM,0,70'
 		E.db.movers.MicrobarMover = 'BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-274,4'
 
-    if layout == 'DPS/Tank' then
-	
+	if layout == 'DPS/Tank' then
+
 		E.db.movers.ElvUF_PlayerMover = 'BOTTOM,ElvUIParent,BOTTOM,-299,390'
 		E.db.movers.ElvUF_PetMover = 'BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,717,390'
 		E.db.movers.ElvUF_TargetMover = 'BOTTOM,ElvUIParent,BOTTOM,299,390'
@@ -71,8 +71,8 @@ db.movers = function(layout)
 		E.db.movers.ElvBar_Pet = "BOTTOM,ElvUIParent,BOTTOM,245,74"
 		E.db.movers.ShiftAB = 'TOPLEFT,ElvUIParent,BOTTOMLEFT,860,110'
 		E.db.movers.ElvBar_Totem = 'BOTTOM,ElvUIParent,BOTTOM,-315,74'
-		
-    elseif layout == 'Healer-H' or layout == 'Healer-V' then
+
+	elseif layout == 'Healer-H' or layout == 'Healer-V' then
 
 		E.db.movers.ElvUF_PlayerMover = 'BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,699,355'
 		E.db.movers.ElvUF_PetMover = 'BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,564,355'
@@ -93,20 +93,20 @@ db.movers = function(layout)
 		E.db.movers.ElvUF_TargetCastbarMover = 'BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-698,335'
 		E.db.movers.ElvUF_FocusCastbarMover = 'BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-338,335'
 
-        E.db.movers.ElvBar_Pet = 'BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,134,313'
+		E.db.movers.ElvBar_Pet = 'BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,134,313'
 		E.db.movers.ShiftAB = 'BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-546,4'
 		E.db.movers.ElvBar_Totem = 'BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-546,4'
 		
-    end
+	end
 
-    if layout == 'Healer-H' then
+	if layout == 'Healer-H' then
 		E.db.movers.ElvUF_PartyMover = 'BOTTOM,ElvUIParent,BOTTOM,0,341'
-    elseif layout == 'Healer-V' then
+	elseif layout == 'Healer-V' then
 		E.db.movers.ElvUF_PartyMover = 'BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,699,544'
-    end
-		
+	end
+
 	elseif MUI:GetProfileResolution() == 'FULL_HD' then
-	
+
 		E.db.movers.DTB2_DBT2_LeftBottomBar_Mover = 'BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,4,4'
 		E.db.movers.DTB2_DBT2_RightBottomBar_Mover = 'BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-4,4'
 		E.db.movers.AlertFrameMover = 'TOP,ElvUIParent,TOP,288,-322'
@@ -150,8 +150,8 @@ db.movers = function(layout)
 		E.db.movers.ElvAB_6 = 'BOTTOMLEFT,UIParent,BOTTOMLEFT,424,551'
 		E.db.movers.MicrobarMover = 'BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-239,4'
 
-    if layout == 'DPS/Tank' then
-	
+	if layout == 'DPS/Tank' then
+
 		E.db.movers.ElvUF_PlayerMover = 'BOTTOM,ElvUIParent,BOTTOM,-267,280'
 		E.db.movers.ElvUF_PetMover = 'BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,446,280'
 		E.db.movers.ElvUF_TargetMover = 'BOTTOM,ElvUIParent,BOTTOM,267,280'
@@ -175,8 +175,8 @@ db.movers = function(layout)
 		E.db.movers.ElvBar_Pet = 'BOTTOM,ElvUIParent,BOTTOM,217,66'
 		E.db.movers.ShiftAB = 'TOPLEFT,ElvUIParent,BOTTOMLEFT,588,98'
 		E.db.movers.ElvBar_Totem = 'BOTTOM,ElvUIParent,BOTTOM,-279,66'
-		
-    elseif layout == 'Healer-H' or layout == 'Healer-V' then
+
+	elseif layout == 'Healer-H' or layout == 'Healer-V' then
 
 		E.db.movers.ElvUF_PlayerMover = 'BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,478,280'
 		E.db.movers.ElvUF_PetMover = 'BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,478,167'
@@ -201,14 +201,14 @@ db.movers = function(layout)
 		E.db.movers.ElvBar_Pet = 'BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,4,318'
 		E.db.movers.ShiftAB = 'BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,4,283'
 		E.db.movers.ElvBar_Totem = 'BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,4,283'
-		
-    end
 
-    if layout == 'Healer-H' then
-      E.db.movers.ElvUF_PartyMover = "TOPLEFT,ElvUIParent,BOTTOMLEFT,712,324"
-    elseif layout == 'Healer-V' then
-      E.db.movers.ElvUF_PartyMover = "TOPLEFT,ElvUIParent,TOPLEFT,478,-361"
-    end
+	end
+
+	if layout == 'Healer-H' then
+	  E.db.movers.ElvUF_PartyMover = "TOPLEFT,ElvUIParent,BOTTOMLEFT,712,324"
+	elseif layout == 'Healer-V' then
+	  E.db.movers.ElvUF_PartyMover = "TOPLEFT,ElvUIParent,TOPLEFT,478,-361"
+	end
   end
 end
 
@@ -377,7 +377,7 @@ db.chat = function()
 		E.db.chat.panelWidthRight = 232
 		E.db.chat.tabFontSize = 13
 	end
-	
+
 end
 
 db.databars = function()
@@ -528,7 +528,7 @@ db.actionbars = function()
 		E.db.actionbar['bar'..i].buttonsPerRow = 12
 		E.db.actionbar['bar'..i].showGrid = showGrid
 	end
-	
+
 	E.db.actionbar.barPet.showGrid = showGrid
 	E.db.actionbar.barPet.mouseover = showMouseover
 	E.db.actionbar.stanceBar.mouseover = showMouseover
@@ -596,7 +596,7 @@ db.unitframes = function(layout)
 	E.db.unitframe.units.party.customTexts.UnitName = E.db.unitframe.units.party.customTexts.UnitName or {}
 	E.db.unitframe.units.party.customTexts.OfflineStatus = E.db.unitframe.units.party.customTexts.OfflineStatus or {}
 	E.db.unitframe.units.party.customTexts.UnitHealth = E.db.unitframe.units.party.customTexts.UnitHealth or {}
-	
+
 	E.db.unitframe.units.pet.customTexts = E.db.unitframe.units.pet.customTexts or {}
 	E.db.unitframe.units.pet.customTexts.UnitHealth = E.db.unitframe.units.pet.customTexts.UnitHealth or {}
 	E.db.unitframe.units.pet.customTexts.UnitName = E.db.unitframe.units.pet.customTexts.UnitName or {}
@@ -645,7 +645,7 @@ db.unitframes = function(layout)
 	E.db.unitframe.units.raid25.threatStyle = 'ICONLEFT'
 	E.db.unitframe.units.raid40.threatStyle = 'ICONLEFT'
 	E.db.unitframe.units.party.threatStyle = 'ICONLEFT'
-	
+
 	E.db.unitframe.colors.castColor.b = 0
 	E.db.unitframe.colors.castColor.g = 0.67843137254902
 	E.db.unitframe.colors.castColor.r = 1
@@ -675,14 +675,14 @@ db.unitframes = function(layout)
 	E.db.unitframe.colors.power.MANA.b = 1
 	E.db.unitframe.colors.power.MANA.g = 0.86274509803922
 	E.db.unitframe.colors.power.MANA.r = 0.019607843137255
-	
+
 	E.db.unitframe.cooldown.fonts.enable = true
 	E.db.unitframe.cooldown.fonts.font = MUI:GetProfileFont()
-	
+
 	E.db.unitframe.font = MUI:GetProfileFont()
 	E.db.unitframe.fontOutline = 'OUTLINE'
 	E.db.unitframe.statusbar = MUI:GetProfileTexture()
-	
+
 	E.db.unitframe.units.player.RestIcon.enable = false
 	E.db.unitframe.units.player.aurabar.enable = false
 	E.db.unitframe.units.player.buffs.anchorPoint = 'TOPRIGHT'
@@ -716,7 +716,7 @@ db.unitframes = function(layout)
 	E.db.unitframe.units.player.raidRoleIcons.position = 'TOPLEFT'
 	E.db.unitframe.units.player.threatStyle = 'NONE'
 	E.db.unitframe.units.player.absorbPrediction.absorbTexture = MUI:GetProfileTexture()
-	
+
 	E.db.unitframe.units.target.combobar.enable = false
 	E.db.unitframe.units.target.aurabar.enable = false
 	E.db.unitframe.units.target.buffs.attachTo = 'DEBUFFS'
@@ -761,7 +761,7 @@ db.unitframes = function(layout)
 	E.db.unitframe.units.target.smartAuraPosition = 'FLUID_BUFFS_ON_DEBUFFS'
 	E.db.unitframe.units.target.threatStyle = 'NONE'
 	E.db.unitframe.units.target.absorbPrediction.absorbTexture = MUI:GetProfileTexture()
-	
+
 	E.db.unitframe.units.targettarget.debuffs.enable = false
 	E.db.unitframe.units.targettarget.debuffs.yOffset = -2
 	E.db.unitframe.units.targettarget.customTexts.UnitName.attachTextTo = 'Health'
@@ -779,7 +779,7 @@ db.unitframes = function(layout)
 	E.db.unitframe.units.targettarget.buffs.maxDuration = 0
 	E.db.unitframe.units.targettarget.buffs.yOffset = -2
 	E.db.unitframe.units.targettarget.orientation = 'RIGHT'
-	
+
 	E.db.unitframe.units.pet.buffs.priority = 'Blacklist,Personal,PlayerBuffs,Dispellable'
 	E.db.unitframe.units.pet.debuffs.attachTo = 'BUFFS'
 	E.db.unitframe.units.pet.debuffs.priority = 'Blacklist,Personal,Boss,RaidDebuffs,CCDebuffs,Dispellable,Whitelist'
@@ -805,7 +805,7 @@ db.unitframes = function(layout)
 	E.db.unitframe.units.pet.customTexts.UnitHealth.justifyH = 'CENTER'
 	E.db.unitframe.units.pet.customTexts.UnitHealth.text_format = '[health:current] - [health:max]'
 	E.db.unitframe.units.pet.absorbPrediction.absorbTexture = MUI:GetProfileTexture()
-	
+
 	E.db.unitframe.units.focus.colorOverride = 'FORCE_ON'
 	E.db.unitframe.units.focus.disableTargetGlow = true
 	E.db.unitframe.units.focus.fader.enable = false
@@ -855,7 +855,7 @@ db.unitframes = function(layout)
 	E.db.unitframe.units.focus.customTexts.UnitName.justifyH = 'LEFT'
 	E.db.unitframe.units.focus.customTexts.UnitName.text_format = '[name:abbrev:medium]'
 	E.db.unitframe.units.focus.absorbPrediction.absorbTexture = MUI:GetProfileTexture()
-	
+
 	E.db.unitframe.units.arena.buffs.countFont = MUI:GetProfileFont()
 	E.db.unitframe.units.arena.buffs.enable = false
 	E.db.unitframe.units.arena.buffs.maxDuration = 0
@@ -892,9 +892,9 @@ db.unitframes = function(layout)
 	E.db.unitframe.units.arena.power.text_format = ''
 	E.db.unitframe.units.arena.spacing = -1
 	E.db.unitframe.units.arena.absorbPrediction.absorbTexture = MUI:GetProfileTexture()
-	
+
 	E.db.unitframe.units.assist.enable = false
-	
+
 	E.db.unitframe.units.boss.buffs.countFont = MUI:GetProfileFont()
 	E.db.unitframe.units.boss.buffs.enable = true
 	E.db.unitframe.units.boss.buffs.anchorPoint = 'RIGHT'
@@ -933,7 +933,7 @@ db.unitframes = function(layout)
 	E.db.unitframe.units.boss.name.text_format = ''
 	E.db.unitframe.units.boss.power.height = 6
 	E.db.unitframe.units.boss.power.text_format = ''
-	
+
 	E.db.unitframe.units.tank.buffIndicator.enable = true
 	E.db.unitframe.units.tank.debuffs.countFont = MUI:GetProfileFont()
 	E.db.unitframe.units.tank.enable = false
@@ -943,7 +943,7 @@ db.unitframes = function(layout)
 	E.db.unitframe.units.tank.targetsGroup.enable = false
 	E.db.unitframe.units.tank.threatStyle = 'NONE'
 	E.db.unitframe.units.tank.verticalSpacing = 1
-	
+
 	E.db.unitframe.units.party.colorOverride = 'FORCE_ON'
 	E.db.unitframe.units.party.customTexts.DeadGhostStatus.attachTextTo = 'Health'
 	E.db.unitframe.units.party.customTexts.DeadGhostStatus.enable = true
@@ -1060,7 +1060,7 @@ db.unitframes = function(layout)
 	E.db.unitframe.units.raid10.rdebuffs.font = MUI:GetProfileFont()
 	E.db.unitframe.units.raid10.rdebuffs.fontOutline = 'OUTLINE'
 	E.db.unitframe.units.raid10.absorbPrediction.absorbTexture = MUI:GetProfileTexture()
-	
+
 	E.db.unitframe.units.raid25.colorOverride = 'FORCE_ON'
 	E.db.unitframe.units.raid25.customTexts.DeadGhostStatus.attachTextTo = 'Health'
 	E.db.unitframe.units.raid25.customTexts.DeadGhostStatus.enable = true
@@ -1102,7 +1102,7 @@ db.unitframes = function(layout)
 	E.db.unitframe.units.raid25.rdebuffs.font = MUI:GetProfileFont()
 	E.db.unitframe.units.raid25.rdebuffs.fontOutline = 'OUTLINE'
 	E.db.unitframe.units.raid25.absorbPrediction.absorbTexture = MUI:GetProfileTexture()
-	
+
 	E.db.unitframe.units.raid40.colorOverride = 'FORCE_ON'
 	E.db.unitframe.units.raid40.customTexts.DeadGhostStatus.attachTextTo = 'Health'
 	E.db.unitframe.units.raid40.customTexts.DeadGhostStatus.enable = true
@@ -1141,7 +1141,7 @@ db.unitframes = function(layout)
 	E.db.unitframe.units.raid40.rdebuffs.font = MUI:GetProfileFont()
 	E.db.unitframe.units.raid40.rdebuffs.fontOutline = 'OUTLINE'
 	E.db.unitframe.units.raid40.absorbPrediction.absorbTexture = MUI:GetProfileTexture()
-	
+
 	E.db.unitframe.units.raidpet.health.text_format = ''
 	E.db.unitframe.units.raidpet.horizontalSpacing = -1
 	E.db.unitframe.units.raidpet.name.text_format = ''
@@ -1178,12 +1178,12 @@ db.unitframes = function(layout)
 		E.db.unitframe.units.raid25.growthDirection = 'RIGHT_DOWN'
 		E.db.unitframe.units.raid40.growthDirection = 'RIGHT_DOWN'
 	end
-	
+
 	if MUI:GetProfileResolution() == 'QUAD_HD' then
-	
+
 		E.db.unitframe.cooldown.fonts.fontSize = 20
 		E.db.unitframe.fontSize = 14
-		
+
 		E.db.unitframe.units.player.CombatIcon.size = 23
 		E.db.unitframe.units.player.customTexts.UnitPower.size = 14
 		E.db.unitframe.units.player.customTexts.UnitPower.xOffset = 3
@@ -1194,7 +1194,7 @@ db.unitframes = function(layout)
 		E.db.unitframe.units.player.height = 51
 		E.db.unitframe.units.player.power.height = 6
 		E.db.unitframe.units.player.width = 259
-		
+
 		E.db.unitframe.units.pet.height = 51
 		E.db.unitframe.units.pet.width = 125
 		E.db.unitframe.units.pet.castbar.height = 22
@@ -1205,7 +1205,7 @@ db.unitframes = function(layout)
 		E.db.unitframe.units.pet.customTexts.UnitHealth.size = 14
 		E.db.unitframe.units.pet.customTexts.UnitHealth.xOffset = 0
 		E.db.unitframe.units.pet.customTexts.UnitHealth.yOffset = 0
-		
+
 		E.db.unitframe.units.target.width = 260
 		E.db.unitframe.units.target.height = 51
 		E.db.unitframe.units.target.power.height = 6
@@ -1226,7 +1226,7 @@ db.unitframes = function(layout)
 		E.db.unitframe.units.target.customTexts.UnitName.size = 14
 		E.db.unitframe.units.target.customTexts.UnitName.xOffset = 3
 		E.db.unitframe.units.target.customTexts.UnitName.yOffset = 10
-		
+
 		E.db.unitframe.units.targettarget.width = 120
 		E.db.unitframe.units.targettarget.height = 51
 		E.db.unitframe.units.targettarget.debuffs.countFontSize = 14
@@ -1235,7 +1235,7 @@ db.unitframes = function(layout)
 		E.db.unitframe.units.targettarget.customTexts.UnitName.yOffset = 0
 		E.db.unitframe.units.targettarget.customTexts.UnitName.xOffset = 0
 		E.db.unitframe.units.targettarget.buffs.countFontSize = 14
-		
+
 		E.db.unitframe.units.focus.height = 51
 		E.db.unitframe.units.focus.width = 220
 		E.db.unitframe.units.focus.castbar.height = 22
@@ -1252,7 +1252,7 @@ db.unitframes = function(layout)
 		E.db.unitframe.units.focus.customTexts.UnitName.size = 14
 		E.db.unitframe.units.focus.customTexts.UnitName.xOffset = 3
 		E.db.unitframe.units.focus.customTexts.UnitName.yOffset = 10
-		
+
 		E.db.unitframe.units.arena.height = 55
 		E.db.unitframe.units.arena.width = 220
 		E.db.unitframe.units.arena.power.height = 6
@@ -1271,7 +1271,7 @@ db.unitframes = function(layout)
 		E.db.unitframe.units.arena.customTexts.UnitName.xOffset = 3
 		E.db.unitframe.units.arena.customTexts.UnitName.yOffset = 0
 		E.db.unitframe.units.arena.pvpTrinket.size = 44
-		
+
 		E.db.unitframe.units.boss.height = 50
 		E.db.unitframe.units.boss.width = 220
 		E.db.unitframe.units.boss.buffs.countFontSize = 14
@@ -1291,7 +1291,7 @@ db.unitframes = function(layout)
 		E.db.unitframe.units.boss.customTexts.UnitName.size = 14
 		E.db.unitframe.units.boss.customTexts.UnitName.xOffset = 2
 		E.db.unitframe.units.boss.customTexts.UnitName.yOffset = 0
-		
+
 		E.db.unitframe.units.party.customTexts.DeadGhostStatus.size = 13
 		E.db.unitframe.units.party.customTexts.OfflineStatus.size = 13
 		E.db.unitframe.units.party.customTexts.UnitName.size = 14
@@ -1299,7 +1299,7 @@ db.unitframes = function(layout)
 		E.db.unitframe.units.party.customTexts.DeadGhostStatus.xOffset = 0
 		E.db.unitframe.units.party.customTexts.OfflineStatus.yOffset = 14
 		E.db.unitframe.units.party.customTexts.OfflineStatus.xOffset = 0
-		
+
 		E.db.unitframe.units.raidpet.debuffs.countFontSize = 11
 		E.db.unitframe.units.raidpet.debuffs.sizeOverride = 17
 		E.db.unitframe.units.raidpet.debuffs.yOffset = -17
@@ -1307,37 +1307,37 @@ db.unitframes = function(layout)
 		E.db.unitframe.units.raidpet.customTexts.UnitName.size = 14
 		E.db.unitframe.units.raidpet.customTexts.UnitName.xOffset = 0
 		E.db.unitframe.units.raidpet.customTexts.UnitName.yOffset = 0
-		
+
 		E.db.unitframe.units.tank.height = 45
 		E.db.unitframe.units.tank.width = 100
 		E.db.unitframe.units.tank.debuffs.countFontSize = 14
-		
+
 		E.db.unitframe.units.party.buffIndicator.countFontSize = 14
 		E.db.unitframe.units.raid10.buffIndicator.countFontSize = 14
 		E.db.unitframe.units.raid25.buffIndicator.countFontSize = 14
 		E.db.unitframe.units.raid40.buffIndicator.countFontSize = 14
-		
+
 		E.db.unitframe.units.raid10.buffs.sizeOverride = 13
 		E.db.unitframe.units.raid10.debuffs.sizeOverride = 13
-		
+
 		E.db.unitframe.units.raid25.buffs.sizeOverride = 13
 		E.db.unitframe.units.raid25.debuffs.sizeOverride = 13
-		
+
 		E.db.unitframe.units.raid40.buffs.sizeOverride = 13
 		E.db.unitframe.units.raid40.debuffs.sizeOverride = 13
-		
+
 		E.db.unitframe.units.raid10.customTexts.UnitName.size = 14
 		E.db.unitframe.units.raid10.customTexts.DeadGhostStatus.size = 13
-		
+
 		E.db.unitframe.units.raid25.customTexts.UnitName.size = 14
 		E.db.unitframe.units.raid25.customTexts.DeadGhostStatus.size = 13
-		
+
 		E.db.unitframe.units.raid40.customTexts.UnitName.size = 14
 		E.db.unitframe.units.raid40.customTexts.DeadGhostStatus.size = 13
 	if layout == 'DPS/Tank' then
 		E.db.unitframe.units.player.castbar.height = 33
 		E.db.unitframe.units.player.castbar.width = 275
-		
+
 		E.db.unitframe.units.party.customTexts.UnitName.text_format = '[name]'
 		E.db.unitframe.units.party.height = 60
 		E.db.unitframe.units.party.width = 259
@@ -1347,7 +1347,7 @@ db.unitframes = function(layout)
 		E.db.unitframe.units.party.rdebuffs.fontSize = 12
 		E.db.unitframe.units.party.rdebuffs.yOffset = 10
 		E.db.unitframe.units.party.petsGroup.enable = false
-		
+
 		E.db.unitframe.units.raid10.width = 97
 		E.db.unitframe.units.raid10.height = 50
 		E.db.unitframe.units.raid10.customTexts.DeadGhostStatus.xOffset = 0
@@ -1365,7 +1365,7 @@ db.unitframes = function(layout)
 		E.db.unitframe.units.raid10.rdebuffs.size = 26
 		E.db.unitframe.units.raid10.rdebuffs.fontSize = 13
 		E.db.unitframe.units.raid10.rdebuffs.yOffset = 7
-		
+
 		E.db.unitframe.units.raid25.width = 97
 		E.db.unitframe.units.raid25.height = 50
 		E.db.unitframe.units.raid25.customTexts.DeadGhostStatus.xOffset = 0
@@ -1383,7 +1383,7 @@ db.unitframes = function(layout)
 		E.db.unitframe.units.raid25.rdebuffs.size = 26
 		E.db.unitframe.units.raid25.rdebuffs.fontSize = 13
 		E.db.unitframe.units.raid25.rdebuffs.yOffset = 7
-		
+
 		E.db.unitframe.units.raid40.width = 97
 		E.db.unitframe.units.raid40.height = 42
 		E.db.unitframe.units.raid40.customTexts.DeadGhostStatus.xOffset = 0
@@ -1401,10 +1401,10 @@ db.unitframes = function(layout)
 		E.db.unitframe.units.raid40.rdebuffs.size = 26
 		E.db.unitframe.units.raid40.rdebuffs.fontSize = 13
 		E.db.unitframe.units.raid40.rdebuffs.yOffset = 7
-		
+
 		E.db.unitframe.units.raidpet.height = 45
 		E.db.unitframe.units.raidpet.width = 65
-    elseif layout == 'Healer-H' or layout == 'Healer-V' then
+	elseif layout == 'Healer-H' or layout == 'Healer-V' then
 		if layout == 'Healer-H' then
 			E.db.unitframe.units.party.customTexts.UnitName.text_format = '[name:abbrev:veryshort]'
 			E.db.unitframe.units.party.height = 65
@@ -1437,10 +1437,10 @@ db.unitframes = function(layout)
 
 		E.db.unitframe.units.player.castbar.height = 35
 		E.db.unitframe.units.player.castbar.width = 497
-		
+
 		E.db.unitframe.units.raidpet.height = 47
 		E.db.unitframe.units.raidpet.width = 84
-		
+
 		E.db.unitframe.units.raid10.width = 130
 		E.db.unitframe.units.raid10.height = 65
 		E.db.unitframe.units.raid10.customTexts.DeadGhostStatus.size = 14
@@ -1459,7 +1459,7 @@ db.unitframes = function(layout)
 		E.db.unitframe.units.raid10.rdebuffs.size = 30
 		E.db.unitframe.units.raid10.rdebuffs.fontSize = 14
 		E.db.unitframe.units.raid10.rdebuffs.yOffset = 15
-		
+
 		E.db.unitframe.units.raid25.width = 130
 		E.db.unitframe.units.raid25.height = 65
 		E.db.unitframe.units.raid25.customTexts.DeadGhostStatus.size = 14
@@ -1478,7 +1478,7 @@ db.unitframes = function(layout)
 		E.db.unitframe.units.raid25.rdebuffs.size = 30
 		E.db.unitframe.units.raid25.rdebuffs.fontSize = 14
 		E.db.unitframe.units.raid25.rdebuffs.yOffset = 15
-		
+
 		E.db.unitframe.units.raid40.width = 130
 		E.db.unitframe.units.raid40.height = 42
 		E.db.unitframe.units.raid40.customTexts.DeadGhostStatus.size = 14
@@ -1497,7 +1497,7 @@ db.unitframes = function(layout)
 		E.db.unitframe.units.raid40.rdebuffs.size = 27
 		E.db.unitframe.units.raid40.rdebuffs.fontSize = 14
 		E.db.unitframe.units.raid40.rdebuffs.yOffset = 2
-    end
+	end
 	elseif MUI:GetProfileResolution() == 'FULL_HD' then
 		E.db.unitframe.cooldown.fonts.fontSize = 20
 		E.db.unitframe.fontSize = 13
@@ -1636,10 +1636,10 @@ db.unitframes = function(layout)
 		E.db.unitframe.units.raid40.customTexts.UnitName.size = 13
 		E.db.unitframe.units.raid40.customTexts.DeadGhostStatus.size = 12
 
-    if layout == 'DPS/Tank' then
+	if layout == 'DPS/Tank' then
 		E.db.unitframe.units.player.castbar.height = 33
 		E.db.unitframe.units.player.castbar.width = 275
-		
+
 		E.db.unitframe.units.party.customTexts.UnitName.text_format = '[name]'
 		E.db.unitframe.units.party.height = 55
 		E.db.unitframe.units.party.width = 230
@@ -1649,7 +1649,7 @@ db.unitframes = function(layout)
 		E.db.unitframe.units.party.rdebuffs.fontSize = 12
 		E.db.unitframe.units.party.rdebuffs.yOffset = 10
 		E.db.unitframe.units.party.petsGroup.enable = false
-		
+
 		E.db.unitframe.units.raid10.width = 80
 		E.db.unitframe.units.raid10.height = 44
 		E.db.unitframe.units.raid10.customTexts.DeadGhostStatus.xOffset = 0
@@ -1667,7 +1667,7 @@ db.unitframes = function(layout)
 		E.db.unitframe.units.raid10.rdebuffs.size = 26
 		E.db.unitframe.units.raid10.rdebuffs.fontSize = 12
 		E.db.unitframe.units.raid10.rdebuffs.yOffset = 7
-		
+
 		E.db.unitframe.units.raid25.width = 80
 		E.db.unitframe.units.raid25.height = 32
 		E.db.unitframe.units.raid25.customTexts.DeadGhostStatus.xOffset = 0
@@ -1685,7 +1685,7 @@ db.unitframes = function(layout)
 		E.db.unitframe.units.raid25.rdebuffs.size = 26
 		E.db.unitframe.units.raid25.rdebuffs.fontSize = 12
 		E.db.unitframe.units.raid25.rdebuffs.yOffset = 7
-		
+
 		E.db.unitframe.units.raid40.width = 80
 		E.db.unitframe.units.raid40.height = 32
 		E.db.unitframe.units.raid40.customTexts.DeadGhostStatus.xOffset = 0
@@ -1703,10 +1703,10 @@ db.unitframes = function(layout)
 		E.db.unitframe.units.raid40.rdebuffs.size = 26
 		E.db.unitframe.units.raid40.rdebuffs.fontSize = 12
 		E.db.unitframe.units.raid40.rdebuffs.yOffset = 7
-		
+
 		E.db.unitframe.units.raidpet.height = 35
 		E.db.unitframe.units.raidpet.width = 47
-    elseif layout == 'Healer-H' or layout == 'Healer-V' then
+	elseif layout == 'Healer-H' or layout == 'Healer-V' then
 		if layout == 'Healer-H' then
 			E.db.unitframe.units.party.customTexts.UnitName.text_format = '[name:abbrev:veryshort]'
 			E.db.unitframe.units.party.height = 55
@@ -1739,7 +1739,7 @@ db.unitframes = function(layout)
 
 		E.db.unitframe.units.player.castbar.height = 35
 		E.db.unitframe.units.player.castbar.width = 497
-		
+
 		E.db.unitframe.units.raid10.width = 100
 		E.db.unitframe.units.raid10.height = 50
 		E.db.unitframe.units.raid10.customTexts.DeadGhostStatus.size = 13
@@ -1758,7 +1758,7 @@ db.unitframes = function(layout)
 		E.db.unitframe.units.raid10.rdebuffs.size = 30
 		E.db.unitframe.units.raid10.rdebuffs.fontSize = 13
 		E.db.unitframe.units.raid10.rdebuffs.yOffset = 15
-		
+
 		E.db.unitframe.units.raid25.width = 100
 		E.db.unitframe.units.raid25.height = 50
 		E.db.unitframe.units.raid25.customTexts.DeadGhostStatus.size = 13
@@ -1777,7 +1777,7 @@ db.unitframes = function(layout)
 		E.db.unitframe.units.raid25.rdebuffs.size = 30
 		E.db.unitframe.units.raid25.rdebuffs.fontSize = 13
 		E.db.unitframe.units.raid25.rdebuffs.yOffset = 15
-		
+
 		E.db.unitframe.units.raid40.width = 100
 		E.db.unitframe.units.raid40.height = 32
 		E.db.unitframe.units.raid40.customTexts.DeadGhostStatus.size = 13
@@ -1796,7 +1796,7 @@ db.unitframes = function(layout)
 		E.db.unitframe.units.raid40.rdebuffs.size = 27
 		E.db.unitframe.units.raid40.rdebuffs.fontSize = 13
 		E.db.unitframe.units.raid40.rdebuffs.yOffset = 2
-    end
+	end
   end
 end
 
@@ -1899,7 +1899,7 @@ db.nameplates = function()
 	E.db.nameplates.filters.Mark_Square = E.db.nameplates.filters.Mark_Square or {}
 	E.db.nameplates.filters.Mark_Square.triggers = E.db.nameplates.filters.Mark_Square.triggers or {}
 	E.global.nameplates.filters = E.global.nameplates.filters or {}
-	
+
 	E.global.nameplates.filters['Mark_Circle'] = {
 		['actions'] = {
 			['iconOnly'] = false,
@@ -3468,7 +3468,7 @@ db.filters = function()
 		if not spellName then
 			return
 		end
-	
+
 		if not E.global.unitframe.aurafilters[filter] then
 			E.global.unitframe.aurafilters[filter] = {
 				type = type,
@@ -3486,7 +3486,7 @@ db.filters = function()
 			['stackThreshold'] = 0,
 		}
 	end
-	
+
 	AddSpellId(53227, 'CCDebuffs')
 
 	for _, spellId in pairs(turtle) do
@@ -3855,7 +3855,7 @@ function MUI:LoadPlugins()
 		E.db.addOnSkins.dbmFontSize = 12
 		E.db.addOnSkins.embed.leftWindowWidth = 190
 	end
-	
+
 	if plugins['DataText Bar 2'] then
 		E.db.dtbars = E.db.dtbars or {}
 		E.db.dtbars.DTB2_DBT2_LeftBottomBar = E.db.dtbars.DTB2_DBT2_LeftBottomBar or {}
@@ -3874,7 +3874,7 @@ function MUI:LoadPlugins()
 		E.db.dtbars.DTB2_DBT2_RightBottomBar.mouseover = false
 		E.db.dtbars.DTB2_DBT2_RightBottomBar.vehicleHide = false
 		E.db.dtbars.DTB2_DBT2_RightBottomBar.border = true
-		
+
 		if MUI:GetProfileResolution() == 'QUAD_HD' then
 			E.db.dtbars.DTB2_DBT2_RightBottomBar.width = 260
 			E.db.dtbars.DTB2_DBT2_RightBottomBar.height = 23
@@ -3886,7 +3886,7 @@ function MUI:LoadPlugins()
 			E.db.dtbars.DTB2_DBT2_LeftBottomBar.width = 396
 			E.db.dtbars.DTB2_DBT2_LeftBottomBar.height = 23
 		end
-		
+
 	end
 
 	if plugins['Enhanced'] then
@@ -3920,7 +3920,7 @@ function MUI:LoadPlugins()
 		E.db.enhanced.minimap.buttonGrabber.insideMinimap.xOffset = 0
 		E.db.enhanced.minimap.buttonGrabber.insideMinimap.yOffset = -1
 		E.db.enhanced.minimap.buttonGrabber.insideMinimap.position = 'BOTTOM'
-		
+
 		if MUI:GetProfileResolution() == 'QUAD_HD' then
 			E.db.enhanced.equipment.fontSize = 13
 			E.db.enhanced.blizzard.errorFrame.fontSize = 14
@@ -3928,7 +3928,7 @@ function MUI:LoadPlugins()
 			E.db.enhanced.equipment.fontSize = 12
 			E.db.enhanced.blizzard.errorFrame.fontSize = 13
 		end
-		
+
 	end
 
 	local chat_error_msg = false
@@ -3983,25 +3983,25 @@ function MUI:PrivateDB()
 		E.private.enhanced.minimapButtonGrabber = true
 		E.private.enhanced.animatedAchievementBars = true
 	end
-	
+
 	if MUI:GetProfileResolution() == 'QUAD_HD' then
 		E.private.general.chatBubbleFontSize = 11
 	elseif MUI:GetProfileResolution() == 'FULL_HD' then
 		E.private.general.chatBubbleFontSize = 10
 	end
-	
+
 end
 
 function MUI:GlobalDB()
 
 	ElvDB.global = ElvDB.global or {}
 	ElvDB.global.general = ElvDB.global.general or {}
-	
+
 	E.global.unitframe.raidDebuffIndicator = {
 		['otherFilter'] = 'Debuff Indicators',
 		['instanceFilter'] = 'Debuff Indicators',
 	}
-	
+
 	E.global.dtbars = E.global.dtbars or {}
 	E.global.dtbars.DTB2_DBT2_LeftBottomBar = E.global.dtbars.DTB2_DBT2_LeftBottomBar or {}
 	E.global.dtbars.DTB2_DBT2_LeftBottomBar.strata = 'HIGH'
@@ -4016,28 +4016,28 @@ function MUI:GlobalDB()
 	E.global.dtbars.DTB2_DBT2_RightBottomBar.slots = 2
 	E.global.dtbars.DTB2_DBT2_RightBottomBar.hide = false
 	E.global.general.fadeMapWhenMoving = false
-	
+
 	local DB = E:GetModule('DTBars2')
 	DB:CreateFrames()
 	DB:MoverCreation()
-	
+
 	if MUI:GetProfileResolution() == 'QUAD_HD' then
 		ElvDB.global.general.UIScale = 0.5333333333333001
 	elseif MUI:GetProfileResolution() == 'FULL_HD' then
 		ElvDB.global.general.UIScale = 0.7111111111111111
 	end
-	
+
 end
 
 function MUI:ImportElvUI(layout)
 
 	local profileName = 'MerfinUI (' .. layout .. ') (' .. addonTable.ScreenHeight .. ') v' .. addonTable.Version
 	E.data:SetProfile(profileName)
-	
+
 	MUI:GlobalDB()
 	MUI:PrivateDB()
 	MUI:LoadPlugins()
-	
+
 	db.movers(layout)
 	db.general()
 	db.auras()
@@ -4050,9 +4050,9 @@ function MUI:ImportElvUI(layout)
 	db.unitframes(layout)
 	db.nameplates()
 	db.filters()
-	
+
 	E:UpdateAll(true)
-	
+
 	addonTable:PluginInstallStepComplete('ElvUI ' .. profileName)
-	
+
 end
