@@ -3,7 +3,7 @@ local profileName = addonTable.MerfinProfileName
 
 function MUI:ImportDBM(layout)
 	if not IsAddOnLoaded('DBM-Core') then
-		DEFAULT_CHAT_FRAME:AddMessage('|cffbefc03MerfinUI:|r You need to enable DBM to apply profile settings!')
+		DEFAULT_CHAT_FRAME:AddMessage('|cffbefc03MerfinUI:|r Вам нужно включить DBM, чтобы применить настройки профиля!')
 	end
 
 	local profileName = 'MerfinUI (' .. layout .. ') (' .. addonTable.ScreenHeight .. ') v' .. addonTable.Version
