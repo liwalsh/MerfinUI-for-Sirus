@@ -3910,6 +3910,7 @@ function MUI:LoadPlugins()
 		E.db.enhanced.equipment.font = MUI:GetProfileFont()
 		E.db.enhanced.equipment.fontOutline = 'OUTLINE'
 		E.db.enhanced.equipment.enable = true
+		E.db.enhanced.equipment.durability.enable = true
 		E.db.enhanced.blizzard.errorFrame.enable = true
 		E.db.enhanced.blizzard.errorFrame.font = MUI:GetProfileFont()
 		E.db.enhanced.nameplates.classCache = true
