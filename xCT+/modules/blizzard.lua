@@ -71,6 +71,15 @@ InterfaceOptionsCombatTextPanelPeriodicDamage:Hide()
 InterfaceOptionsCombatTextPanelPetDamage:Hide()
 InterfaceOptionsCombatTextPanelHealing:Hide()
 
+-- new combat text sirus.su
+InterfaceOptionsCombatTextPanelWorldTextEnhancedEnable:Hide()
+InterfaceOptionsCombatTextPanelWorldTextEnhancedScale:Hide()
+InterfaceOptionsCombatTextPanelWorldTextEnhancedOffsetY:Hide()
+InterfaceOptionsCombatTextPanelWorldTextEnhancedDuration:Hide()
+InterfaceOptionsCombatTextPanelWorldTextEnhancedAbbrNumbers:Hide()
+InterfaceOptionsCombatTextPanelWorldTextEnhancedAtBase:Hide()
+InterfaceOptionsCombatTextPanelWorldTextEnhancedOutline:Hide()
+
 function x:UpdateBlizzardFCT()
   if self.db.profile.blizzardFCT.enabled then
     DAMAGE_TEXT_FONT = self.db.profile.blizzardFCT.fontName
