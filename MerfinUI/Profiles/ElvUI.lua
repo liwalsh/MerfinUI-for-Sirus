@@ -1802,7 +1802,7 @@ end
 
 db.nameplates = function()
 	E.private.nameplates.enable = true
-	local platesfriendly = { 'FRIENDLY_PLAYER', 'FRIENDLY_NPC' }
+	local platesfriendly = { 'PLAYER', 'FRIENDLY_PLAYER', 'FRIENDLY_NPC' }
 	local platesfriendlyplayer = { 'FRIENDLY_PLAYER' }
 	local platesenemy = { 'ENEMY_PLAYER', 'ENEMY_NPC' }
 	local platesenemyplayer = { 'ENEMY_PLAYER' }
@@ -1820,7 +1820,7 @@ db.nameplates = function()
 		E.db.nameplates.units[nameplateType].level.enable = false
 		E.db.nameplates.units[nameplateType].castbar.enable = false
 		E.db.nameplates.units[nameplateType].raidTargetIndicator.position = 'TOP'
-		E.db.nameplates.units[nameplateType].raidTargetIndicator.size = 0
+		E.db.nameplates.units[nameplateType].raidTargetIndicator.size = 23
 		E.db.nameplates.units[nameplateType].raidTargetIndicator.xOffset = 0
 	end
 	for _, nameplateType in ipairs(platesfriendlyplayer) do
@@ -3199,15 +3199,15 @@ db.nameplates = function()
 			['inCombat'] = false,
 		},
 	}
-	E.db.nameplates.filters.Mark_Target.triggers.enable = true
-	E.db.nameplates.filters.Mark_Circle.triggers.enable = true
-	E.db.nameplates.filters.Mark_Cross.triggers.enable = true
-	E.db.nameplates.filters.Mark_Moon.triggers.enable = true
-	E.db.nameplates.filters.Mark_Skull.triggers.enable = true
-	E.db.nameplates.filters.Mark_Diamond.triggers.enable = true
-	E.db.nameplates.filters.Mark_Star.triggers.enable = true
-	E.db.nameplates.filters.Mark_Triangle.triggers.enable = true
-	E.db.nameplates.filters.Mark_Square.triggers.enable = true
+	E.global.nameplates.filters.Mark_Target.triggers.enable = true
+	E.global.nameplates.filters.Mark_Circle.triggers.enable = true
+	E.global.nameplates.filters.Mark_Cross.triggers.enable = true
+	E.global.nameplates.filters.Mark_Moon.triggers.enable = true
+	E.global.nameplates.filters.Mark_Skull.triggers.enable = true
+	E.global.nameplates.filters.Mark_Diamond.triggers.enable = true
+	E.global.nameplates.filters.Mark_Star.triggers.enable = true
+	E.global.nameplates.filters.Mark_Triangle.triggers.enable = true
+	E.global.nameplates.filters.Mark_Square.triggers.enable = true
 end
 
 db.filters = function()
