@@ -1802,9 +1802,31 @@ end
 
 db.nameplates = function()
 	E.private.nameplates.enable = true
-	local plates = { 'FRIENDLY_PLAYER', 'FRIENDLY_NPC', 'ENEMY_PLAYER', 'ENEMY_NPC' }
+	local platesfriendly = { 'FRIENDLY_PLAYER', 'FRIENDLY_NPC' }
+	local platesfriendlyplayer = { 'FRIENDLY_PLAYER' }
+	local platesenemy = { 'ENEMY_PLAYER', 'ENEMY_NPC' }
+	local platesenemyplayer = { 'ENEMY_PLAYER' }
 
-	for _, nameplateType in ipairs(plates) do
+	for _, nameplateType in ipairs(platesfriendly) do
+		E.db.nameplates.units[nameplateType].name.position = 'CENTER'
+		E.db.nameplates.units[nameplateType].name.fontSize = 9
+		E.db.nameplates.units[nameplateType].name.font = MUI:GetProfileFont()
+		E.db.nameplates.units[nameplateType].name.textFormat = '[namecolor][name:abbrev:medium]'
+		E.db.nameplates.units[nameplateType].health.enable = false
+		E.db.nameplates.units[nameplateType].health.healPrediction.enable = false
+		E.db.nameplates.units[nameplateType].health.text.enable = false
+		E.db.nameplates.units[nameplateType].debuffs.enable = false
+		E.db.nameplates.units[nameplateType].buffs.enable = false
+		E.db.nameplates.units[nameplateType].level.enable = false
+		E.db.nameplates.units[nameplateType].castbar.enable = false
+		E.db.nameplates.units[nameplateType].raidTargetIndicator.position = 'TOP'
+		E.db.nameplates.units[nameplateType].raidTargetIndicator.size = 0
+		E.db.nameplates.units[nameplateType].raidTargetIndicator.xOffset = 0
+	end
+	for _, nameplateType in ipairs(platesfriendlyplayer) do
+		E.db.nameplates.units[nameplateType].pvpindicator.enable = false
+	end
+	for _, nameplateType in ipairs(platesenemy) do
 		E.db.nameplates.units[nameplateType].debuffs.size = 20
 		E.db.nameplates.units[nameplateType].debuffs.perrow = 7
 		E.db.nameplates.units[nameplateType].debuffs.countFontSize = 8
@@ -1819,7 +1841,7 @@ db.nameplates = function()
 		E.db.nameplates.units[nameplateType].debuffs.growthX = 'RIGHT'
 		E.db.nameplates.units[nameplateType].debuffs.countXOffset = 0
 		E.db.nameplates.units[nameplateType].debuffs.spacing = 0
-		E.db.nameplates.units[nameplateType].debuffs.filters.priority = 'Blacklist,CCDebuffs,Personal'
+		E.db.nameplates.units[nameplateType].debuffs.priority = 'Blacklist,CCDebuffs,Personal'
 		E.db.nameplates.units[nameplateType].buffs.size = 20
 		E.db.nameplates.units[nameplateType].buffs.perrow = 7
 		E.db.nameplates.units[nameplateType].buffs.countFontSize = 8
@@ -1833,7 +1855,7 @@ db.nameplates = function()
 		E.db.nameplates.units[nameplateType].buffs.growthX = 'RIGHT'
 		E.db.nameplates.units[nameplateType].buffs.countXOffset = 0
 		E.db.nameplates.units[nameplateType].buffs.spacing = 0
-		E.db.nameplates.units[nameplateType].buffs.filters.priority = 'Blacklist,blockNoDuration,Personal,TurtleBuffs'
+		E.db.nameplates.units[nameplateType].buffs.priority = 'Blacklist,blockNoDuration,Personal,TurtleBuffs'
 		E.db.nameplates.units[nameplateType].castbar.iconSize = 34
 		E.db.nameplates.units[nameplateType].castbar.height = 15
 		E.db.nameplates.units[nameplateType].castbar.width = 155
@@ -1848,8 +1870,7 @@ db.nameplates = function()
 		E.db.nameplates.units[nameplateType].name.fontSize = 9
 		E.db.nameplates.units[nameplateType].name.abbrev = true
 		E.db.nameplates.units[nameplateType].name.font = MUI:GetProfileFont()
-		E.db.nameplates.units[nameplateType].name.textFormat = 'namenp:abbrev:medium'
-		E.db.nameplates.units[nameplateType].name.useClassColor = false
+		E.db.nameplates.units[nameplateType].name.textFormat = '[name:abbrev:medium]'
 		E.db.nameplates.units[nameplateType].health.height = 18
 		E.db.nameplates.units[nameplateType].health.width = 155
 		E.db.nameplates.units[nameplateType].health.text.position = 'BOTTOMRIGHT'
@@ -1858,14 +1879,16 @@ db.nameplates = function()
 		E.db.nameplates.units[nameplateType].health.text.fontSize = 9
 		E.db.nameplates.units[nameplateType].health.text.font = MUI:GetProfileFont()
 		E.db.nameplates.units[nameplateType].health.text.enable = true
-		E.db.nameplates.units[nameplateType].health.text.format = 'CURRENT_PERCENT'
+		E.db.nameplates.units[nameplateType].health.text.format = '[health:current-percent]'
 		E.db.nameplates.units[nameplateType].level.enable = false
 		E.db.nameplates.units[nameplateType].level.font = MUI:GetProfileFont()
 		E.db.nameplates.units[nameplateType].raidTargetIndicator.size = 23
 		E.db.nameplates.units[nameplateType].raidTargetIndicator.xOffset = -6
 		E.db.nameplates.units[nameplateType].raidTargetIndicator.position = 'LEFT'
 	end
-	E.db.nameplates.units.FRIENDLY_PLAYER.name.useClassColor = true
+	for _, nameplateType in ipairs(platesenemyplayer) do
+		E.db.nameplates.units[nameplateType].pvpindicator.enable = false
+	end
 	E.db.nameplates.threat.badScale = 1
 	E.db.nameplates.threat.goodScale = 1
 	E.db.nameplates.nonTargetTransparency = 1
@@ -3925,7 +3948,7 @@ function MUI:LoadPlugins()
 		E.db.enhanced.equipment.durability.enable = true
 		E.db.enhanced.blizzard.errorFrame.enable = true
 		E.db.enhanced.blizzard.errorFrame.font = MUI:GetProfileFont()
-		E.db.enhanced.nameplates.classCache = true
+		E.db.enhanced.nameplates.classCache = false
 		E.db.enhanced.minimap.location = true
 		E.db.enhanced.minimap.buttonGrabber.mouseover = true
 		E.db.enhanced.minimap.buttonGrabber.buttonsPerRow = 10
