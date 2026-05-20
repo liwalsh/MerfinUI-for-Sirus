@@ -321,6 +321,7 @@ function MUI:Import_xCT(layout)
 		xCTSavedDB.profiles[profileName].frames.outgoing.Height = 128
 		xCTSavedDB.profiles[profileName].frames.outgoing.fontSize = 14
 		xCTSavedDB.profiles[profileName].frames.outgoing.iconsSize = 20
+		xCTSavedDB.profiles[profileName].frames.critical.iconsSize = 20
 
 		if layout == 'DPS/Tank' then
 			xCTSavedDB.profiles[profileName].frames.outgoing.Y = -361
