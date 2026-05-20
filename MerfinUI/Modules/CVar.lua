@@ -2,6 +2,46 @@ local addonName, addonTable = ...
 local E, L, V, P, G = unpack(ElvUI)
 local SetCVar = SetCVar
 
+local PallyPowerDB = function()
+  if not IsAddOnLoaded('PallyPower') then
+    return
+  end
+
+  PallyPowerDB['profiles'] = PallyPowerDB['profiles'] or {}
+  PallyPowerDB['profiles'][addonTable.MerfinProfileName] = {
+    ['auras'] = false,
+    ['cBuffNeedAll'] = {
+      ['b'] = 0.5,
+      ['t'] = 0.8,
+      ['g'] = 0.5,
+      ['r'] = 0.5,
+    },
+    ['cBuffNeedSome'] = {
+      ['t'] = 0.8,
+      ['g'] = 0.5,
+      ['r'] = 0.5,
+    },
+    ['rfbuff'] = false,
+    ['cBuffGood'] = {
+      ['b'] = 0.06,
+      ['t'] = 0.8,
+      ['g'] = 0.06,
+      ['r'] = 0.06,
+    },
+    ['cBuffNeedSpecial'] = {
+      ['b'] = 0.5,
+      ['t'] = 0.8,
+      ['g'] = 0.5,
+      ['r'] = 0.5,
+    },
+    ['disable'] = false,
+  }
+
+  PallyPowerDB['currentProfile'] = PallyPowerDB['currentProfile'] or {}
+  PallyPowerDB['currentProfile'][addonTable.AceProfileName] = addonTable.MerfinProfileName
+
+end
+
 function MUI:Set_CVars()
 	local CVars = {
 		["autoLootDefault"] = 1,
@@ -35,6 +75,8 @@ function MUI:Set_CVars()
 	for CVar, variable in pairs(CVars) do
 		SetCVar(CVar, variable)
 	end
+
+	PallyPowerDB()
 
 	addonTable:PluginInstallStepComplete("Account Settings")
 end
