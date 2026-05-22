@@ -1882,8 +1882,8 @@ db.nameplates = function()
 	E.db.nameplates.units.TARGET.comboPoints.enable = false
 	E.db.nameplates.alwaysShowTargetHealth = false
 	E.db.nameplates.clickThrough.friendly = true
-	E.db.nameplates.filters.Mark_Target = E.db.nameplates.filters.Mark_Target or {}
-	E.db.nameplates.filters.Mark_Target.triggers = E.db.nameplates.filters.Mark_Target.triggers or {}
+	E.db.nameplates.filters.ElvUI_Target = E.db.nameplates.filters.ElvUI_Target or {}
+	E.db.nameplates.filters.ElvUI_Target.triggers = E.db.nameplates.filters.ElvUI_Target.triggers or {}
 	E.db.nameplates.filters.Mark_Circle = E.db.nameplates.filters.Mark_Circle or {}
 	E.db.nameplates.filters.Mark_Circle.triggers = E.db.nameplates.filters.Mark_Circle.triggers or {}
 	E.db.nameplates.filters.Mark_Cross = E.db.nameplates.filters.Mark_Cross or {}
@@ -1902,7 +1902,7 @@ db.nameplates = function()
 	E.db.nameplates.filters.Mark_Square.triggers = E.db.nameplates.filters.Mark_Square.triggers or {}
 	E.global.nameplates.filters = E.global.nameplates.filters or {}
 
-	E.global.nameplates.filters['Mark_Target'] = {
+	E.global.nameplates.filters['ElvUI_Target'] = {
 		["actions"] = {
 			["color"] = {
 				["border"] = true,
@@ -3177,7 +3177,7 @@ db.nameplates = function()
 			['inCombat'] = false,
 		},
 	}
-	E.db.nameplates.filters.Mark_Target.triggers.enable = true
+	E.db.nameplates.filters.ElvUI_Target.triggers.enable = true
 	E.db.nameplates.filters.Mark_Circle.triggers.enable = true
 	E.db.nameplates.filters.Mark_Cross.triggers.enable = true
 	E.db.nameplates.filters.Mark_Moon.triggers.enable = true
