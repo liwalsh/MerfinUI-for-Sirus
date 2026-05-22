@@ -1909,6 +1909,7 @@ db.nameplates = function()
 			},
 		},
 		["triggers"] = {
+			["requireTarget"] = true,
 			["isTarget"] = true,
 		},
 	}
