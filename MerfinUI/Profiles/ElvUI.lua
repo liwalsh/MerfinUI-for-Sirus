@@ -1802,7 +1802,7 @@ end
 
 db.nameplates = function()
 	E.private.nameplates.enable = true
-	local platesfriendly = { 'PLAYER', 'FRIENDLY_PLAYER', 'FRIENDLY_NPC' }
+	local platesfriendly = { 'FRIENDLY_PLAYER', 'FRIENDLY_NPC' }
 	local platesfriendlyplayer = { 'FRIENDLY_PLAYER' }
 	local platesenemy = { 'ENEMY_PLAYER', 'ENEMY_NPC' }
 	local platesenemyplayer = { 'ENEMY_PLAYER' }
