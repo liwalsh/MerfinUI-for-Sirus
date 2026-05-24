@@ -44,6 +44,7 @@ end
 
 function MUI:Set_CVars()
 	local CVars = {
+		["nameplateEnableNew"] = 1,
 		["autoLootDefault"] = 1,
 		["cameraPivot"] = 1,
 		["cameraSmoothStyle"] = 0,
