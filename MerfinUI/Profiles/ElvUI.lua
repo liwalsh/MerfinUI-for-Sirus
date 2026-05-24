@@ -1803,10 +1803,11 @@ end
 db.nameplates = function()
 	E.private.nameplates.enable = true
 	local platesfriendly = { 'FRIENDLY_PLAYER', 'FRIENDLY_NPC' }
+	local platesfriendlyplayer = { 'FRIENDLY_PLAYER' }
 	local platesenemy = { 'ENEMY_PLAYER', 'ENEMY_NPC' }
+	local platesenemyplayer = { 'ENEMY_PLAYER' }
 	for _, nameplateType in ipairs(platesfriendly,platesfriendlyplayer,platesenemy,platesenemyplayer) do
 		E.db.nameplates.units[nameplateType].name.parent = 'Nameplate'
-		E.db.nameplates.units[nameplateType].pvpindicator.enable = false
 	end
 	for _, nameplateType in ipairs(platesfriendly) do
 		E.db.nameplates.units[nameplateType].name.position = 'CENTER'
@@ -1823,6 +1824,9 @@ db.nameplates = function()
 		E.db.nameplates.units[nameplateType].raidTargetIndicator.position = 'TOP'
 		E.db.nameplates.units[nameplateType].raidTargetIndicator.size = 23
 		E.db.nameplates.units[nameplateType].raidTargetIndicator.xOffset = 0
+	end
+	for _, nameplateType in ipairs(platesfriendlyplayer) do
+		E.db.nameplates.units[nameplateType].pvpindicator.enable = false
 	end
 	for _, nameplateType in ipairs(platesenemy) do
 		E.db.nameplates.units[nameplateType].debuffs.size = 20
@@ -1883,6 +1887,9 @@ db.nameplates = function()
 		E.db.nameplates.units[nameplateType].raidTargetIndicator.size = 23
 		E.db.nameplates.units[nameplateType].raidTargetIndicator.xOffset = -6
 		E.db.nameplates.units[nameplateType].raidTargetIndicator.position = 'LEFT'
+	end
+	for _, nameplateType in ipairs(platesenemyplayer) do
+		E.db.nameplates.units[nameplateType].pvpindicator.enable = false
 	end
 	
 	E.db.nameplates.threat.badScale = 1
