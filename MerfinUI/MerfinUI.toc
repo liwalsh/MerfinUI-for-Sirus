@@ -1,6 +1,6 @@
 ## Interface: 30300
 ## Author: Merfin
-## Version: 7.2
+## Version: 7.3
 ## Title: |cff1784d1E|r|cffe5e3e3lvUI|r |cff1784d1M|r|cffe5e3e3erfinUI|r for sirus
 ## RequiredDeps: ElvUI
 ## DefaultState: enabled
