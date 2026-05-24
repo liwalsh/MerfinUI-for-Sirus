@@ -1803,12 +1803,12 @@ end
 db.nameplates = function()
 	E.private.nameplates.enable = true
 	local platesfriendly = { 'FRIENDLY_PLAYER', 'FRIENDLY_NPC' }
-	local platesfriendlyplayer = { 'FRIENDLY_PLAYER' }
 	local platesenemy = { 'ENEMY_PLAYER', 'ENEMY_NPC' }
-	local platesenemyplayer = { 'ENEMY_PLAYER' }
-
-	for _, nameplateType in ipairs(platesfriendly) do
+	for _, nameplateType in ipairs(platesfriendly,platesfriendlyplayer,platesenemy,platesenemyplayer) do
 		E.db.nameplates.units[nameplateType].name.parent = 'Nameplate'
+		E.db.nameplates.units[nameplateType].pvpindicator.enable = false
+	end
+	for _, nameplateType in ipairs(platesfriendly) do
 		E.db.nameplates.units[nameplateType].name.position = 'CENTER'
 		E.db.nameplates.units[nameplateType].name.fontSize = 9
 		E.db.nameplates.units[nameplateType].name.font = MUI:GetProfileFont()
@@ -1823,10 +1823,6 @@ db.nameplates = function()
 		E.db.nameplates.units[nameplateType].raidTargetIndicator.position = 'TOP'
 		E.db.nameplates.units[nameplateType].raidTargetIndicator.size = 23
 		E.db.nameplates.units[nameplateType].raidTargetIndicator.xOffset = 0
-	end
-	for _, nameplateType in ipairs(platesfriendlyplayer) do
-		E.db.nameplates.units[nameplateType].pvpindicator.enable = false
-		E.db.nameplates.units[nameplateType].name.parent = 'Nameplate'
 	end
 	for _, nameplateType in ipairs(platesenemy) do
 		E.db.nameplates.units[nameplateType].debuffs.size = 20
@@ -1866,7 +1862,6 @@ db.nameplates = function()
 		E.db.nameplates.units[nameplateType].castbar.yOffset = -1
 		E.db.nameplates.units[nameplateType].castbar.font = MUI:GetProfileFont()
 		E.db.nameplates.units[nameplateType].castbar.textPosition = 'ONBAR'
-		E.db.nameplates.units[nameplateType].name.parent = 'Nameplate'
 		E.db.nameplates.units[nameplateType].name.position = 'BOTTOMLEFT'
 		E.db.nameplates.units[nameplateType].name.xOffset = 2
 		E.db.nameplates.units[nameplateType].name.yOffset = 14
@@ -1889,10 +1884,7 @@ db.nameplates = function()
 		E.db.nameplates.units[nameplateType].raidTargetIndicator.xOffset = -6
 		E.db.nameplates.units[nameplateType].raidTargetIndicator.position = 'LEFT'
 	end
-	for _, nameplateType in ipairs(platesenemyplayer) do
-		E.db.nameplates.units[nameplateType].pvpindicator.enable = false
-		E.db.nameplates.units[nameplateType].name.parent = 'Nameplate'
-	end
+	
 	E.db.nameplates.threat.badScale = 1
 	E.db.nameplates.threat.goodScale = 1
 	E.db.nameplates.nonTargetTransparency = 1
