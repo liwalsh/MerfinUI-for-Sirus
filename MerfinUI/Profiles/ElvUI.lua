@@ -3200,7 +3200,6 @@ db.nameplates = function()
 			['inCombat'] = false,
 		},
 	}
-<<<<<<< new_plates
 	E.global.nameplates.filters.ElvUI_Target.triggers.enable = true
 	E.global.nameplates.filters.Mark_Circle.triggers.enable = true
 	E.global.nameplates.filters.Mark_Cross.triggers.enable = true
@@ -3210,17 +3209,6 @@ db.nameplates = function()
 	E.global.nameplates.filters.Mark_Star.triggers.enable = true
 	E.global.nameplates.filters.Mark_Triangle.triggers.enable = true
 	E.global.nameplates.filters.Mark_Square.triggers.enable = true
-=======
-	E.db.nameplates.filters.ElvUI_Target.triggers.enable = true
-	E.db.nameplates.filters.Mark_Circle.triggers.enable = true
-	E.db.nameplates.filters.Mark_Cross.triggers.enable = true
-	E.db.nameplates.filters.Mark_Moon.triggers.enable = true
-	E.db.nameplates.filters.Mark_Skull.triggers.enable = true
-	E.db.nameplates.filters.Mark_Diamond.triggers.enable = true
-	E.db.nameplates.filters.Mark_Star.triggers.enable = true
-	E.db.nameplates.filters.Mark_Triangle.triggers.enable = true
-	E.db.nameplates.filters.Mark_Square.triggers.enable = true
->>>>>>> main
 end
 
 db.filters = function()
