@@ -45,6 +45,19 @@ end
 function MUI:Set_CVars()
 	local CVars = {
 		["nameplateEnableNew"] = 1,
+		["nameplateSelectedAlpha"] = 1,
+		["nameplateSelectedScale"] = 1,
+		["nameplateOccludedAlphaMult"] = 1,
+		["nameplateMinScale"] = 1,
+		["nameplateMinAlpha"] = 1,
+		["nameplateNotSelectedAlpha"] = 1,
+		["nameplateShowDebuffsOnFriendly"] = 0,
+		["nameplateVerticalScale"] = 2,
+		["nameplateHorizontalScale"] = 2,
+		["nameplateShowSelf"] = 0,
+		["NameplatePersonalShowInCombat"] = 0,
+		["NameplatePersonalClickThrough"] = 0,
+
 		["autoLootDefault"] = 1,
 		["cameraPivot"] = 1,
 		["cameraSmoothStyle"] = 0,
