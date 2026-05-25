@@ -1802,33 +1802,11 @@ end
 
 db.nameplates = function()
 	E.private.nameplates.enable = true
-	local platesfriendly = { 'FRIENDLY_PLAYER', 'FRIENDLY_NPC' }
-	local platesfriendlyplayer = { 'FRIENDLY_PLAYER' }
-	local platesenemy = { 'ENEMY_PLAYER', 'ENEMY_NPC' }
-	local platesenemyplayer = { 'ENEMY_PLAYER' }
-	for _, nameplateType in ipairs(platesfriendly,platesfriendlyplayer,platesenemy,platesenemyplayer) do
-		E.db.nameplates.units[nameplateType].name.parent = 'Nameplate'
-	end
-	for _, nameplateType in ipairs(platesfriendly) do
-		E.db.nameplates.units[nameplateType].name.position = 'CENTER'
-		E.db.nameplates.units[nameplateType].name.fontSize = 9
-		E.db.nameplates.units[nameplateType].name.font = MUI:GetProfileFont()
-		E.db.nameplates.units[nameplateType].name.textFormat = '[namecolor][name:abbrev:medium]'
-		E.db.nameplates.units[nameplateType].health.enable = false
-		E.db.nameplates.units[nameplateType].health.healPrediction.enable = false
-		E.db.nameplates.units[nameplateType].health.text.enable = false
-		E.db.nameplates.units[nameplateType].debuffs.enable = false
-		E.db.nameplates.units[nameplateType].buffs.enable = false
-		E.db.nameplates.units[nameplateType].level.enable = false
-		E.db.nameplates.units[nameplateType].castbar.enable = false
-		E.db.nameplates.units[nameplateType].raidTargetIndicator.position = 'TOP'
-		E.db.nameplates.units[nameplateType].raidTargetIndicator.size = 23
-		E.db.nameplates.units[nameplateType].raidTargetIndicator.xOffset = 0
-	end
-	for _, nameplateType in ipairs(platesfriendlyplayer) do
-		E.db.nameplates.units[nameplateType].pvpindicator.enable = false
-	end
-	for _, nameplateType in ipairs(platesenemy) do
+	local plates = { 'PLAYER', 'FRIENDLY_PLAYER', 'FRIENDLY_NPC', 'ENEMY_PLAYER', 'ENEMY_NPC' }
+	local platesplayer = { 'FRIENDLY_PLAYER', 'ENEMY_PLAYER' }
+	local platesfriend = { 'FRIENDLY_PLAYER', 'FRIENDLY_NPC' }
+	
+	for _, nameplateType in ipairs(plates) do
 		E.db.nameplates.units[nameplateType].debuffs.size = 20
 		E.db.nameplates.units[nameplateType].debuffs.perrow = 7
 		E.db.nameplates.units[nameplateType].debuffs.countFontSize = 8
@@ -1882,19 +1860,26 @@ db.nameplates = function()
 		E.db.nameplates.units[nameplateType].health.text.font = MUI:GetProfileFont()
 		E.db.nameplates.units[nameplateType].health.text.enable = true
 		E.db.nameplates.units[nameplateType].health.text.format = '[health:current-percent]'
+		E.db.nameplates.units[nameplateType].health.healPrediction.absorbTexture = MUI:GetProfileTexture()
+		E.db.nameplates.units[nameplateType].power.text.font = MUI:GetProfileFont()
 		E.db.nameplates.units[nameplateType].level.enable = false
 		E.db.nameplates.units[nameplateType].level.font = MUI:GetProfileFont()
 		E.db.nameplates.units[nameplateType].raidTargetIndicator.size = 23
 		E.db.nameplates.units[nameplateType].raidTargetIndicator.xOffset = -6
 		E.db.nameplates.units[nameplateType].raidTargetIndicator.position = 'LEFT'
 	end
-	for _, nameplateType in ipairs(platesenemyplayer) do
+	for _, nameplateType in ipairs(platesplayer) do
 		E.db.nameplates.units[nameplateType].pvpindicator.enable = false
 	end
-	
+	for _, nameplateType in ipairs(platesfriend) do
+		E.db.nameplates.units[nameplateType].name.textFormat = '[namecolor][name:abbrev:medium]'
+		E.db.nameplates.units[nameplateType].nameOnly = true
+	end
 	E.db.nameplates.threat.badScale = 1
 	E.db.nameplates.threat.goodScale = 1
 	E.db.nameplates.nonTargetTransparency = 1
+	E.db.nameplates.plateSize.personalHeight = 18
+	E.db.nameplates.plateSize.personalWidth = 155
 	E.db.nameplates.plateSize.friendlyHeight = 18
 	E.db.nameplates.plateSize.friendlyWidth = 155
 	E.db.nameplates.plateSize.enemyWidth = 155
@@ -1905,8 +1890,6 @@ db.nameplates = function()
 	E.db.nameplates.fadeIn = false
 	E.db.nameplates.units.TARGET.glowStyle = 'none'
 	E.db.nameplates.units.TARGET.arrow = 'Arrow11'
-	E.db.nameplates.units.TARGET.comboPoints.enable = false
-	E.db.nameplates.alwaysShowTargetHealth = false
 	E.db.nameplates.clickThrough.friendly = true
 	E.db.nameplates.filters.ElvUI_Target = E.db.nameplates.filters.ElvUI_Target or {}
 	E.db.nameplates.filters.ElvUI_Target.triggers = E.db.nameplates.filters.ElvUI_Target.triggers or {}
