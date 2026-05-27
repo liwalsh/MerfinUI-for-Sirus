@@ -483,7 +483,6 @@ db.actionbars = function()
 	E.db.actionbar.countTextYOffset = 1
 	E.db.actionbar.cooldown.fonts.enable = true
 	E.db.actionbar.cooldown.fonts.font = MUI:GetProfileFont()
-	E.db.actionbar.cooldown.fonts.font = MUI:GetProfileFont()
 	E.db.actionbar.cooldown.hhmmColor.b = 1
 	E.db.actionbar.cooldown.hhmmColor.g = 1
 	E.db.actionbar.cooldown.hhmmColor.r = 1
@@ -492,8 +491,6 @@ db.actionbars = function()
 	E.db.actionbar.cooldown.mmssColor.g = 1
 	E.db.actionbar.cooldown.mmssColor.r = 1
 	E.db.actionbar.cooldown.threshold = -1
-	E.db.actionbar.cooldown.fonts.enable = true
-	E.db.actionbar.cooldown.fonts.font = MUI:GetProfileFont()
 	E.db.actionbar.cooldown.mmssThreshold = 300
 	E.db.actionbar.microbar.backdropSpacing = 0
 	E.db.actionbar.microbar.symbolic = false
@@ -1808,12 +1805,10 @@ db.nameplates = function()
 	
 	for _, nameplateType in ipairs(plates) do
 		E.db.nameplates.units[nameplateType].debuffs.size = 20
-		E.db.nameplates.units[nameplateType].debuffs.perrow = 7
-		E.db.nameplates.units[nameplateType].debuffs.countFontSize = 8
-		E.db.nameplates.units[nameplateType].debuffs.durationFontSize = 10
+		E.db.nameplates.units[nameplateType].debuffs.numAuras = 7
+		E.db.nameplates.units[nameplateType].debuffs.countFontSize = 7
 		E.db.nameplates.units[nameplateType].debuffs.xOffset = 0
 		E.db.nameplates.units[nameplateType].debuffs.countFont = MUI:GetProfileFont()
-		E.db.nameplates.units[nameplateType].debuffs.durationFont = MUI:GetProfileFont()
 		E.db.nameplates.units[nameplateType].debuffs.countYOffset = 0
 		E.db.nameplates.units[nameplateType].debuffs.yOffset = 4
 		E.db.nameplates.units[nameplateType].debuffs.attachTo = 'FRAME'
@@ -1823,12 +1818,10 @@ db.nameplates = function()
 		E.db.nameplates.units[nameplateType].debuffs.spacing = 0
 		E.db.nameplates.units[nameplateType].debuffs.priority = 'Blacklist,CCDebuffs,Personal'
 		E.db.nameplates.units[nameplateType].buffs.size = 20
-		E.db.nameplates.units[nameplateType].buffs.perrow = 7
-		E.db.nameplates.units[nameplateType].buffs.countFontSize = 8
-		E.db.nameplates.units[nameplateType].buffs.durationFontSize = 10
+		E.db.nameplates.units[nameplateType].buffs.numAuras = 7
+		E.db.nameplates.units[nameplateType].buffs.countFontSize = 7
 		E.db.nameplates.units[nameplateType].buffs.xOffset = 0
 		E.db.nameplates.units[nameplateType].buffs.countFont = MUI:GetProfileFont()
-		E.db.nameplates.units[nameplateType].buffs.durationFont = MUI:GetProfileFont()
 		E.db.nameplates.units[nameplateType].buffs.countYOffset = 0
 		E.db.nameplates.units[nameplateType].buffs.yOffset = 28
 		E.db.nameplates.units[nameplateType].buffs.anchorPoint = 'TOPLEFT'
@@ -1836,11 +1829,12 @@ db.nameplates = function()
 		E.db.nameplates.units[nameplateType].buffs.countXOffset = 0
 		E.db.nameplates.units[nameplateType].buffs.spacing = 0
 		E.db.nameplates.units[nameplateType].buffs.priority = 'Blacklist,blockNoDuration,Personal,TurtleBuffs'
-		E.db.nameplates.units[nameplateType].castbar.iconSize = 34
+		E.db.nameplates.units[nameplateType].castbar.iconSize = 36
 		E.db.nameplates.units[nameplateType].castbar.height = 15
 		E.db.nameplates.units[nameplateType].castbar.width = 155
 		E.db.nameplates.units[nameplateType].castbar.fontSize = 9
 		E.db.nameplates.units[nameplateType].castbar.iconOffsetX = 0
+		E.db.nameplates.units[nameplateType].castbar.iconOffsetY = -1
 		E.db.nameplates.units[nameplateType].castbar.yOffset = -1
 		E.db.nameplates.units[nameplateType].castbar.font = MUI:GetProfileFont()
 		E.db.nameplates.units[nameplateType].castbar.textPosition = 'ONBAR'
@@ -1875,11 +1869,10 @@ db.nameplates = function()
 		E.db.nameplates.units[nameplateType].name.textFormat = '[namecolor][name:abbrev:medium]'
 		E.db.nameplates.units[nameplateType].nameOnly = true
 	end
+	
 	E.db.nameplates.threat.badScale = 1
 	E.db.nameplates.threat.goodScale = 1
 	E.db.nameplates.nonTargetTransparency = 1
-	E.db.nameplates.plateSize.personalHeight = 18
-	E.db.nameplates.plateSize.personalWidth = 155
 	E.db.nameplates.plateSize.friendlyHeight = 18
 	E.db.nameplates.plateSize.friendlyWidth = 155
 	E.db.nameplates.plateSize.enemyWidth = 155
@@ -1890,6 +1883,8 @@ db.nameplates = function()
 	E.db.nameplates.fadeIn = false
 	E.db.nameplates.units.TARGET.glowStyle = 'none'
 	E.db.nameplates.units.TARGET.arrow = 'Arrow11'
+	E.db.nameplates.units.TARGET.comboPoints.enable = false
+	E.db.nameplates.alwaysShowTargetHealth = false
 	E.db.nameplates.clickThrough.friendly = true
 	E.db.nameplates.filters.ElvUI_Target = E.db.nameplates.filters.ElvUI_Target or {}
 	E.db.nameplates.filters.ElvUI_Target.triggers = E.db.nameplates.filters.ElvUI_Target.triggers or {}
@@ -3551,10 +3546,6 @@ db.filters = function()
 		AddSpellId(spellId, 'RaidDebuffs_RS', 'Whitelist')
 	end
 
-	for _ , spellId in pairs(tinyDebuffs['RS']) do
-		AddSpellId(spellId, 'RaidDebuffs_RS', 'Whitelist')
-	end
-
 	for _, filterName in pairs( { 'OS', 'NAXX', 'EOE', 'ULDUAR', 'TOGC', 'ICC', 'RS'} ) do
 		for _, spellId in pairs(bigDebuffs[filterName]) do
 			AddSpellId(spellId, 'Debuff Indicators', 'Whitelist')
@@ -3970,7 +3961,7 @@ function MUI:LoadPlugins()
 		DEFAULT_CHAT_FRAME:AddMessage('|cffff0000MerfinUI Installation:|r')
 		DEFAULT_CHAT_FRAME:AddMessage(chat_error_msg)
 	end
-	
+
 end
 
 function MUI:PrivateDB()
@@ -4049,6 +4040,10 @@ function MUI:GlobalDB()
 	elseif MUI:GetProfileResolution() == 'FULL_HD' then
 		ElvDB.global.general.UIScale = 0.7111111111111111
 	end
+
+	E.db.cooldown.fonts.enable= true
+	E.db.cooldown.fonts.font= MUI:GetProfileFont()
+	E.db.cooldown.fonts.fontSize = 14
 
 end
 
