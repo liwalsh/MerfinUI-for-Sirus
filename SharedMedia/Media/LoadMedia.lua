@@ -8,8 +8,6 @@ end
 LSM:Register("background", SetMediaName('Chat Background'), [[Interface\AddOns\SharedMedia\Media\background\MerfinUI_ChatBackground.tga]]) 
 
 --  FONT
-LSM:Register("font", "Expressway", [[Interface\AddOns\SharedMedia\Media\font\Expressway.ttf]])
-LSM:Register("font", "HOOGE", [[Interface\AddOns\SharedMedia\Media\font\HOOGE.TTF]])
 LSM:Register("font", "SFUIDisplayCondensed-Bold", [[Interface\AddOns\SharedMedia\Media\font\SFUIDisplayCondensed-Bold.ttf]], LSM.LOCALE_BIT_western + LSM.LOCALE_BIT_ruRU)
 LSM:Register("font", "SFUIDisplayCondensed-Semibold", [[Interface\AddOns\SharedMedia\Media\font\SFUIDisplayCondensed-Semibold.ttf]], LSM.LOCALE_BIT_western + LSM.LOCALE_BIT_ruRU)
 
