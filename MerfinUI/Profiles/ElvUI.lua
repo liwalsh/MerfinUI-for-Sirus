@@ -1894,7 +1894,6 @@ db.nameplates = function()
 	E.db.nameplates.targetScale = 1
 	E.db.nameplates.fadeIn = false
 	E.db.nameplates.alwaysShowTargetHealth = false
-	E.db.nameplates.clickThrough.friendly = true
 
 	E.db.nameplates.filters.ElvUI_Target = E.db.nameplates.filters.ElvUI_Target or {}
 	E.db.nameplates.filters.ElvUI_Target.triggers = E.db.nameplates.filters.ElvUI_Target.triggers or {}
