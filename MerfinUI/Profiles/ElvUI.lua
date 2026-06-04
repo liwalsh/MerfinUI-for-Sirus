@@ -1884,6 +1884,251 @@ db.nameplates = function()
 	E.db.nameplates.alwaysShowTargetHealth = false
 	E.db.nameplates.clickThrough.friendly = true
 
+	E.db.nameplates.filters.ElvUI_Target = E.db.nameplates.filters.ElvUI_Target or {}
+	E.db.nameplates.filters.ElvUI_Target.triggers = E.db.nameplates.filters.ElvUI_Target.triggers or {}
+	E.db.nameplates.filters.ElvUI_Circle = E.db.nameplates.filters.ElvUI_Circle or {}
+	E.db.nameplates.filters.ElvUI_Circle.triggers = E.db.nameplates.filters.ElvUI_Circle.triggers or {}
+	E.db.nameplates.filters.ElvUI_Cross = E.db.nameplates.filters.ElvUI_Cross or {}
+	E.db.nameplates.filters.ElvUI_Cross.triggers = E.db.nameplates.filters.ElvUI_Cross.triggers or {}
+	E.db.nameplates.filters.ElvUI_Moon = E.db.nameplates.filters.ElvUI_Moon or {}
+	E.db.nameplates.filters.ElvUI_Moon.triggers = E.db.nameplates.filters.ElvUI_Moon.triggers or {}
+	E.db.nameplates.filters.ElvUI_Skull = E.db.nameplates.filters.ElvUI_Skull or {}
+	E.db.nameplates.filters.ElvUI_Skull.triggers = E.db.nameplates.filters.ElvUI_Skull.triggers or {}
+	E.db.nameplates.filters.ElvUI_Diamond = E.db.nameplates.filters.ElvUI_Diamond or {}
+	E.db.nameplates.filters.ElvUI_Diamond.triggers = E.db.nameplates.filters.ElvUI_Diamond.triggers or {}
+	E.db.nameplates.filters.ElvUI_Star = E.db.nameplates.filters.ElvUI_Star or {}
+	E.db.nameplates.filters.ElvUI_Star.triggers = E.db.nameplates.filters.ElvUI_Star.triggers or {}
+	E.db.nameplates.filters.ElvUI_Triangle = E.db.nameplates.filters.ElvUI_Triangle or {}
+	E.db.nameplates.filters.ElvUI_Triangle.triggers = E.db.nameplates.filters.ElvUI_Triangle.triggers or {}
+	E.db.nameplates.filters.ElvUI_Square = E.db.nameplates.filters.ElvUI_Square or {}
+	E.db.nameplates.filters.ElvUI_Square.triggers = E.db.nameplates.filters.ElvUI_Square.triggers or {}
+	E.global.nameplates.filters = E.global.nameplates.filters or {}
+
+	E.global.nameplates.filters['ElvUI_Target'] = {
+		['triggers'] = {
+			['enable'] = true,
+			['priority'] = 100,
+			["isTarget"] = true,
+		},
+		["actions"] = {
+			['showHealthy'] = false,
+			['color'] = {
+				['border'] = true,
+			},
+		},
+	}
+	E.global.nameplates.filters['ElvUI_NonTarget'] = {
+		['triggers'] = {
+			['enable'] = true,
+			['priority'] = 10,
+			['notTarget'] = true,
+			['requireTarget'] = true,
+		},
+		['actions'] = {
+			['alpha'] = 50,
+		},
+	}
+	E.global.nameplates.filters['ElvUI_Circle'] = {
+		['triggers'] = {
+			['enable'] = true,
+			['priority'] = 5,
+			['raidTarget'] = {
+				['circle'] = true,
+			},
+		},
+		['actions'] = {
+			['texture'] = {
+				['enable'] = false,
+				['texture'] = MUI:GetProfileTexture(),
+			},
+			['color'] = {
+				['health'] = true,
+				['healthColor'] = {
+					['a'] = 1,
+					['b'] = 0,
+					['g'] = 0.50196078431373,
+					['r'] = 1,
+				},
+			},
+		},
+	}
+	E.global.nameplates.filters['ElvUI_Cross'] = {
+		['triggers'] = {
+			['enable'] = true,
+			['priority'] = 5,
+			['raidTarget'] = {
+				['cross'] = true,
+			},
+		},
+		['actions'] = {
+			['texture'] = {
+				['enable'] = false,
+				['texture'] = MUI:GetProfileTexture(),
+			},
+			['color'] = {
+				['health'] = true,
+				['healthColor'] = {
+					['a'] = 1,
+					['b'] = 0,
+					['g'] = 0,
+					['r'] = 1,
+				},
+			},
+		},
+	}
+	E.global.nameplates.filters['ElvUI_Moon'] = {
+		['triggers'] = {
+			['enable'] = true,
+			['priority'] = 5,
+			['raidTarget'] = {
+				['moon'] = true,
+			},
+		},
+		['actions'] = {
+			['texture'] = {
+				['enable'] = false,
+				['texture'] = MUI:GetProfileTexture(),
+			},
+			['color'] = {
+				['health'] = true,
+				['healthColor'] = {
+					['a'] = 1,
+					['b'] = 0.94117647058824,
+					['g'] = 0.8,
+					['r'] = 0.41176470588235,
+				},
+			},
+		},
+	}
+	E.global.nameplates.filters['ElvUI_Skull'] = {
+		['triggers'] = {
+			['enable'] = true,
+			['priority'] = 5,
+			['raidTarget'] = {
+				['skull'] = true,
+			},
+		},
+		['actions'] = {
+			['texture'] = {
+				['enable'] = false,
+				['texture'] = MUI:GetProfileTexture(),
+			},
+			['color'] = {
+				['health'] = true,
+				['healthColor'] = {
+					['a'] = 1,
+					['b'] = 0.6156862745098,
+					['g'] = 0.6156862745098,
+					['r'] = 0.6156862745098,
+				},
+			},
+		},
+	}
+	E.global.nameplates.filters['ElvUI_Diamond'] = {
+		['triggers'] = {
+			['enable'] = true,
+			['priority'] = 5,
+			['raidTarget'] = {
+				['diamond'] = true,
+			},
+		},
+		['actions'] = {
+			['texture'] = {
+				['enable'] = false,
+				['texture'] = MUI:GetProfileTexture(),
+			},
+			['color'] = {
+				['health'] = true,
+				['healthColor'] = {
+					['a'] = 1,
+					['b'] = 1,
+					['g'] = 0,
+					['r'] = 1,
+				},
+			},
+		},
+	}
+	E.global.nameplates.filters['ElvUI_Star'] = {
+		['triggers'] = {
+			['enable'] = true,
+			['priority'] = 5,
+			['raidTarget'] = {
+				['star'] = true,
+			},
+		},
+		['actions'] = {
+			['texture'] = {
+				['enable'] = false,
+				['texture'] = MUI:GetProfileTexture(),
+			},
+			['color'] = {
+				['health'] = true,
+				['healthColor'] = {
+					['a'] = 1,
+					['b'] = 0,
+					['g'] = 1,
+					['r'] = 1,
+				},
+			},
+		},
+	}
+	E.global.nameplates.filters['ElvUI_Triangle'] = {
+		['triggers'] = {
+			['enable'] = true,
+			['priority'] = 5,
+			['raidTarget'] = {
+				['triangle'] = true,
+			},
+		},
+		['actions'] = {
+			['texture'] = {
+				['enable'] = false,
+				['texture'] = MUI:GetProfileTexture(),
+			},
+			['color'] = {
+				['health'] = true,
+				['healthColor'] = {
+					['a'] = 1,
+					['b'] = 0,
+					['g'] = 1,
+					['r'] = 0,
+				},
+			},
+		},
+	}
+	E.global.nameplates.filters['ElvUI_Square'] = {
+		['triggers'] = {
+			['enable'] = true,
+			['priority'] = 5,
+			['raidTarget'] = {
+				['square'] = true,
+			},
+		},
+		['actions'] = {
+			['texture'] = {
+				['enable'] = false,
+				['texture'] = MUI:GetProfileTexture(),
+			},
+			['color'] = {
+				['health'] = true,
+				['healthColor'] = {
+					['a'] = 1,
+					['b'] = 1,
+					['g'] = 0,
+					['r'] = 0,
+				},
+			},
+		},
+	}
+	E.global.nameplates.filters.ElvUI_Target.triggers.enable = true
+	E.global.nameplates.filters.ElvUI_Circle.triggers.enable = true
+	E.global.nameplates.filters.ElvUI_Cross.triggers.enable = true
+	E.global.nameplates.filters.ElvUI_Moon.triggers.enable = true
+	E.global.nameplates.filters.ElvUI_Skull.triggers.enable = true
+	E.global.nameplates.filters.ElvUI_Diamond.triggers.enable = true
+	E.global.nameplates.filters.ElvUI_Star.triggers.enable = true
+	E.global.nameplates.filters.ElvUI_Triangle.triggers.enable = true
+	E.global.nameplates.filters.ElvUI_Square.triggers.enable = true
 end
 
 db.filters = function()

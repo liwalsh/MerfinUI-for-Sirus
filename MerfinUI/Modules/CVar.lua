@@ -47,7 +47,7 @@ function MUI:Set_CVars()
 		["nameplateEnableNew"] = 1,
 		["nameplateSelectedAlpha"] = 1,
 		["nameplateSelectedScale"] = 1,
-		["nameplateOccludedAlphaMult"] = 1,
+		["nameplateOccludedAlphaMult"] = 0.5,
 		["nameplateMinScale"] = 1,
 		["nameplateMinAlpha"] = 1,
 		["nameplateNotSelectedAlpha"] = 1,
