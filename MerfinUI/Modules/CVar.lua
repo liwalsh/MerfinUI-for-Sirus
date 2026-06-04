@@ -55,8 +55,6 @@ function MUI:Set_CVars()
 		["nameplateVerticalScale"] = 1,
 		["nameplateHorizontalScale"] = 1,
 		["nameplateShowSelf"] = 0,
-		["NameplatePersonalShowInCombat"] = 0,
-		["NameplatePersonalClickThrough"] = 0,
 
 		["autoLootDefault"] = 1,
 		["cameraPivot"] = 1,

@@ -1839,7 +1839,7 @@ db.nameplates = function()
 		E.db.nameplates.units[nameplateType].castbar.font = MUI:GetProfileFont()
 		E.db.nameplates.units[nameplateType].castbar.textPosition = 'ONBAR'
 		E.db.nameplates.units[nameplateType].name.position = 'BOTTOMLEFT'
-		E.db.nameplates.units[nameplateType].name.xOffset = 2
+		E.db.nameplates.units[nameplateType].name.xOffset = 4
 		E.db.nameplates.units[nameplateType].name.yOffset = 14
 		E.db.nameplates.units[nameplateType].name.fontSize = 9
 		E.db.nameplates.units[nameplateType].name.abbrev = true
@@ -1848,7 +1848,7 @@ db.nameplates = function()
 		E.db.nameplates.units[nameplateType].health.height = 18
 		E.db.nameplates.units[nameplateType].health.width = 155
 		E.db.nameplates.units[nameplateType].health.text.position = 'BOTTOMRIGHT'
-		E.db.nameplates.units[nameplateType].health.text.xOffset = -2
+		E.db.nameplates.units[nameplateType].health.text.xOffset = -4
 		E.db.nameplates.units[nameplateType].health.text.yOffset = 14
 		E.db.nameplates.units[nameplateType].health.text.fontSize = 9
 		E.db.nameplates.units[nameplateType].health.text.font = MUI:GetProfileFont()
@@ -1868,6 +1868,8 @@ db.nameplates = function()
 	for _, nameplateType in ipairs(platesfriend) do
 		E.db.nameplates.units[nameplateType].name.textFormat = '[namecolor][name:abbrev:medium]'
 		E.db.nameplates.units[nameplateType].nameOnly = true
+		E.db.nameplates.units[nameplateType].raidTargetIndicator.xOffset = 0
+		E.db.nameplates.units[nameplateType].raidTargetIndicator.position = 'TOP'
 	end
 	
 	E.db.nameplates.threat.badScale = 1
@@ -1877,6 +1879,8 @@ db.nameplates = function()
 	E.db.nameplates.plateSize.friendlyWidth = 155
 	E.db.nameplates.plateSize.enemyWidth = 155
 	E.db.nameplates.plateSize.enemyHeight = 18
+	E.db.nameplates.plateSize.personalHeight = 18
+	E.db.nameplates.plateSize.personalWidth = 155
 	E.db.nameplates.statusbar = MUI:GetProfileTexture()
 	E.db.nameplates.useTargetScale = false
 	E.db.nameplates.targetScale = 1
