@@ -321,11 +321,17 @@ function MUI:Config()
                     xctDps = {
                         order = 4,
                         type = "execute",
-                        name = 'xCT DPS/Tank',
-                        func = function() MUI:Import_xCT("DPS/Tank") end
+                        name = 'xCT DPS',
+                        func = function() MUI:Import_xCT("DPS") end
+                    },
+					xctTank = {
+                        order = 5,
+                        type = "execute",
+                        name = 'xCT Tank',
+                        func = function() MUI:Import_xCT("Tank") end
                     },
                     xctHealer = {
-                        order = 5,
+                        order = 6,
                         type = "execute",
                         name = 'xCT Healer',
                         func = function() MUI:Import_xCT("Healer") end

@@ -227,10 +227,14 @@ function MUI:Import_xCT(layout)
 				['enabledFrame'] = false,
 			},
 			['healing'] = {
+				['enableFontShadow'] = false,
 				['font'] = mainFont,
 				['enableRealmNames'] = false,
+				['showFriendlyHealers'] = false,
+				['enableClassNames'] = false,
 				['fontSize'] = 13,
 				['enabledFrame'] = false,
+				['fontJustify'] = 'RIGHT',
 				['Y'] = 213,
 				['X'] = -403,
 			},
@@ -294,6 +298,11 @@ function MUI:Import_xCT(layout)
 		},
 	}
 
+	if layout == 'Tank' then
+		local healing = xCTSavedDB['profiles'][profileName]['frames']['healing']
+		healing.enabledFrame = true
+	end
+
 	if MUI:GetProfileResolution() == 'QUAD_HD' then
 		xCTSavedDB.profiles[profileName].frames.general.Y = 400
 		xCTSavedDB.profiles[profileName].frames.general.X = 0
@@ -304,7 +313,7 @@ function MUI:Import_xCT(layout)
 		xCTSavedDB.profiles[profileName].frames.outgoing.iconsSize = 24
 		xCTSavedDB.profiles[profileName].frames.critical.iconsSize = 24
 
-		if layout == 'DPS/Tank' then
+		if layout == 'DPS' or layout == 'Tank' or layout == 'DPS/Tank' then
 			xCTSavedDB.profiles[profileName].frames.outgoing.Y = -427
 			xCTSavedDB.profiles[profileName].frames.outgoing.X = 340
 			xCTSavedDB.profiles[profileName].frames.outgoing.enableOutHeal = false
@@ -313,6 +322,16 @@ function MUI:Import_xCT(layout)
 			xCTSavedDB.profiles[profileName].frames.outgoing.X = 868
 			xCTSavedDB.profiles[profileName].frames.outgoing.enableOutHeal = true
 		end
+
+		if layout == 'Tank' then
+			local healing = xCTSavedDB['profiles'][profileName]['frames']['healing']
+			healing.Width = 275
+			healing.fontSize = 14
+			healing.Y = -279
+			healing.X = -580
+			healing.Height = 104
+		end
+
 	elseif MUI:GetProfileResolution() == 'FULL_HD' then
 		xCTSavedDB.profiles[profileName].frames.general.Y = 300
 		xCTSavedDB.profiles[profileName].frames.general.X = 0
@@ -323,7 +342,7 @@ function MUI:Import_xCT(layout)
 		xCTSavedDB.profiles[profileName].frames.outgoing.iconsSize = 20
 		xCTSavedDB.profiles[profileName].frames.critical.iconsSize = 20
 
-		if layout == 'DPS/Tank' then
+		if layout == 'DPS' or layout == 'Tank' or layout == 'DPS/Tank' then
 			xCTSavedDB.profiles[profileName].frames.outgoing.Y = -361
 			xCTSavedDB.profiles[profileName].frames.outgoing.X = 299
 			xCTSavedDB.profiles[profileName].frames.outgoing.enableOutHeal = false
@@ -332,6 +351,16 @@ function MUI:Import_xCT(layout)
 			xCTSavedDB.profiles[profileName].frames.outgoing.X = 587
 			xCTSavedDB.profiles[profileName].frames.outgoing.enableOutHeal = true
 		end
+
+		if layout == 'Tank' then
+			local healing = xCTSavedDB['profiles'][profileName]['frames']['healing']
+			healing.Width = 216
+			healing.fontSize = 13
+			healing.Y = -215
+			healing.X = -510
+			healing.Height = 90
+		end
+
 	end
 
 	xCTSavedDB['profileKeys'][addonTable.AceProfileName] = profileName

@@ -1871,7 +1871,15 @@ db.nameplates = function()
 		E.db.nameplates.units[nameplateType].raidTargetIndicator.xOffset = 0
 		E.db.nameplates.units[nameplateType].raidTargetIndicator.position = 'TOP'
 	end
-	
+
+	E.db.nameplates.engine.occludedAlphaMult = 0.5
+	E.db.nameplates.engine.loadDistance = 79
+	E.db.nameplates.engine.showSelf = 0
+	E.db.nameplates.engine.horizontalScale = 1
+	E.db.nameplates.engine.verticalScale = 1
+	E.db.nameplates.engine.showDebuffsOnFriendly = 0
+	E.db.nameplates.engine.selectedScale = 1
+
 	E.db.nameplates.threat.badScale = 1
 	E.db.nameplates.threat.goodScale = 1
 	E.db.nameplates.nonTargetTransparency = 1
@@ -1886,7 +1894,6 @@ db.nameplates = function()
 	E.db.nameplates.targetScale = 1
 	E.db.nameplates.fadeIn = false
 	E.db.nameplates.alwaysShowTargetHealth = false
-	E.db.nameplates.clickThrough.friendly = true
 
 	E.db.nameplates.filters.ElvUI_Target = E.db.nameplates.filters.ElvUI_Target or {}
 	E.db.nameplates.filters.ElvUI_Target.triggers = E.db.nameplates.filters.ElvUI_Target.triggers or {}
