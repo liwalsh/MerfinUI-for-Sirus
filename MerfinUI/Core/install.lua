@@ -146,20 +146,3 @@ MUI.InstallerData = {
 	StepTitleButtonWidth = 250,
 	StepTitleTextJustification = "RIGHT",
 }
-MUI.QuickInstall = function(layout)
-	MUI:Set_CVars()
-	MUI:SetupChat()
-	MUI:ImportDetails('Normal')
-	MUI:ImportElvUI(layout)
-	if layout == 'DPS/Tank' then
-		MUI:Import_xCT("DPS/Tank")
-		MUI:ImportDBM("DPS/Tank")
-	elseif layout == 'Healer-H' then
-		MUI:Import_xCT("Healer")
-		MUI:ImportDBM("Healer")
-	elseif layout == 'Healer-V' then
-		MUI:Import_xCT("Healer")
-		MUI:ImportDBM("Healer")
-	end
-	addonTable:InstallComplete()
-end
