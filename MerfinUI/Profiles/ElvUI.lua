@@ -194,7 +194,7 @@ db.movers = function(layout)
 
 		E.db.movers.ElvUF_PlayerCastbarMover = 'BOTTOM,ElvUIParent,BOTTOM,0,76'
 		E.db.movers.ElvUF_PetCastbarMover = 'BOTTOM,ElvUIParent,BOTTOM,0,197'
-		E.db.movers.ElvUF_TargetCastbarMover = 'BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-477,250' 
+		E.db.movers.ElvUF_TargetCastbarMover = 'BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-478,250' 
 		E.db.movers.ElvUF_FocusCastbarMover = 'BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-289,350'
 
 		E.db.movers.ElvBar_Pet = 'BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,4,318'
