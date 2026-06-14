@@ -1929,7 +1929,7 @@ db.nameplates = function()
 	}
 	E.global.nameplates.filters['ElvUI_NonTarget'] = {
 		['triggers'] = {
-			['enable'] = true,
+			['enable'] = false,
 			['priority'] = 10,
 			['notTarget'] = true,
 			['requireTarget'] = true,
