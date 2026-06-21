@@ -67,17 +67,16 @@ end
 
 -- Clickable Reminder
 Merfin.SetButtonTemplate = function(aura_env, buttonName, type, context)
-
+    
     if WeakAuras.IsOptionsOpen() then return end
     if not aura_env then return end
     if UnitAffectingCombat('player') then return end
-
-    local r = WeakAuras.GetRegion(aura_env.id)
+    
     if not aura_env.button then
-        aura_env.button = CreateFrame("Button", buttonName, r, "SecureActionButtonTemplate")
+        local r = WeakAuras.GetRegion(aura_env.id)
+        aura_env.button = CreateFrame("Button", buttonName, r, "SecureActionButtonTemplate")  
     end
-
-    aura_env.button:SetParent(r)
+    
     aura_env.button:SetAllPoints()
     aura_env.button:RegisterForClicks("AnyUp")
     aura_env.button:SetAttribute("type", type)
@@ -89,7 +88,7 @@ Merfin.SetButtonTemplate = function(aura_env, buttonName, type, context)
         local spell = GetSpellInfo(context)
         aura_env.button:SetAttribute("spell", spell)
     end
-    aura_env.button:Show()
+    
 end
 
 Merfin.DropdownMenuState = function(aura_env, buttonEvent, a, e)
