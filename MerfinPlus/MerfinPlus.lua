@@ -1,12 +1,37 @@
 local _, MerfinPlus = ...
-MerfinPlus = LibStub("AceAddon-3.0"):NewAddon("MerfinPlus", "AceEvent-3.0")
+MerfinPlus = LibStub("AceAddon-3.0"):NewAddon(MerfinPlus, "MerfinPlus", "AceEvent-3.0")
 
-function MerfinPlus:OnEnable()
-    self:RegisterEvent("PLAYER_ENTERING_WORLD", "HandleEnteringWorld")
+MerfinPlus.BuildInfo = select(4, GetBuildInfo())
+
+function MerfinPlus:OnInitialize()
+  self.db = LibStub("AceDB-3.0"):New("MerfinPlusSaved", MerfinPlus.defaults, true)
+  self:RegisterCustomFonts()
+  self:RegisterCustomBars()
+  self:RegisterMediaAliasesFromCallback()
+  self:RegisterFonts()
+  self:RegisterBars()
+  self:SetupOptions()
 end
 
-function MerfinPlus:HandleEnteringWorld()
-    ChatFrame1:SetFrameStrata("MEDIUM")
-end
+function MerfinPlus:OnEnable() end
 
-Merfin = Merfin or {} 
+Merfin = Merfin or {}
+
+Merfin.L = GetLocale()
+Merfin.ForcedSoundLoc = false
+
+local supportedLoc = {
+  ["ruRU"] = true,
+  ["enUS"] = true,
+  ["zhCN"] = true,
+}
+
+Merfin.GetLocale = function()
+  if Merfin.ForcedSoundLoc then
+    return Merfin.ForcedSoundLoc
+  elseif not supportedLoc[Merfin.L] then
+    return "enUS"
+  else
+    return Merfin.L
+  end
+end
