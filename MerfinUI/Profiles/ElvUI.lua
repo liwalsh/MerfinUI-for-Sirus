@@ -74,9 +74,9 @@ db.movers = function(layout)
 
 	elseif layout == 'Healer-H' or layout == 'Healer-V' then
 
-		E.db.movers.ElvUF_PlayerMover = 'BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,698,355'
+		E.db.movers.ElvUF_PlayerMover = 'BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,699,355'
 		E.db.movers.ElvUF_PetMover = 'BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,565,355'
-		E.db.movers.ElvUF_TargetMover = 'BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-697,355'
+		E.db.movers.ElvUF_TargetMover = 'BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-699,355'
 		E.db.movers.ElvUF_FocusMover = 'BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-326,355'
 		E.db.movers.ElvUF_TargetTargetMover = 'BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-562,355'
 
@@ -85,9 +85,9 @@ db.movers = function(layout)
 		E.db.movers.ElvUF_TargetCastbarMover = 'BOTTOM,ElvUF_Target,BOTTOM,0,-21'
 		E.db.movers.ElvUF_FocusCastbarMover = 'BOTTOM,ElvUF_Focus,BOTTOM,0,-21'
 
-		E.db.movers.ElvUF_Raid10Mover = 'BOTTOM,ElvUIParent,BOTTOM,0,277'
-		E.db.movers.ElvUF_Raid25Mover = 'BOTTOM,UIParent,BOTTOM,0,85'
-		E.db.movers.ElvUF_Raid40Mover = 'BOTTOM,ElvUIParent,BOTTOM,0,85'
+		E.db.movers.ElvUF_Raid10Mover = 'BOTTOM,ElvUIParent,BOTTOM,0,276'
+		E.db.movers.ElvUF_Raid25Mover = 'BOTTOM,UIParent,BOTTOM,0,84'
+		E.db.movers.ElvUF_Raid40Mover = 'BOTTOM,ElvUIParent,BOTTOM,0,76'
 		E.db.movers.ElvUF_RaidpetMover = 'BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-708,85'
 		E.db.movers.ArenaHeaderMover = 'TOPRIGHT,UIParent,TOPRIGHT,-463,-555'
 		E.db.movers.BossHeaderMover = 'TOPRIGHT,ElvUIParent,TOPRIGHT,-626,-406'
@@ -100,7 +100,7 @@ db.movers = function(layout)
 	end
 
 	if layout == 'Healer-H' then
-		E.db.movers.ElvUF_PartyMover = 'BOTTOM,ElvUIParent,BOTTOM,0,341'
+		E.db.movers.ElvUF_PartyMover = 'BOTTOM,ElvUIParent,BOTTOM,0,340'
 	elseif layout == 'Healer-V' then
 		E.db.movers.ElvUF_PartyMover = 'BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,699,544'
 	end
@@ -189,8 +189,8 @@ db.movers = function(layout)
 		E.db.movers.ElvUF_TargetCastbarMover = 'BOTTOM,ElvUF_Target,BOTTOM,0,-21'
 		E.db.movers.ElvUF_FocusCastbarMover = 'BOTTOM,ElvUF_Focus,BOTTOM,0,-21'
 
-		E.db.movers.ElvUF_Raid10Mover = 'BOTTOM,UIParent,BOTTOM,0,216'
-		E.db.movers.ElvUF_Raid25Mover = 'BOTTOM,ElvUIParent,BOTTOM, 0,69'
+		E.db.movers.ElvUF_Raid10Mover = 'BOTTOM,ElvUIParent,BOTTOM,0,216'
+		E.db.movers.ElvUF_Raid25Mover = 'BOTTOM,ElvUIParent,BOTTOM,0,69'
 		E.db.movers.ElvUF_Raid40Mover = 'BOTTOM,ElvUIParent,BOTTOM,0,66'
 		E.db.movers.ElvUF_RaidpetMover = 'TOPLEFT,ElvUIParent,BOTTOMLEFT,1207,249'
 		E.db.movers.ArenaHeaderMover = 'TOPRIGHT,ElvUIParent,TOPRIGHT,-289,-331'
@@ -204,7 +204,7 @@ db.movers = function(layout)
 	end
 
 	if layout == 'Healer-H' then
-		E.db.movers.ElvUF_PartyMover = "BOTTOM,UIParent,BOTTOM,0,260"
+		E.db.movers.ElvUF_PartyMover = "BOTTOM,ElvUIParent,BOTTOM,0,260"
 	elseif layout == 'Healer-V' then
 		E.db.movers.ElvUF_PartyMover = "TOPLEFT,ElvUIParent,TOPLEFT,478,-361"
 	end
@@ -2999,7 +2999,6 @@ function MUI:ImportElvUI(layout)
 	MUI:PrivateDB()
 	MUI:LoadPlugins()
 
-	db.movers(layout)
 	db.general()
 	db.auras()
 	db.bags()
@@ -3011,6 +3010,10 @@ function MUI:ImportElvUI(layout)
 	db.unitframes(layout)
 	db.nameplates()
 	db.filters()
+
+	E:UpdateAll(true)
+
+	db.movers(layout)
 
 	E:UpdateAll(true)
 
