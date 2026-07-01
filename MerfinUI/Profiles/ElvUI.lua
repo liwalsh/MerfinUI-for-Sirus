@@ -54,6 +54,11 @@ db.movers = function(layout)
 		E.db.movers.ElvUF_FocusMover = 'BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-491,390'
 		E.db.movers.ElvUF_TargetTargetMover = 'BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-721,390'
 
+		E.db.movers.ElvUF_PlayerCastbarMover = 'BOTTOM,ElvUF_Player,BOTTOM,0,-21'
+		E.db.movers.ElvUF_PetCastbarMover = 'BOTTOM,ElvUF_Pet,BOTTOM,0,-21'
+		E.db.movers.ElvUF_TargetCastbarMover = 'BOTTOM,ElvUF_Target,BOTTOM,0,-21'
+		E.db.movers.ElvUF_FocusCastbarMover = 'BOTTOM,ElvUF_Focus,BOTTOM,0,-21'
+
 		E.db.movers.ElvUF_PartyMover = 'TOPLEFT,ElvUIParent,TOPLEFT,644,-560'
 		E.db.movers.ElvUF_Raid10Mover = 'BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,4,314'
 		E.db.movers.ElvUF_Raid25Mover = 'BOTTOMLEFT,UIParent,BOTTOMLEFT,4,314'
@@ -62,11 +67,6 @@ db.movers = function(layout)
 		E.db.movers.ArenaHeaderMover = 'TOPRIGHT,UIParent,TOPRIGHT,-626,-546'
 		E.db.movers.BossHeaderMover = 'TOPRIGHT,ElvUIParent,TOPRIGHT,-626,-406'
 		E.db.movers.ElvUF_TankMover = 'BOTTOM,ElvUIParent,BOTTOM,-303,49'
-
-		E.db.movers.ElvUF_PlayerCastbarMover = 'BOTTOM,ElvUIParent,BOTTOM,-1,308'
-		E.db.movers.ElvUF_TargetCastbarMover = 'BOTTOM,ElvUIParent,BOTTOM,299,372'
-		E.db.movers.ElvUF_PetCastbarMover = 'BOTTOM,ElvUIParent,BOTTOM,0,197'
-		E.db.movers.ElvUF_FocusCastbarMover = 'BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-491,372'
 
 		E.db.movers.ElvBar_Pet = "BOTTOM,ElvUIParent,BOTTOM,245,74"
 		E.db.movers.ShiftAB = 'TOPLEFT,ElvUIParent,BOTTOMLEFT,860,110'
@@ -80,6 +80,11 @@ db.movers = function(layout)
 		E.db.movers.ElvUF_FocusMover = 'BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-326,355'
 		E.db.movers.ElvUF_TargetTargetMover = 'BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-562,355'
 
+		E.db.movers.ElvUF_PlayerCastbarMover = 'BOTTOM,ElvUF_Player,BOTTOM,0,-21'
+		E.db.movers.ElvUF_PetCastbarMover = 'BOTTOM,ElvUF_Pet,BOTTOM,0,-21'
+		E.db.movers.ElvUF_TargetCastbarMover = 'BOTTOM,ElvUF_Target,BOTTOM,0,-21'
+		E.db.movers.ElvUF_FocusCastbarMover = 'BOTTOM,ElvUF_Focus,BOTTOM,0,-21'
+
 		E.db.movers.ElvUF_Raid10Mover = 'BOTTOM,ElvUIParent,BOTTOM,0,277'
 		E.db.movers.ElvUF_Raid25Mover = 'BOTTOM,UIParent,BOTTOM,0,85'
 		E.db.movers.ElvUF_Raid40Mover = 'BOTTOM,ElvUIParent,BOTTOM,0,85'
@@ -87,11 +92,6 @@ db.movers = function(layout)
 		E.db.movers.ArenaHeaderMover = 'TOPRIGHT,UIParent,TOPRIGHT,-463,-555'
 		E.db.movers.BossHeaderMover = 'TOPRIGHT,ElvUIParent,TOPRIGHT,-626,-406'
 		E.db.movers.ElvUF_TankMover = 'BOTTOM,ElvUIParent,BOTTOM,-303,49'
-
-		E.db.movers.ElvUF_PlayerCastbarMover = 'BOTTOM,ElvUIParent,BOTTOM,0,84'
-		E.db.movers.ElvUF_PetCastbarMover = 'BOTTOM,ElvUIParent,BOTTOM,0,197'
-		E.db.movers.ElvUF_TargetCastbarMover = 'BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-698,335'
-		E.db.movers.ElvUF_FocusCastbarMover = 'BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-338,335'
 
 		E.db.movers.ElvBar_Pet = 'BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,134,313'
 		E.db.movers.ShiftAB = 'BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-546,4'
@@ -158,6 +158,11 @@ db.movers = function(layout)
 		E.db.movers.ElvUF_TargetTargetMover = 'BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-445,280'
 		E.db.movers.ElvUF_FocusMover = 'BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-255,280'
 
+		E.db.movers.ElvUF_PlayerCastbarMover = 'BOTTOM,ElvUF_Player,BOTTOM,0,-21'
+		E.db.movers.ElvUF_PetCastbarMover = 'BOTTOM,ElvUF_Pet,BOTTOM,0,-21'
+		E.db.movers.ElvUF_TargetCastbarMover = 'BOTTOM,ElvUF_Target,BOTTOM,0,-21'
+		E.db.movers.ElvUF_FocusCastbarMover = 'BOTTOM,ElvUF_Focus,BOTTOM,0,-21'
+
 		E.db.movers.ElvUF_PartyMover = 'TOPLEFT,ElvUIParent,TOPLEFT,418,-339'
 		E.db.movers.ElvUF_Raid10Mover = 'BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,4,281'
 		E.db.movers.ElvUF_Raid25Mover = 'BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,4,281'
@@ -166,11 +171,6 @@ db.movers = function(layout)
 		E.db.movers.ArenaHeaderMover = 'TOPRIGHT,UIParent,TOPRIGHT,-378,-344'
 		E.db.movers.BossHeaderMover = 'TOPRIGHT,ElvUIParent,TOPRIGHT,-378,-209'
 		E.db.movers.ElvUF_TankMover = 'BOTTOM,ElvUIParent,BOTTOM,-303,49'
-
-		E.db.movers.ElvUF_PlayerCastbarMover = 'BOTTOM,ElvUIParent,BOTTOM,0,220'
-		E.db.movers.ElvUF_PetCastbarMover = 'BOTTOM,ElvUIParent,BOTTOM,0,222'
-		E.db.movers.ElvUF_TargetCastbarMover = 'BOTTOM,ElvUIParent,BOTTOM,267,259'
-		E.db.movers.ElvUF_FocusCastbarMover = 'BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-255,259'
 
 		E.db.movers.ElvBar_Pet = 'BOTTOM,ElvUIParent,BOTTOM,217,66'
 		E.db.movers.ShiftAB = 'TOPLEFT,ElvUIParent,BOTTOMLEFT,588,98'
@@ -184,6 +184,11 @@ db.movers = function(layout)
 		E.db.movers.ElvUF_FocusMover = 'BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-289,371'
 		E.db.movers.ElvUF_TargetTargetMover = 'BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-350,271'
 
+		E.db.movers.ElvUF_PlayerCastbarMover = 'BOTTOM,ElvUF_Player,BOTTOM,0,-21'
+		E.db.movers.ElvUF_PetCastbarMover = 'BOTTOM,ElvUF_Pet,BOTTOM,0,-21'
+		E.db.movers.ElvUF_TargetCastbarMover = 'BOTTOM,ElvUF_Target,BOTTOM,0,-21'
+		E.db.movers.ElvUF_FocusCastbarMover = 'BOTTOM,ElvUF_Focus,BOTTOM,0,-21'
+
 		E.db.movers.ElvUF_Raid10Mover = 'BOTTOM,UIParent,BOTTOM,0,216'
 		E.db.movers.ElvUF_Raid25Mover = 'BOTTOM,ElvUIParent,BOTTOM, 0,69'
 		E.db.movers.ElvUF_Raid40Mover = 'BOTTOM,ElvUIParent,BOTTOM,0,66'
@@ -192,11 +197,6 @@ db.movers = function(layout)
 		E.db.movers.BossHeaderMover = 'TOPRIGHT,ElvUIParent,TOPRIGHT,-289,-306'
 		E.db.movers.ElvUF_TankMover = 'BOTTOM,ElvUIParent,BOTTOM,-303,49'
 
-		E.db.movers.ElvUF_PlayerCastbarMover = 'BOTTOM,ElvUIParent,BOTTOM,0,76'
-		E.db.movers.ElvUF_PetCastbarMover = 'BOTTOM,ElvUIParent,BOTTOM,0,197'
-		E.db.movers.ElvUF_TargetCastbarMover = 'BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-478,250' 
-		E.db.movers.ElvUF_FocusCastbarMover = 'BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-289,350'
-
 		E.db.movers.ElvBar_Pet = 'BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,4,318'
 		E.db.movers.ShiftAB = 'BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,4,283'
 		E.db.movers.ElvBar_Totem = 'BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,4,283'
@@ -204,9 +204,9 @@ db.movers = function(layout)
 	end
 
 	if layout == 'Healer-H' then
-	  E.db.movers.ElvUF_PartyMover = "BOTTOM,UIParent,BOTTOM,0,260"
+		E.db.movers.ElvUF_PartyMover = "BOTTOM,UIParent,BOTTOM,0,260"
 	elseif layout == 'Healer-V' then
-	  E.db.movers.ElvUF_PartyMover = "TOPLEFT,ElvUIParent,TOPLEFT,478,-361"
+		E.db.movers.ElvUF_PartyMover = "TOPLEFT,ElvUIParent,TOPLEFT,478,-361"
 	end
   end
 end
@@ -1180,6 +1180,11 @@ db.unitframes = function(layout)
 		E.db.unitframe.cooldown.fonts.fontSize = 20
 		E.db.unitframe.fontSize = 14
 
+		E.db.unitframe.units.player.width = 260
+		E.db.unitframe.units.player.height = 51
+		E.db.unitframe.units.player.power.height = 6
+		E.db.unitframe.units.player.castbar.height = 22
+		E.db.unitframe.units.player.castbar.width = 260
 		E.db.unitframe.units.player.CombatIcon.size = 23
 		E.db.unitframe.units.player.customTexts.UnitPower.size = 14
 		E.db.unitframe.units.player.customTexts.UnitPower.xOffset = 3
@@ -1187,9 +1192,6 @@ db.unitframes = function(layout)
 		E.db.unitframe.units.player.customTexts.UnitHealth.size = 14
 		E.db.unitframe.units.player.customTexts.UnitHealth.xOffset = -3
 		E.db.unitframe.units.player.customTexts.UnitHealth.yOffset = 0
-		E.db.unitframe.units.player.height = 51
-		E.db.unitframe.units.player.power.height = 6
-		E.db.unitframe.units.player.width = 259
 
 		E.db.unitframe.units.pet.height = 51
 		E.db.unitframe.units.pet.width = 125
@@ -1331,8 +1333,6 @@ db.unitframes = function(layout)
 		E.db.unitframe.units.raid40.customTexts.UnitName.size = 14
 		E.db.unitframe.units.raid40.customTexts.DeadGhostStatus.size = 13
 	if layout == 'DPS/Tank' then
-		E.db.unitframe.units.player.castbar.height = 33
-		E.db.unitframe.units.player.castbar.width = 275
 
 		E.db.unitframe.units.party.customTexts.UnitName.text_format = '[name]'
 		E.db.unitframe.units.party.height = 60
@@ -1431,9 +1431,6 @@ db.unitframes = function(layout)
 			E.db.unitframe.units.party.petsGroup.name.text_format = "[health:current]"
 		end
 
-		E.db.unitframe.units.player.castbar.height = 35
-		E.db.unitframe.units.player.castbar.width = 497
-
 		E.db.unitframe.units.raidpet.height = 47
 		E.db.unitframe.units.raidpet.width = 84
 
@@ -1497,6 +1494,11 @@ db.unitframes = function(layout)
 	elseif MUI:GetProfileResolution() == 'FULL_HD' then
 		E.db.unitframe.cooldown.fonts.fontSize = 20
 		E.db.unitframe.fontSize = 13
+		E.db.unitframe.units.player.width = 235
+		E.db.unitframe.units.player.height = 44
+		E.db.unitframe.units.player.power.height = 6
+		E.db.unitframe.units.player.castbar.width = 235
+		E.db.unitframe.units.player.castbar.height = 22
 		E.db.unitframe.units.player.CombatIcon.size = 23
 		E.db.unitframe.units.player.customTexts.UnitPower.size = 13
 		E.db.unitframe.units.player.customTexts.UnitPower.xOffset = 2
@@ -1504,9 +1506,6 @@ db.unitframes = function(layout)
 		E.db.unitframe.units.player.customTexts.UnitHealth.size = 13
 		E.db.unitframe.units.player.customTexts.UnitHealth.xOffset = -2
 		E.db.unitframe.units.player.customTexts.UnitHealth.yOffset = 0
-		E.db.unitframe.units.player.height = 44
-		E.db.unitframe.units.player.power.height = 6
-		E.db.unitframe.units.player.width = 235
 		E.db.unitframe.units.pet.height = 44
 		E.db.unitframe.units.pet.width = 120
 		E.db.unitframe.units.pet.castbar.height = 22
@@ -1633,8 +1632,6 @@ db.unitframes = function(layout)
 		E.db.unitframe.units.raid40.customTexts.DeadGhostStatus.size = 12
 
 	if layout == 'DPS/Tank' then
-		E.db.unitframe.units.player.castbar.height = 33
-		E.db.unitframe.units.player.castbar.width = 275
 
 		E.db.unitframe.units.party.customTexts.UnitName.text_format = '[name]'
 		E.db.unitframe.units.party.height = 55
@@ -1732,9 +1729,6 @@ db.unitframes = function(layout)
 			E.db.unitframe.units.party.petsGroup.enable = true
 			E.db.unitframe.units.party.petsGroup.name.text_format = '[health:current]'
 		end
-
-		E.db.unitframe.units.player.castbar.height = 35
-		E.db.unitframe.units.player.castbar.width = 497
 
 		E.db.unitframe.units.raid10.width = 100
 		E.db.unitframe.units.raid10.height = 50
