@@ -77,3 +77,6 @@ L["Credits Desc"] = "Я бы хотел выделить следующих лю
 L["Automatation Desc"] = "Настройки автоматизации для различных действий."
 L["Unit Frames Desc"] = "Настройки рамок юнитов."
 L["Reload required. Continue?"] = "Требуется перезагрузка. Продолжить?"
+L["xCT+ addon not found"] = "Аддон xCT+ не найден. Требуется его установка."
+L["DBM addon not found"] = "Аддон Deadly Boss Mods не найден. Требуется его установка."
+L["Details addon not found"] = "Аддон Details не найден. Требуется его установка."

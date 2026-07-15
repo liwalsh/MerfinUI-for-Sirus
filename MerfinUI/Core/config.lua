@@ -358,14 +358,16 @@ function MUI:Config()
                         type = "execute",
                         name = 'DBM DPS/Tank',
                         desc = L['DBM DPS/Tank Desc'],
-                        func = function() MUI:ImportDBM("DPS/Tank") end
+                        func = function() MUI:ImportDBM("DPS/Tank") end,
+                        disabled = function() return not IsAddOnLoaded('DBM-Core') end
                     },
                     dbmHealer = {
                         order = 4,
                         type = "execute",
                         name = 'DBM Healer',
                         desc = L['DBM Healer Desc'],
-                        func = function() MUI:ImportDBM("Healer") end
+                        func = function() MUI:ImportDBM("Healer") end,
+                        disabled = function() return not IsAddOnLoaded('DBM-Core') end
                     }
                 }
             },
@@ -391,7 +393,8 @@ function MUI:Config()
                         type = "execute",
                         name = L['Details'],
                         desc = L['Details Desc'],
-                        func = function() MUI:ImportDetails('DARK') end
+                        func = function() MUI:ImportDetails('DARK') end,
+                        disabled = function() return not IsAddOnLoaded('Details') end
                     }
                 }
             },
@@ -424,21 +427,24 @@ function MUI:Config()
                         type = "execute",
                         name = 'xCT DPS',
                         desc = L['xCT DPS Desc'],
-                        func = function() MUI:Import_xCT("DPS") end
+                        func = function() MUI:Import_xCT("DPS") end,
+                        disabled = function() return not IsAddOnLoaded('xCT+') end
                     },
                     xctTank = {
                         order = 5,
                         type = "execute",
                         name = 'xCT Tank',
                         desc = L['xCT Tank Desc'],
-                        func = function() MUI:Import_xCT("Tank") end
+                        func = function() MUI:Import_xCT("Tank") end,
+                        disabled = function() return not IsAddOnLoaded('xCT+') end
                     },
                     xctHealer = {
                         order = 6,
                         type = "execute",
                         name = 'xCT Healer',
                         desc = L['xCT Healer Desc'],
-                        func = function() MUI:Import_xCT("Healer") end
+                        func = function() MUI:Import_xCT("Healer") end,
+                        disabled = function() return not IsAddOnLoaded('xCT+') end
                     }
                 }
             },

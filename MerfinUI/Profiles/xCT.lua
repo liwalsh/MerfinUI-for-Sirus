@@ -24,11 +24,6 @@ function MUI:Import_xCT(layout)
 		return	
 	end
 
-	if not IsAddOnLoaded('xCT+') then
-		DEFAULT_CHAT_FRAME:AddMessage('|cffbefc03MerfinUI:|r Модуль xCT+ не найден. Убедитесь, что установлен аддон "xCT+".')
-		return
-	end
-
   local mainFont = MUI:GetProfileFont()
 
   xCTSavedDB['profiles'] = xCTSavedDB['profiles'] or {}

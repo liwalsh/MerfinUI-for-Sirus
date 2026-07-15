@@ -76,37 +76,65 @@ MUI.InstallerData = {
 			PluginInstallFrame.SubTitle:SetText(L["Combat Text"])
 			PluginInstallFrame.Desc1:SetText(L["Click on the button to adjust settings. If you wish to see standart Blizzard Combat Text, you can skip this step and disable xCT+ addon."])
 			PluginInstallFrame.Desc2:SetText(L["Importance: |cff4beb2cHigh|r"])
+			local xctLoaded = IsAddOnLoaded('xCT+')
 			PluginInstallFrame.Option1:Show()
 			PluginInstallFrame.Option1:SetScript("OnClick", function() MUI:Import_xCT("Blizzard") end)
 			PluginInstallFrame.Option1:SetText("Blizzard CText")
 			PluginInstallFrame.Option2:Show()
-      		PluginInstallFrame.Option2:SetScript('OnClick', function() MUI:Import_xCT('DPS') end)
-      		PluginInstallFrame.Option2:SetText('xCT DPS')
+		    		PluginInstallFrame.Option2:SetScript('OnClick', function() MUI:Import_xCT('DPS') end)
+		    		PluginInstallFrame.Option2:SetText('xCT DPS')
 			PluginInstallFrame.Option3:Show()
 			PluginInstallFrame.Option3:SetScript('OnClick', function() MUI:Import_xCT('Tank') end)
 			PluginInstallFrame.Option3:SetText('xCT Tank')
 			PluginInstallFrame.Option4:Show()
 			PluginInstallFrame.Option4:SetScript("OnClick", function() MUI:Import_xCT("Healer") end)
 			PluginInstallFrame.Option4:SetText("xCT Healer")
+			if not xctLoaded then
+				PluginInstallFrame.Option2:Disable()
+				PluginInstallFrame.Option3:Disable()
+				PluginInstallFrame.Option4:Disable()
+				PluginInstallFrame.Desc3:SetText("|cffff0000" .. L['xCT+ addon not found'] .. "|r")
+				PluginInstallFrame.Desc3:Show()
+			else
+				PluginInstallFrame.Desc3:SetText("")
+				PluginInstallFrame.Desc3:Hide()
+			end
 		end,
 		[7] = function()
 			PluginInstallFrame.SubTitle:SetText("Deadly Boss Mods")
 			PluginInstallFrame.Desc1:SetText(L["Click on the button to adjust settings."])
 			PluginInstallFrame.Desc2:SetText(L["Importance: |cff4beb2cHigh|r"])
+			local dbmLoaded = IsAddOnLoaded('DBM-Core')
 			PluginInstallFrame.Option1:Show()
 			PluginInstallFrame.Option1:SetScript("OnClick", function() MUI:ImportDBM("DPS/Tank") end)
 			PluginInstallFrame.Option1:SetText("DPS/Tank")
 			PluginInstallFrame.Option2:Show()
 			PluginInstallFrame.Option2:SetScript("OnClick", function() MUI:ImportDBM("Healer") end)
 			PluginInstallFrame.Option2:SetText("Healer")
+			if not dbmLoaded then
+				PluginInstallFrame.Option1:Disable()
+				PluginInstallFrame.Option2:Disable()
+				PluginInstallFrame.Desc3:SetText("|cffff0000" .. L['DBM addon not found'] .. "|r")
+				PluginInstallFrame.Desc3:Show()
+			else
+				PluginInstallFrame.Desc3:SetText("")
+				PluginInstallFrame.Desc3:Hide()
+			end
 		end,
 		[8] = function()
 			PluginInstallFrame.SubTitle:SetText("Details")
 			PluginInstallFrame.Desc1:SetText(L["Click on the button to adjust settings."])
-			PluginInstallFrame.Desc3:SetText(L["Importance: |cff4beb2cHigh|r"])
+			local detailsLoaded = IsAddOnLoaded('Details')
 			PluginInstallFrame.Option1:Show()
 			PluginInstallFrame.Option1:SetScript("OnClick", function() MUI:ImportDetails('Normal') end)
 			PluginInstallFrame.Option1:SetText(L["Details"])
+			if not detailsLoaded then
+				PluginInstallFrame.Option1:Disable()
+				PluginInstallFrame.Desc3:SetText("|cffff0000" .. L['Details addon not found'] .. "|r")
+				PluginInstallFrame.Desc3:Show()
+			else
+				PluginInstallFrame.Desc3:SetText(L["Importance: |cff4beb2cHigh|r"])
+			end
 		end,
 		[9] = function()
 			PluginInstallFrame.SubTitle:SetText(L["Color Theme"])
