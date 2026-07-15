@@ -3,7 +3,7 @@ local E, L, V, P, G = unpack(ElvUI)
 
 function MUI:ImportDetails(theme)
 	if not E:IsAddOnEnabled('Details') then
-		DEFAULT_CHAT_FRAME:AddMessage('|cffbefc03MerfinUI:|r Вам нужно включить Details, чтобы применить настройки профиля!')
+		DEFAULT_CHAT_FRAME:AddMessage('|cffbefc03MerfinUI:|r Модуль Details не найден. Убедитесь, что установлен аддон "Details".')
 		return
 	end
 

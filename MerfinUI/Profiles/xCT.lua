@@ -25,7 +25,7 @@ function MUI:Import_xCT(layout)
 	end
 
 	if not IsAddOnLoaded('xCT+') then
-		DEFAULT_CHAT_FRAME:AddMessage('|cffbefc03MerfinUI:|r Вам нужно включить xCT+, чтобы применить настройки профиля!')
+		DEFAULT_CHAT_FRAME:AddMessage('|cffbefc03MerfinUI:|r Модуль xCT+ не найден. Убедитесь, что установлен аддон "xCT+".')
 		return
 	end
 
