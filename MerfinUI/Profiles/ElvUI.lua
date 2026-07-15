@@ -2974,9 +2974,13 @@ function MUI:GlobalDB()
 	E.global.dtbars.DTB2_DBT2_RightBottomBar.hide = false
 	E.global.general.fadeMapWhenMoving = false
 
-	local DB = E:GetModule('DTBars2')
-	DB:CreateFrames()
-	DB:MoverCreation()
+	if E:IsAddOnEnabled('DTBars2') then
+		local DB = E:GetModule('DTBars2')
+		DB:CreateFrames()
+		DB:MoverCreation()
+	else
+		DEFAULT_CHAT_FRAME:AddMessage('|cffbefc03MerfinUI:|r Модуль DTBars2 не найден. Убедитесь, что установлен аддон "DTBars2".')
+	end
 
 	if MUI:GetProfileResolution() == 'QUAD_HD' then
 		ElvDB.global.general.UIScale = 0.5333333333333001
