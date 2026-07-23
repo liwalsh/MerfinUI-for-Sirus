@@ -3,6 +3,11 @@ local E, L, V, P, G = unpack(ElvUI)
 
 function MUI:ImportDetails(theme)
 
+	if not IsAddOnLoaded('Details') then
+		DEFAULT_CHAT_FRAME:AddMessage('|cffbefc03MerfinUI:|r ' .. L["Details addon not found"])
+		return
+	end
+
 	_detalhes.encounter_spell_pool = {}
 	_detalhes.npcid_pool = {}
 	_detalhes.spell_pool = {}

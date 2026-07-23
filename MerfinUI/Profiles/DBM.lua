@@ -1,7 +1,13 @@
 local addonName, addonTable = ...
+local E, L = unpack(ElvUI)
 local profileName = addonTable.MerfinProfileName
 
 function MUI:ImportDBM(layout)
+
+	if not IsAddOnLoaded('DBM-Core') then
+		DEFAULT_CHAT_FRAME:AddMessage('|cffbefc03MerfinUI:|r ' .. L['DBM addon not found'])
+		return
+	end
 
 	local profileName = 'MerfinUI (' .. layout .. ') (' .. addonTable.ScreenHeight .. ') v' .. addonTable.Version
 

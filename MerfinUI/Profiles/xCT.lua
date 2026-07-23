@@ -1,4 +1,5 @@
 local addonName, addonTable = ...
+local E, L = unpack(ElvUI)
 
 function MUI:Import_xCT(layout)
 	if layout == 'Blizzard' then
@@ -22,6 +23,11 @@ function MUI:Import_xCT(layout)
 		addonTable:PluginInstallStepComplete('Blizzard Combat Text')
 
 		return	
+	end
+
+	if not IsAddOnLoaded('xCT+') then
+		DEFAULT_CHAT_FRAME:AddMessage('|cffbefc03MerfinUI:|r ' .. L['xCT+ addon not found'])
+		return
 	end
 
   local mainFont = MUI:GetProfileFont()
