@@ -281,6 +281,64 @@ function MUI:Config()
                         desc = L["Show Empty cells"]
                     }
                 }
+            },
+
+            raidFrames = {
+                order = 8,
+                type = "group",
+                name = L['Raid Frames'],
+                guiInline = true,
+                args = {
+                    desc = {
+                        order = 1,
+                        type = "description",
+                        name = L['Choose between Cell or ElvUI raid frames and apply optimized layouts for raids and dungeons.'],
+                        fontSize = 'medium'
+                    },
+                    spacer1 = {
+                        order = 2,
+                        type = "description",
+                        name = " "
+                    },
+                    cellDPSTank = {
+                        order = 3,
+                        type = "execute",
+                        name = 'Cell (DPS/Tank)',
+                        func = function()
+                            MUI:ImportRaidFrames('Cell', 'DPS/Tank')
+                            MUI:ApplyCellColorTheme('DARK')
+                            E:StaticPopup_Show('MUI_RELOAD')
+                        end
+                    },
+                    cellHealerH = {
+                        order = 5,
+                        type = "execute",
+                        name = 'Cell (Healer-H)',
+                        func = function()
+                            MUI:ImportRaidFrames('Cell', 'Healer-H')
+                            MUI:ApplyCellColorTheme('DARK')
+                            E:StaticPopup_Show('MUI_RELOAD')
+                        end
+                    },
+                    cellHealerV = {
+                        order = 6,
+                        type = "execute",
+                        name = 'Cell (Healer-V)',
+                        func = function()
+                            MUI:ImportRaidFrames('Cell', 'Healer-V')
+                            MUI:ApplyCellColorTheme('DARK')
+                            E:StaticPopup_Show('MUI_RELOAD')
+                        end
+                    },
+                    elvui = {
+                        order = 7,
+                        type = "execute",
+                        name = 'ElvUI Frames',
+                        func = function()
+                            MUI:ImportRaidFrames('ElvUI')
+                        end
+                    }
+                }
             }
         }
     }

@@ -62,6 +62,20 @@ MUI.InstallerData = {
 			PluginInstallFrame.Option3:SetText("Healer-V")
 		end,
 		[5] = function()
+			PluginInstallFrame.SubTitle:SetText(L['Raid Frames'])
+			PluginInstallFrame.Desc1:SetText(L['Cell is a standalone addon included in my AddOns pack. It’s a powerful raid frame addon inspired by some of the best—CompactRaid, Grid2, Aptechka, and VuhDo. With its user-friendly interface, Cell offers a smoother and more intuitive experience than ever before.'])
+			PluginInstallFrame.Desc2:SetText(L['Importance: |cff4beb2cHigh|r'])
+			PluginInstallFrame.Option1:Show()
+			PluginInstallFrame.Option1:SetScript('OnClick', function() MUI:ImportRaidFrames('Cell', 'DPS/Tank') end)
+			PluginInstallFrame.Option1:SetText(L['Cell (DPS/Tank)'])
+			PluginInstallFrame.Option2:Show()
+			PluginInstallFrame.Option2:SetScript('OnClick', function() MUI:ImportRaidFrames('Cell', 'Healer') end)
+			PluginInstallFrame.Option2:SetText('Cell (Healer)')
+			PluginInstallFrame.Option3:Show()
+			PluginInstallFrame.Option3:SetScript('OnClick', function() MUI:ImportRaidFrames('ElvUI') end)
+			PluginInstallFrame.Option3:SetText('ElvUI Frames')
+    	end,
+		[6] = function()
 			PluginInstallFrame.SubTitle:SetText(L["Action Bars Visibility"])
 			PluginInstallFrame.Desc1:SetText(L["Click on the button to set action bars visibility."])
 			PluginInstallFrame.Desc3:SetText(L['Importance: |cff4beb2cOptional|r'])
@@ -72,7 +86,7 @@ MUI.InstallerData = {
 			PluginInstallFrame.Option2:SetScript("OnClick", function() MUI:ActionBarsVisibility(false) end)
 			PluginInstallFrame.Option2:SetText(L["Show Mouseover"])
 		end,
-		[6] = function()
+		[7] = function()
 			PluginInstallFrame.SubTitle:SetText(L["Combat Text"])
 			PluginInstallFrame.Desc1:SetText(L["Click on the button to adjust settings. If you wish to see standart Blizzard Combat Text, you can skip this step and disable xCT+ addon."])
 			PluginInstallFrame.Desc2:SetText(L["Importance: |cff4beb2cHigh|r"])
@@ -89,7 +103,7 @@ MUI.InstallerData = {
 			PluginInstallFrame.Option4:SetScript("OnClick", function() MUI:Import_xCT("Healer") end)
 			PluginInstallFrame.Option4:SetText("xCT Healer")
 		end,
-		[7] = function()
+		[8] = function()
 			PluginInstallFrame.SubTitle:SetText("Deadly Boss Mods")
 			PluginInstallFrame.Desc1:SetText(L["Click on the button to adjust settings."])
 			PluginInstallFrame.Desc2:SetText(L["Importance: |cff4beb2cHigh|r"])
@@ -100,14 +114,14 @@ MUI.InstallerData = {
 			PluginInstallFrame.Option2:SetScript("OnClick", function() MUI:ImportDBM("Healer") end)
 			PluginInstallFrame.Option2:SetText("Healer")
 		end,
-		[8] = function()
+		[9] = function()
 			PluginInstallFrame.SubTitle:SetText("Details")
 			PluginInstallFrame.Desc1:SetText(L["Click on the button to adjust settings."])
 			PluginInstallFrame.Option1:Show()
 			PluginInstallFrame.Option1:SetScript("OnClick", function() MUI:ImportDetails('Normal') end)
 			PluginInstallFrame.Option1:SetText(L["Details"])
 		end,
-		[9] = function()
+		[10] = function()
 			PluginInstallFrame.SubTitle:SetText(L["Color Theme"])
 			PluginInstallFrame.Desc1:SetText(L["Click on the button below to set color theme of ElvUI unit frames.\n- Normal Theme would enable class colorized frames;\n- Dark Theme would darken them and put Unit Names texts class colorized"])
 			PluginInstallFrame.Desc3:SetText(L['Importance: |cff4beb2cOptional|r'])
@@ -118,7 +132,7 @@ MUI.InstallerData = {
 			PluginInstallFrame.Option2:SetScript("OnClick", function() MUI:ChangeTheme('Dark') end)
 			PluginInstallFrame.Option2:SetText(L["Dark Theme"])
 		end,
-		[10] = function()
+		[11] = function()
 			PluginInstallFrame.SubTitle:SetText(L["Installation Complete"])
 			PluginInstallFrame.Desc1:SetText(L["You have completed the installation process."])
 			PluginInstallFrame.Desc2:SetText(L["You must click the button below in order to finalize the process and automatically reload your UI."])
@@ -132,12 +146,13 @@ MUI.InstallerData = {
 		[2] = L["Account Settings"],
 		[3] = L["Chat Settings"],
 		[4] = L["Profiles (ElvUI)"],
-		[5] = L["Action Bars Visibility"],
-		[6] = L["Combat Text"],
-		[7] = L['Deadly Boss Mods'],
-		[8] = L['Details'],
-		[9] = L["Color Theme"],
-		[10] = L["Installation Complete"],
+		[5] = L['Raid Frames'],
+		[6] = L["Action Bars Visibility"],
+		[7] = L["Combat Text"],
+		[8] = L['Deadly Boss Mods'],
+		[9] = L['Details'],
+		[10] = L["Color Theme"],
+		[11] = L["Installation Complete"],
 	},
 	StepTitlesColor = { 1, 1, 1 },
 	StepTitlesColorSelected = { 0, 179/255, 1 },
