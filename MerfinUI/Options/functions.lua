@@ -89,7 +89,13 @@ function MUI:ChangeTheme(theme)
 		E.db.unitframe.colors.health_backdrop_dead.b = dead.b
 		E.db.unitframe.colors.health_backdrop_dead.g = dead.g
 		E.db.unitframe.colors.health_backdrop_dead.r = dead.r
-		E.db.unitframe.units['party'].customTexts.UnitName.text_format = "[namecolor][name]"
+
+		if layout == 'DPS/Tank' or layout == 'Healer-V' then
+			E.db.unitframe.units['party'].customTexts.UnitName.text_format = "[namecolor][name]"
+		elseif layout == 'Healer-H' then
+			E.db.unitframe.units['party'].customTexts.UnitName.text_format = "[namecolor][name:abbrev:veryshort]"
+		end
+		
 		E.db.unitframe.units['raid10'].customTexts.UnitName.text_format = "[namecolor][name:veryshort]"
 		E.db.unitframe.units['raid25'].customTexts.UnitName.text_format = "[namecolor][name:veryshort]"
 		E.db.unitframe.units['raid40'].customTexts.UnitName.text_format = "[namecolor][name:veryshort]"
@@ -115,7 +121,14 @@ function MUI:ChangeTheme(theme)
 		E.db.unitframe.colors.health_backdrop_dead.b = 0.46274509803922
 		E.db.unitframe.colors.health_backdrop_dead.g = 0.46274509803922
 		E.db.unitframe.colors.health_backdrop_dead.r = 0.51764705882353
-		E.db.unitframe.units['party'].customTexts.UnitName.text_format = "[name]"
+
+		if layout == 'DPS/Tank' or layout == 'Healer-V' then
+			E.db.unitframe.units['party'].customTexts.UnitName.text_format = "[name]"
+		elseif layout == 'Healer-H' then
+			E.db.unitframe.units['party'].customTexts.UnitName.text_format = "[name:abbrev:veryshort]"
+		end
+
+		E.db.unitframe.units['party'].customTexts.UnitName.text_format = "[name:abbrev:veryshort]"
 		E.db.unitframe.units['raid10'].customTexts.UnitName.text_format = "[name:veryshort]"
 		E.db.unitframe.units['raid25'].customTexts.UnitName.text_format = "[name:veryshort]"
 		E.db.unitframe.units['raid40'].customTexts.UnitName.text_format = "[name:veryshort]"

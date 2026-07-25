@@ -681,8 +681,12 @@ db.unitframes = function(layout)
 
 	E.db.unitframe.units.player.RestIcon.enable = false
 	E.db.unitframe.units.player.aurabar.enable = false
-	E.db.unitframe.units.player.buffs.anchorPoint = 'TOPRIGHT'
+	E.db.unitframe.units.player.buffs.enable = false
+	E.db.unitframe.units.player.buffs.attachTo = 'DEBUFFS'
 	E.db.unitframe.units.player.buffs.countFont = MUI:GetProfileFont()
+	E.db.unitframe.units.player.buffs.spacing = -1
+	E.db.unitframe.units.player.buffs.yOffset = -1
+	E.db.unitframe.units.player.buffs.priority = 'Blacklist,Personal,Friendly:nonPersonal'
 	E.db.unitframe.units.player.castbar.enable = false
 	E.db.unitframe.units.player.castbar.tickWidth = 1
 	E.db.unitframe.units.player.castbar.format = 'CURRENTMAX'
@@ -701,8 +705,12 @@ db.unitframes = function(layout)
 	E.db.unitframe.units.player.customTexts.UnitHealth.fontOutline = 'OUTLINE'
 	E.db.unitframe.units.player.customTexts.UnitHealth.justifyH = 'RIGHT'
 	E.db.unitframe.units.player.customTexts.UnitHealth.text_format = '[health:current]'
-	E.db.unitframe.units.player.debuffs.anchorPoint = 'TOPRIGHT'
 	E.db.unitframe.units.player.debuffs.enable = false
+	E.db.unitframe.units.player.debuffs.attachTo = 'FRAME'
+	E.db.unitframe.units.player.debuffs.countFont = MUI:GetProfileFont()
+	E.db.unitframe.units.player.debuffs.spacing = -1
+	E.db.unitframe.units.player.debuffs.yOffset = -1
+	E.db.unitframe.units.player.debuffs.priority = 'Blacklist,Personal,RaidDebuffs,CCDebuffs,Friendly:Dispellable,Friendly:notCastByUnit,Friendly:CastByNPC'
 	E.db.unitframe.units.player.healPrediction.enable = false
 	E.db.unitframe.units.player.health.text_format = ''
 	E.db.unitframe.units.player.power.enable = false
@@ -747,7 +755,7 @@ db.unitframes = function(layout)
 	E.db.unitframe.units.target.debuffs.spacing = -1
 	E.db.unitframe.units.target.debuffs.yOffset = -1
 	E.db.unitframe.units.target.debuffs.priority = 'Blacklist,Personal,RaidDebuffs,CCDebuffs,Friendly:Dispellable,Friendly:notCastByUnit,Friendly:CastByNPC'
-	E.db.unitframe.units.target.buffs.perrow = 8
+	
 	E.db.unitframe.units.target.fader.enable = false
 	E.db.unitframe.units.target.fader.range = false
 	E.db.unitframe.units.target.healPrediction.enable = false
@@ -895,10 +903,7 @@ db.unitframes = function(layout)
 	E.db.unitframe.units.boss.buffs.enable = true
 	E.db.unitframe.units.boss.buffs.anchorPoint = 'RIGHT'
 	E.db.unitframe.units.boss.buffs.numrows = 2
-	E.db.unitframe.units.boss.buffs.sizeOverride = 20
 	E.db.unitframe.units.boss.buffs.countFontSize = 11
-	E.db.unitframe.units.boss.buffs.xOffset = 3
-	E.db.unitframe.units.boss.buffs.yOffset = 10
 	E.db.unitframe.units.boss.colorOverride = 'FORCE_ON'
 	E.db.unitframe.units.boss.customTexts.UnitPower.attachTextTo = 'Power'
 	E.db.unitframe.units.boss.customTexts.UnitPower.enable = true
@@ -961,6 +966,13 @@ db.unitframes = function(layout)
 	E.db.unitframe.units.party.customTexts.UnitHealth.text_format = '[health:current]'
 	E.db.unitframe.units.party.customTexts.UnitHealth.xOffset = -5
 	E.db.unitframe.units.party.customTexts.UnitHealth.yOffset = 0
+	
+	if layout == 'DPS/Tank' or layout == 'Healer-V' then
+		E.db.unitframe.units['party'].customTexts.UnitName.text_format = "[name]"
+	elseif layout == 'Healer-H' then
+		E.db.unitframe.units['party'].customTexts.UnitName.text_format = "[name:abbrev:veryshort]"
+	end
+
 	E.db.unitframe.units.party.customTexts.UnitName.attachTextTo = 'Health'
 	E.db.unitframe.units.party.customTexts.UnitName.enable = true
 	E.db.unitframe.units.party.customTexts.UnitName.font = MUI:GetProfileFont()
@@ -1155,7 +1167,6 @@ db.unitframes = function(layout)
 	E.db.unitframe.units.raidpet.absorbPrediction.absorbTexture = MUI:GetProfileTexture()
 
 	if layout == 'DPS/Tank' then
-		E.db.unitframe.units.party.customTexts.UnitName.text_format = '[name:abbrev:veryshort]'
 		E.db.unitframe.units.raidpet.enable = false
 		E.db.unitframe.units.player.castbar.displayTarget = false
 		E.db.unitframe.units.raid10.growthDirection = 'RIGHT_UP'
@@ -1164,9 +1175,6 @@ db.unitframes = function(layout)
 	elseif layout == 'Healer-H' or layout == 'Healer-V' then
 	if layout == 'Healer-H' then
 		E.db.unitframe.units.party.growthDirection = 'RIGHT_DOWN'
-		E.db.unitframe.units.party.customTexts.UnitName.text_format = '[name:abbrev:veryshort]'
-	elseif layout == 'Healer-V' then
-		E.db.unitframe.units.party.customTexts.UnitName.text_format = '[name:abbrev:veryshort]' 
 	end
 		E.db.unitframe.units.raidpet.enable = true
 		E.db.unitframe.units.player.castbar.displayTarget = true
@@ -1183,6 +1191,12 @@ db.unitframes = function(layout)
 		E.db.unitframe.units.player.width = 260
 		E.db.unitframe.units.player.height = 51
 		E.db.unitframe.units.player.power.height = 6
+		E.db.unitframe.units.player.buffs.countFontSize = 14
+		E.db.unitframe.units.player.buffs.perrow = 8
+		E.db.unitframe.units.player.buffs.sizeOverride = 23
+		E.db.unitframe.units.player.debuffs.countFontSize = 14
+		E.db.unitframe.units.player.debuffs.perrow = 8
+		E.db.unitframe.units.player.debuffs.sizeOverride = 23
 		E.db.unitframe.units.player.castbar.height = 22
 		E.db.unitframe.units.player.castbar.width = 260
 		E.db.unitframe.units.player.CombatIcon.size = 23
@@ -1272,12 +1286,10 @@ db.unitframes = function(layout)
 
 		E.db.unitframe.units.boss.height = 50
 		E.db.unitframe.units.boss.width = 220
-		E.db.unitframe.units.boss.buffs.countFontSize = 14
 		E.db.unitframe.units.boss.debuffs.sizeOverride = 30
 		E.db.unitframe.units.boss.debuffs.xOffset = -3
 		E.db.unitframe.units.boss.debuffs.countFontSize = 14
 		E.db.unitframe.units.boss.buffs.sizeOverride = 20
-		E.db.unitframe.units.boss.buffs.countFontSize = 11
 		E.db.unitframe.units.boss.buffs.xOffset = 3
 		E.db.unitframe.units.boss.buffs.yOffset = 10
 		E.db.unitframe.units.boss.customTexts.UnitPower.size = 14
@@ -1334,7 +1346,6 @@ db.unitframes = function(layout)
 		E.db.unitframe.units.raid40.customTexts.DeadGhostStatus.size = 13
 	if layout == 'DPS/Tank' then
 
-		E.db.unitframe.units.party.customTexts.UnitName.text_format = '[name]'
 		E.db.unitframe.units.party.height = 60
 		E.db.unitframe.units.party.width = 259
 		E.db.unitframe.units.party.power.height = 6
@@ -1402,7 +1413,6 @@ db.unitframes = function(layout)
 		E.db.unitframe.units.raidpet.width = 65
 	elseif layout == 'Healer-H' or layout == 'Healer-V' then
 		if layout == 'Healer-H' then
-			E.db.unitframe.units.party.customTexts.UnitName.text_format = '[name:abbrev:veryshort]'
 			E.db.unitframe.units.party.height = 65
 			E.db.unitframe.units.party.width = 130
 			E.db.unitframe.units.party.power.height = 6
@@ -1416,7 +1426,6 @@ db.unitframes = function(layout)
 			E.db.unitframe.units.party.petsGroup.enable = true
 			E.db.unitframe.units.party.petsGroup.name.text_format = "[health:current]"
 		elseif layout == 'Healer-V' then
-			E.db.unitframe.units.party.customTexts.UnitName.text_format = '[name]'
 			E.db.unitframe.units.party.height = 65
 			E.db.unitframe.units.party.width = 259
 			E.db.unitframe.units.party.power.height = 6
@@ -1497,6 +1506,12 @@ db.unitframes = function(layout)
 		E.db.unitframe.units.player.width = 235
 		E.db.unitframe.units.player.height = 44
 		E.db.unitframe.units.player.power.height = 6
+		E.db.unitframe.units.player.buffs.countFontSize = 13
+		E.db.unitframe.units.player.buffs.perrow = 8
+		E.db.unitframe.units.player.buffs.sizeOverride = 23
+		E.db.unitframe.units.player.debuffs.countFontSize = 13
+		E.db.unitframe.units.player.debuffs.perrow = 8
+		E.db.unitframe.units.player.debuffs.sizeOverride = 23
 		E.db.unitframe.units.player.castbar.width = 235
 		E.db.unitframe.units.player.castbar.height = 22
 		E.db.unitframe.units.player.CombatIcon.size = 23
@@ -1578,12 +1593,10 @@ db.unitframes = function(layout)
 		E.db.unitframe.units.arena.pvpTrinket.size = 44
 		E.db.unitframe.units.boss.height = 44
 		E.db.unitframe.units.boss.width = 180
-		E.db.unitframe.units.boss.buffs.countFontSize = 13
 		E.db.unitframe.units.boss.debuffs.sizeOverride = 30
 		E.db.unitframe.units.boss.debuffs.xOffset = -3
 		E.db.unitframe.units.boss.debuffs.countFontSize = 13
 		E.db.unitframe.units.boss.buffs.sizeOverride = 20
-		E.db.unitframe.units.boss.buffs.countFontSize = 11
 		E.db.unitframe.units.boss.buffs.xOffset = 3
 		E.db.unitframe.units.boss.buffs.yOffset = 10
 		E.db.unitframe.units.boss.customTexts.UnitPower.size = 13
@@ -1633,7 +1646,6 @@ db.unitframes = function(layout)
 
 	if layout == 'DPS/Tank' then
 
-		E.db.unitframe.units.party.customTexts.UnitName.text_format = '[name]'
 		E.db.unitframe.units.party.height = 55
 		E.db.unitframe.units.party.width = 230
 		E.db.unitframe.units.party.power.height = 6
@@ -1701,7 +1713,6 @@ db.unitframes = function(layout)
 		E.db.unitframe.units.raidpet.width = 47
 	elseif layout == 'Healer-H' or layout == 'Healer-V' then
 		if layout == 'Healer-H' then
-			E.db.unitframe.units.party.customTexts.UnitName.text_format = '[name:abbrev:veryshort]'
 			E.db.unitframe.units.party.height = 55
 			E.db.unitframe.units.party.width = 100
 			E.db.unitframe.units.party.power.height = 6
@@ -1715,7 +1726,6 @@ db.unitframes = function(layout)
 			E.db.unitframe.units.party.petsGroup.enable = true
 			E.db.unitframe.units.party.petsGroup.name.text_format = '[health:current]'
 		elseif layout == 'Healer-V' then
-			E.db.unitframe.units.party.customTexts.UnitName.text_format = '[name]'
 			E.db.unitframe.units.party.height = 55
 			E.db.unitframe.units.party.width = 235
 			E.db.unitframe.units.party.power.height = 6
