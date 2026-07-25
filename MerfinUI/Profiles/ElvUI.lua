@@ -722,6 +722,7 @@ db.unitframes = function(layout)
 	E.db.unitframe.units.player.absorbPrediction.absorbTexture = MUI:GetProfileTexture()
 
 	E.db.unitframe.units.target.combobar.enable = false
+	E.db.unitframe.units.target.combobar.height = 6
 	E.db.unitframe.units.target.aurabar.enable = false
 	E.db.unitframe.units.target.buffs.attachTo = 'DEBUFFS'
 	E.db.unitframe.units.target.buffs.countFont = MUI:GetProfileFont()
