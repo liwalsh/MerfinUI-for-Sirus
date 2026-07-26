@@ -105,6 +105,7 @@ function MUI:ChangeTheme(theme)
 		E.db.unitframe.units['targettarget'].customTexts.UnitName.text_format = "[namecolor][name:abbrev:medium]"
 		E.db.unitframe.units['focus'].customTexts.UnitName.text_format = "[namecolor][name:abbrev:veryshort]"
 		MUI:ImportDetails('DARK')
+		MUI:ApplyCellColorTheme('DARK')
 	elseif theme == 'Normal' then
 		for unitFrame in pairs(E.db.unitframe.units) do
 			E.db.unitframe.units[unitFrame].colorOverride = "FORCE_ON"
@@ -138,6 +139,7 @@ function MUI:ChangeTheme(theme)
 		E.db.unitframe.units['targettarget'].customTexts.UnitName.text_format = "[name:abbrev:medium]"
 		E.db.unitframe.units['focus'].customTexts.UnitName.text_format = "[name:abbrev:veryshort]"
 		MUI:ImportDetails('NORMAL')
+		MUI:ApplyCellColorTheme('NORMAL')
 	end
 	local UF = E:GetModule("UnitFrames")
 	UF:Update_AllFrames()
