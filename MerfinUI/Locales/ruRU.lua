@@ -81,4 +81,5 @@ L["xCT+ addon not found"] = "Аддон xCT+ не найден. Требуетс
 L["DBM addon not found"] = "Аддон Deadly Boss Mods не найден. Требуется его установка/включение."
 L["Details addon not found"] = "Аддон Details не найден. Требуется его установка/включение."
 L["DTBars2 addon not found"] = "Аддон ElvUI_DTBars2 не найден. Требуется его установка/включение."
+L["CELL addon not found"] = "Аддон CELL не найден. Требуется его установка/включение."
 L['Cell is a standalone addon included in my AddOns pack. It’s a powerful raid frame addon inspired by some of the best—CompactRaid, Grid2, Aptechka, and VuhDo. With its user-friendly interface, Cell offers a smoother and more intuitive experience than ever before.'] = 'Cell — это самостоятельный аддон. Это мощный аддон для отображения рейд-фреймов, созданный под впечатлением от таких признанных решений, как CompactRaid, Grid2, Aptechka и VuhDo. Благодаря удобному интерфейсу Cell обеспечивает более плавную и интуитивно понятную работу, чем когда-либо прежде.'

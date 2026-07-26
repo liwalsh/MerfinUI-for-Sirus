@@ -965,7 +965,7 @@ end
 
 function MUI:ApplyCellColorTheme(theme)
   if not E:IsAddOnEnabled('Cell') then
-    DEFAULT_CHAT_FRAME:AddMessage('|cffbefc03MerfinUI:|r You need to enable Cell!')
+    DEFAULT_CHAT_FRAME:AddMessage('|cffbefc03MerfinUI:|r ' .. L['CELL addon not found'])
     return
   end
 
