@@ -45,6 +45,7 @@ db.movers = function(layout)
 		E.db.movers.ElvAB_5 = 'BOTTOM,ElvUIParent,BOTTOM,210,39'
 		E.db.movers.ElvAB_6 = 'BOTTOM,ElvUIParent,BOTTOM,0,70'
 		E.db.movers.MicrobarMover = 'BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-274,4'
+		E.db.movers.SocialToastMover = 'BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,4,314'
 
 	if layout == 'DPS/Tank' then
 
@@ -149,6 +150,7 @@ db.movers = function(layout)
 		E.db.movers.ElvAB_5 = 'BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,4,316'
 		E.db.movers.ElvAB_6 = 'BOTTOMLEFT,UIParent,BOTTOMLEFT,424,551'
 		E.db.movers.MicrobarMover = 'BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-239,4'
+		E.db.movers.SocialToastMover = 'BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,4,281'
 
 	if layout == 'DPS/Tank' then
 
