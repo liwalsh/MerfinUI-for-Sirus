@@ -1,5 +1,5 @@
 ### **Для работы MerfinUI понадобится:**<br/><br/>
-[ElvUI](https://github.com/fxpw/ElvUI)<br/>
+[ElvUI 8ver](https://github.com/fxpw/ElvUI)<br/>
 [ElvUI_OptionsUI](https://github.com/fxpw/ElvUI_OptionsUI)<br/>
 [ElvUI_AddOnSkins](https://github.com/fxpw/ElvUI_AddOnSkins)<br/>
 [ElvUI_Enhanced](https://github.com/fxpw/ElvUI_Enhanced)<br/>
